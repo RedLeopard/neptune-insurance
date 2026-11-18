@@ -1,57 +1,2369 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#080d19"><meta name="description" content="Neptune Insurance: a 500-agent target, omnichannel Amazon Connect architecture and interactive insurance customer experience built by Edward Thornton."><title>Neptune Insurance | Edward “E.T.” Thornton</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet"><style>
-:root{--bg:#080b09;--ink:#f1f3e9;--sub:#a6b0a1;--aqua:#c1fa6a;--panel:#111a12;--line:#304032}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:'DM Sans',sans-serif;line-height:1.7}h1,h2,h3{font-family:'Space Grotesk',sans-serif;letter-spacing:-.05em;line-height:1.1;margin-top:0}p{color:var(--sub)}a{text-decoration:none;color:inherit}.container{width:min(1160px,calc(100% - 56px));margin:0 auto}.nav{border-bottom:1px solid #1f3242;background:#0b1521ed;backdrop-filter:blur(15px);position:sticky;top:0;z-index:20}.navin{min-height:78px;display:flex;justify-content:space-between;align-items:center;gap:18px}.wordmark{font-family:'Space Grotesk';font-weight:700;font-size:18px;letter-spacing:-.06em}.wordmark span{color:#80e9d1}.navlinks{display:flex;gap:24px;align-items:center;font-size:12px;font-weight:800;color:#aebdca}.navlinks a:hover{color:#a8efd9}.navbtn{border:1px solid #45626d;padding:10px 16px;border-radius:7px}.eyebrow{color:#83e5ce;font-size:11px;font-weight:800;letter-spacing:.19em;text-transform:uppercase}.hero{padding:95px 0 70px;position:relative;overflow:hidden}.hero:before{position:absolute;content:'';width:650px;height:650px;right:-220px;top:-200px;border-radius:50%;background:radial-gradient(circle,#146a70a8,transparent 65%);pointer-events:none}.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center;position:relative}.hero h1{font-size:clamp(3.5rem,7vw,7rem);margin:24px 0 23px}.hero h1 span{color:var(--aqua)}.hero p{font-size:17px;max-width:590px}.chips{display:flex;gap:8px;flex-wrap:wrap;margin:25px 0 30px}.chips span,.pill{background:#152b36;border:1px solid #2b5660;color:#a6d8d9;border-radius:100px;padding:8px 13px;font-size:11px;font-weight:800}.actions{display:flex;flex-wrap:wrap;gap:12px}.button{display:inline-flex;justify-content:center;align-items:center;gap:13px;min-height:50px;padding:0 20px;background:#74dec7;color:#092f3d;font-weight:800;font-size:13px;border-radius:8px}.button.secondary{background:transparent;color:#d5eef0;border:1px solid #466674}.hero-screen{position:relative;padding:20px;border:1px solid #315766;border-radius:23px;background:#132430;box-shadow:0 30px 110px #061722}.hero-screen:before{content:'';position:absolute;inset:-20px;border-radius:30px;border:1px solid #24616f44;pointer-events:none}.browser-head{display:flex;gap:7px;padding:8px 0 18px}.browser-head span{width:8px;height:8px;background:#527482;border-radius:50%}.screen-img{display:block;overflow:hidden;border-radius:14px;background:#e7f5f1;min-height:325px;position:relative}.screen-img .nav-ui{height:50px;background:#f8fffc;display:flex;align-items:center;justify-content:space-between;padding:0 22px;color:#0b5865;font-weight:800;font-size:14px}.screen-img .nav-ui small{font-size:10px;color:#7b9ca5}.screen-body{padding:42px 27px;background:radial-gradient(circle at 82% 50%,#b1ebd7,transparent 40%)}.screen-body small{color:#137d84;font-size:9px;font-weight:800;letter-spacing:.12em}.screen-body h3{font-size:36px;color:#0b3846;margin:10px 0}.screen-body h3 i{color:#118e89;font-style:normal}.screen-body p{font-size:12px;color:#496d77;max-width:200px}.screen-button{display:inline-block;color:#fff;background:#0a6b75;border-radius:6px;font-size:10px;padding:9px 12px;margin-top:10px}.screen-graphic{position:absolute;width:190px;height:190px;border-radius:50%;background:#7edecf;bottom:20px;right:-30px;box-shadow:0 0 0 38px #54c3bc35}.screen-graphic:after{content:'⌂';position:absolute;color:#0e5c70;font-size:150px;line-height:1;top:10px;left:30px}.screen-label{position:absolute;right:-24px;bottom:-22px;background:#fff;color:#144e59;padding:13px 20px;border-radius:9px;font-size:12px;font-weight:800;box-shadow:0 13px 35px #0006}.stats{border-top:1px solid #1e3a49;border-bottom:1px solid #1e3a49;display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:28px 0;margin-top:36px}.stat strong{display:block;font-family:'Space Grotesk';font-size:29px;letter-spacing:-.07em;color:#dcfdf4}.stat span{font-size:11px;color:#8dabb8;letter-spacing:.02em}.section{padding:100px 0}.section-head{max-width:760px;margin-bottom:48px}.section-head h2{font-size:clamp(2.4rem,4.6vw,4rem);margin:17px 0}.section-head p{font-size:16px}.capabilities{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.capability{border:1px solid var(--line);background:var(--panel);border-radius:16px;padding:32px}.capability span{font-size:10px;color:var(--aqua);letter-spacing:.16em;font-weight:800}.capability h3{font-size:22px;margin:26px 0 14px}.capability p{font-size:13px}.journey{background:#101d29}.journey-row{display:grid;grid-template-columns:repeat(5,1fr);gap:11px}.journey-node{padding:22px 17px;background:#192d3a;border:1px solid #335260;border-radius:12px;min-height:180px}.journey-node strong{display:block;color:#c6f2e8;font-size:13px;margin:16px 0 10px}.journey-node p{font-size:11px;line-height:1.6}.journey-node .n{display:inline-flex;width:29px;height:29px;border-radius:50%;align-items:center;justify-content:center;background:#2e6b71;font-size:11px;color:#d7fff3;font-weight:800}.architecture{border:1px solid #304956;border-radius:16px;padding:26px;background:#0d1b27}.architecture-label{color:#83d9ce;font-size:11px;font-weight:800;letter-spacing:.14em;margin-bottom:20px}.architecture .entry{display:flex;gap:12px;flex-wrap:wrap}.architecture .entry span{flex:1;text-align:center;min-width:100px;padding:17px 12px;background:#1b3e4d;border:1px solid #326779;border-radius:8px;color:#c9f1e8;font-size:12px;font-weight:800}.architecture .down{text-align:center;font-size:24px;color:#78d8ca;padding:15px}.architecture .core{padding:22px;border:1px solid #4f9e92;background:#18474c;border-radius:11px;text-align:center;font-size:18px;font-weight:800}.architecture .core small{display:block;color:#c7e3dd;font-size:12px;font-weight:500}.architecture .downstream{display:grid;grid-template-columns:1fr 1fr 1fr;gap:13px}.architecture .downstream>div{background:#132c3a;padding:20px;border-radius:10px;border:1px solid #315366}.architecture .downstream strong{display:block;font-size:12px;color:#c9f6e8}.architecture .downstream p{font-size:11px;margin-bottom:0}.architecture-note{font-size:12px;color:#9bb7bd;margin-top:18px}.roadmap{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.phase{padding:25px;border:1px solid #294854;border-radius:12px}.phase small{color:#8ee9d2;letter-spacing:.13em;font-size:10px;font-weight:800}.phase h3{font-size:19px;margin:20px 0 10px}.phase p{font-size:12px}.status{display:inline-block;font-size:10px;border:1px solid #487c77;color:#b1e4d5;padding:5px 9px;border-radius:100px;margin-top:6px}.disclosure{border-left:3px solid var(--aqua);padding:5px 25px;background:#0e202b}.disclosure p{margin:0;font-size:13px}.outro{background:#0d3441;border-radius:19px;padding:60px;display:flex;justify-content:space-between;align-items:center;gap:25px}.outro h2{font-size:42px;margin:14px 0}.outro p{max-width:530px}.footer{margin-top:90px;border-top:1px solid #29404d;padding:25px 0;color:#839caa;font-size:12px}.footer .container{display:flex;justify-content:space-between;gap:20px}@media(max-width:900px){.hero-grid,.journey-row{grid-template-columns:1fr}.hero-screen{max-width:520px}.capabilities{grid-template-columns:1fr 1fr}.journey-row{grid-template-columns:repeat(3,1fr)}.stats{grid-template-columns:repeat(2,1fr)}.roadmap{grid-template-columns:1fr 1fr}}@media(max-width:620px){.container{width:calc(100% - 32px)}.navin{min-height:65px}.navlinks a:not(.navbtn){display:none}.hero{padding:55px 0 40px}.hero h1{font-size:3.8rem}.hero p{font-size:15px}.hero-screen{padding:12px}.screen-img{min-height:280px}.screen-graphic{width:130px;height:130px}.screen-graphic:after{font-size:100px}.screen-body h3{font-size:29px}.screen-label{right:0}.stats{gap:22px}.section{padding:70px 0}.capabilities,.journey-row,.roadmap,.architecture .downstream{grid-template-columns:1fr}.outro{padding:30px;display:block}.outro h2{font-size:32px}.footer .container{display:block}.architecture .entry span{min-width:110px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+<!doctype html>
+<html lang="en">
 
-/* Integrates with the dark / lime portfolio aesthetic; Neptune's customer site retains its own branding. */
-.project-notice{background:#142115;border:1px solid #426a38;color:#d9f2c0;border-radius:10px;padding:12px 16px;margin:18px 0 0;font-size:12px;max-width:600px}
-.project-notice strong{color:#c1fa6a}
-.detail-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
-.detail-card{background:#121b15;border:1px solid #314332;border-radius:14px;padding:27px}
-.detail-card .key{display:block;font-family:monospace;font-size:10px;font-weight:700;letter-spacing:.14em;color:#c1fa6a;text-transform:uppercase;margin-bottom:17px}
-.detail-card h3{font-size:20px;margin:0 0 12px}
-.detail-card p{font-size:13px;margin:0;line-height:1.7}
-.live-deployment{margin-top:36px;padding:26px;border:1px solid #4b633b;border-radius:14px;background:linear-gradient(120deg,#17311d,#112019 72%);display:flex;align-items:center;gap:25px;justify-content:space-between}
-.live-deployment h3{font-size:24px;margin:8px 0}
-.live-deployment p{font-size:13px;margin:0;max-width:670px}
-.live-deployment .button{white-space:nowrap}
-.status-rows{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
-.status-row{display:flex;gap:12px;align-items:flex-start;padding:19px 20px;background:#121b15;border:1px solid #314332;border-radius:12px}
-.status-dot{display:block;width:9px;height:9px;margin-top:6px;flex-shrink:0;border-radius:50%;background:#c1fa6a}
-.status-dot.pending{background:#9b9e8d}
-.status-row strong{display:block;font-size:14px;margin-bottom:5px}
-.status-row small{display:block;color:#a5b4a3;font-size:12px;line-height:1.6}
-.log-grid{display:grid;grid-template-columns:170px 1fr;gap:16px;border-top:1px solid #314332;padding:19px 0}
-.log-grid time{font-family:monospace;font-size:11px;color:#b6ee80;font-weight:700}
-.log-grid h3{font-size:18px;margin-bottom:5px}
-.log-grid p{font-size:13px;margin:0}
-.note{font-size:12px;color:#a8b5a4;margin-top:23px}
-@media(max-width:850px){.detail-grid{grid-template-columns:1fr 1fr}.live-deployment{flex-direction:column;align-items:flex-start}}
-@media(max-width:620px){.detail-grid,.status-rows{grid-template-columns:1fr}.log-grid{grid-template-columns:1fr;gap:5px}.navlinks a[href="#build-log"]{display:none}}
-</style></head><body><nav class="nav"><div class="container navin"><a href="index.html" class="wordmark">EDWARD “E.T.” THORNTON<span>.</span></a><div class="navlinks"><a href="#overview">Overview</a><a href="#architecture">Architecture</a><a href="#roadmap">Roadmap</a><a href="#build-log">Build log</a><a href="https://neptune.hireedwardthornton.click/" class="navbtn">Open Neptune ↗</a></div></div></nav>
-<main><section class="hero"><div class="container hero-grid"><div><span class="eyebrow">PROJECT 06 / AMAZON CONNECT · OMNICHANNEL · AGENTIC AI</span><h1>Neptune<br><span>Insurance.</span></h1><p>A complete insurance customer experience prototype connected to a 14-day AWS architecture build. Modern frontend journeys, simulated FNOL and policy services, and a target omnichannel contact center designed for up to 500 agents.</p><div class="chips"><span>Amazon Connect</span><span>Agentic CX Designer</span><span>Voice &amp; Web Chat</span><span>Lambda / DynamoDB</span><span>Security &amp; Observability</span></div><div class="actions"><a class="button" href="https://neptune.hireedwardthornton.click/">Launch Live Demo ↗</a><a class="button secondary" href="#architecture">Explore the architecture ↓</a></div></div><a class="hero-screen" href="https://neptune.hireedwardthornton.click/" aria-label="Open Neptune Insurance website"><div class="browser-head"><span></span><span></span><span></span></div><div class="screen-img"><div class="nav-ui">neptune. <small>COVERAGE · CLAIMS · SUPPORT</small></div><div class="screen-body"><small>HERE FOR YOUR NEXT CHAPTER</small><h3>More life.<br><i>Less worry.</i></h3><p>Your world is always moving. Protection should feel simple.</p><span class="screen-button">Find your coverage →</span></div><div class="screen-graphic"></div></div><span class="screen-label">FULL CUSTOMER WEBSITE ↗</span></a></div><div class="container stats"><div class="stat"><strong>14 days</strong><span>Guided architecture curriculum</span></div><div class="stat"><strong>500</strong><span>Agent design target · Not a tested load</span></div><div class="stat"><strong>4 channels</strong><span>Voice, chat, SMS, email · Staged integrations</span></div><div class="stat"><strong>8 pages</strong><span>Customer-facing prototype</span></div></div></section>
-<section class="section" id="overview"><div class="container"><div class="section-head"><span class="eyebrow">01 / THE BUSINESS CHALLENGE</span><h2>A better way through the complicated moments.</h2><p>Neptune is a fictional regional property-and-casualty insurer migrating from a legacy contact center. The challenge: give policyholders a clear next step without losing their context when they switch channels or teams.</p></div><div class="capabilities"><div class="capability"><span>EXPERIENCE 01</span><h3>Guided FNOL</h3><p>An interactive, step-by-step simulated first notice of loss captures bounded sample information, creates a browser-local reference, and demonstrates how a claims handoff can be structured.</p></div><div class="capability"><span>EXPERIENCE 02</span><h3>Policyholder workspace</h3><p>A synthetic customer dashboard surfaces example auto and home coverage, claim references and status timelines. No authentication or real insurance database is represented.</p></div><div class="capability"><span>EXPERIENCE 03</span><h3>Connected support</h3><p>Support discovery, scripted assistant preview, and precise placeholders for Connect voice, hosted web chat, SMS and email. Channels are only marked live after configuration and verification.</p></div><div class="capability"><span>ARCHITECTURE 04</span><h3>Intent-aware routing</h3><p>Designs for policy servicing, billing, auto claims, claim status, escalations, and after-hours tasks with queue and routing-profile boundaries.</p></div><div class="capability"><span>ARCHITECTURE 05</span><h3>Guarded Agentic AI</h3><p>Proposed conversation automation gathers structured intent and summarizes interactions, while authorized business APIs own validation and sensitive decisions.</p></div><div class="capability"><span>ARCHITECTURE 06</span><h3>Observability by design</h3><p>A traceable contact journey can correlate ContactIds, flow events, contact records, tasks, and secure, minimal customer-context attributes.</p></div></div></div></section>
-<section class="section journey"><div class="container"><div class="section-head"><span class="eyebrow">02 / THE FLAGSHIP CUSTOMER JOURNEY</span><h2>One claim. One continuous story.</h2><p>A realistic demo scenario starts online and illustrates the future end-to-end journey across channels and the specialist team.</p></div><div class="journey-row"><div class="journey-node"><span class="n">01</span><strong>Start online</strong><p>Policyholder initiates fictional auto FNOL on the Neptune website.</p></div><div class="journey-node"><span class="n">02</span><strong>Capture safely</strong><p>Gather minimal structured details, validate and return a simulated reference.</p></div><div class="journey-node"><span class="n">03</span><strong>Continue by channel</strong><p>After consent and approvals, offer voice, chat or message follow-up.</p></div><div class="journey-node"><span class="n">04</span><strong>Route with context</strong><p>Connect targets the Auto Claims queue and passes only approved attributes.</p></div><div class="journey-node"><span class="n">05</span><strong>Trace and resolve</strong><p>Agent or supervisor takes action with auditability and a next-step record.</p></div></div></div></section>
-<section class="section" id="architecture"><div class="container"><div class="section-head"><span class="eyebrow">03 / REFERENCE ARCHITECTURE</span><h2>From the first interaction to a useful outcome.</h2><p>Service boundaries matter: the contact platform routes, AI handles bounded conversation tasks, and authorized insurance APIs decide what can actually change.</p></div><div class="architecture"><div class="architecture-label">CUSTOMER ENTRY / DIGITAL &amp; PSTN</div><div class="entry"><span>☎ Voice</span><span>◌ Web chat</span><span>✉ SMS</span><span>✧ Email</span></div><div class="down">↓</div><div class="core">Amazon Connect <small>Contact entry · Flow orchestration · Queues · Routing profiles · Contact records</small></div><div class="down">↓</div><div class="downstream"><div><strong>Agentic CX + Lex</strong><p>Intent, bounded self-service, contextual summaries, guarded transitions.</p></div><div><strong>Insurance services</strong><p>AWS Lambda + mock policy / claim records in DynamoDB, authorization and validation.</p></div><div><strong>Human agent workspace</strong><p>Policy servicing, billing, claims, escalation and after-hours task journeys.</p></div></div><div class="down">↓</div><div class="entry"><span>CloudWatch / EventBridge</span><span>S3 / KMS</span><span>IAM / MFA / least privilege</span></div><p class="architecture-note">Blueprint, not a representation of a fully deployed system. No live ContactId, SMS verification, phone number assignment, or production data access is claimed.</p></div></div></section>
-<section class="section journey" id="roadmap"><div class="container"><div class="section-head"><span class="eyebrow">04 / IMPLEMENTATION ROADMAP</span><h2>What we're building, and in what order.</h2><p>Small, testable increments for the 14-day lab. One practical integration at a time, with security and console evidence before moving on.</p></div><div class="roadmap"><div class="phase"><small>STAGE 01</small><h3>Experience foundation</h3><p>Responsive Neptune site, guided claim simulation, sample dashboard, help center and technical showcase.</p><span class="status">Frontend prototype created</span></div><div class="phase"><small>STAGE 02</small><h3>Core Amazon Connect</h3><p>Instance, numbers, call flows, queue/routing profiles, 2–3 training agents, baseline call testing.</p><span class="status">Lab build in progress</span></div><div class="phase"><small>STAGE 03</small><h3>Omnichannel journeys</h3><p>Hosted chat widget, callback/task patterns, messaging registration and consent, email prerequisites.</p><span class="status">Requires configuration</span></div><div class="phase"><small>STAGE 04</small><h3>AI + operations</h3><p>Agentic self-service, mock Lambda business APIs, secure context, failure tests, dashboards and teach-back.</p><span class="status">Planned capstone</span></div></div></div></section>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#080d19">
+    <meta name="description"
+        content="Neptune Insurance: a 500-agent target, omnichannel Amazon Connect architecture and interactive insurance customer experience built by Edward Thornton.">
+    <title>Neptune Insurance | Edward “E.T.” Thornton</title>
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Edward E.T. Thornton · Architecture Portfolio">
+    <meta property="og:title" content="Neptune Insurance | Live AWS CX Experience">
+    <meta property="og:description"
+        content="Launch the Neptune Insurance demo website and explore the Amazon Connect omnichannel architecture behind the experience.">
+    <meta property="og:url" content="https://hireedwardthornton.click/neptune-insurance.html">
+    <meta property="og:image" content="https://hireedwardthornton.click/assets/neptune-share.png">
+    <meta property="og:image:secure_url" content="https://hireedwardthornton.click/assets/neptune-share.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:alt"
+        content="Neptune Insurance Amazon Connect omnichannel contact center project artwork">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Neptune Insurance | Live AWS CX Experience">
+    <meta name="twitter:description"
+        content="Explore the interactive customer experience and its AWS architecture case study.">
+    <meta name="twitter:image" content="https://hireedwardthornton.click/assets/neptune-share.png">
+    <link rel="canonical" href="https://hireedwardthornton.click/neptune-insurance.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg: #080b09;
+            --ink: #f1f3e9;
+            --sub: #a6b0a1;
+            --aqua: #c1fa6a;
+            --panel: #111a12;
+            --line: #304032
+        }
 
-<section class="section" id="decisions"><div class="container"><div class="section-head"><div class="eyebrow">05 / ARCHITECTURAL DECISIONS</div><h2>Built like a real system.<br>Documented like one, too.</h2><p>The goal is to practice how an architect makes tradeoffs, not just which buttons to click in the console. This is the deployed foundation and the design logic behind it.</p></div><div class="detail-grid">
-<article class="detail-card"><span class="key">Decision 01 / Edge delivery</span><h3>CloudFront in front of private S3</h3><p>The website is stored in a dedicated, private S3 bucket and served through a CloudFront distribution. Origin Access Control keeps the bucket from being used as a public website endpoint.</p></article>
-<article class="detail-card"><span class="key">Decision 02 / Identity</span><h3>Separate domain, shared portfolio</h3><p>The live customer demo runs at <code>neptune.hireedwardthornton.click</code>. The portfolio case study lives on the main domain, preserving the existing project presentation.</p></article>
-<article class="detail-card"><span class="key">Decision 03 / HTTPS</span><h3>ACM and Route 53</h3><p>Route 53 A and AAAA alias records point to CloudFront. An ACM certificate in us-east-1 secures the custom hostname. DNS validation and HTTPS response were verified during deployment.</p></article>
-<article class="detail-card"><span class="key">Decision 04 / CX boundary</span><h3>Demo interactions before production APIs</h3><p>Claims and sample policy journeys operate as a client-side prototype. Future real processing will require authenticated APIs, validation, durable storage, and auditable events.</p></article>
-<article class="detail-card"><span class="key">Decision 05 / Capacity</span><h3>Design for 500, test small</h3><p>The 500-agent model is a reference architecture, not 500 provisioned Connect users or 500 concurrent calls. Routing profiles, concurrency, and quotas will be modeled separately.</p></article>
-<article class="detail-card"><span class="key">Decision 06 / Messaging</span><h3>Consent is a real boundary</h3><p>SMS will be added only after sender verification, compliant opt-in, and successful delivery tests. A fictional insurance demo is not presented as a licensed insurer.</p></article>
-</div>
-<div class="live-deployment"><div><span class="eyebrow">VERIFIED STATIC WEBSITE / AMAZON CLOUDFRONT</span><h3>The customer-facing experience is live.</h3><p>Explore coverage, walk through a simulated claim, view sample policy information, and try the scripted support preview. These interactions are not yet connected to live insurance or Amazon Connect backends.</p></div><a class="button" href="https://neptune.hireedwardthornton.click/" target="_blank" rel="noopener noreferrer">Launch live website ↗</a></div>
-</div></section>
-<section class="section journey" id="build-log"><div class="container"><div class="section-head"><div class="eyebrow">06 / BUILD LOG</div><h2>Progress you can inspect.</h2><p>This project is versioned by milestone. Completed work is separated from planned capabilities; the GitHub repository tracks source, architecture notes, and next steps.</p></div>
-<div class="status-rows">
-<div class="status-row"><span class="status-dot"></span><div><strong>Done / Static customer site</strong><small>Eight-page Neptune experience, responsive layouts, sample claims, sample policy portal, and help center.</small></div></div>
-<div class="status-row"><span class="status-dot"></span><div><strong>Done / AWS web foundation</strong><small>Private S3 origin, CloudFront delivery, Route 53 aliases, ACM HTTPS certificate, and a verified HTTP 200 response.</small></div></div>
-<div class="status-row"><span class="status-dot pending"></span><div><strong>Next / Amazon Connect channels</strong><small>Wire real voice and embedded web chat; validate routing, queues, agent workspace, and channel permissions.</small></div></div>
-<div class="status-row"><span class="status-dot pending"></span><div><strong>Later / Messaging + agentic AI</strong><small>Sender verification and consent, email/SMS journeys, identity and claims APIs, AI guardrails, and observability.</small></div></div>
-</div>
-<div style="margin-top:35px"><div class="log-grid"><time datetime="2026-11-17">17 NOV 2026</time><div><h3>Customer website + deployment architecture</h3><p>Published Neptune via CloudFront and validated the custom hostname, certificate, private bucket, and homepage.</p></div></div><div class="log-grid"><time datetime="2026-11-18">NEXT MILESTONE</time><div><h3>Source control + Connect foundations</h3><p>Move project source into a dedicated workspace, track milestones in GitHub, and connect the website's first real contact channel.</p></div></div></div>
-<p class="note">This is a fictional training and portfolio project. No real policies are sold, and no real customer submissions should be entered.</p>
-</div></section>
-<section class="section"><div class="container"><div class="disclosure"><p><strong>Project integrity:</strong> This is a training and portfolio demonstration. Neptune Insurance is fictional. The website is runnable as a static prototype; the cloud architecture is a staged implementation and target design. The AWS toll-free messaging registration, if pursued, must truthfully identify the actual registering business (Cloud Systems Direct LLC), not use this fictional insurer as proof of an operating business. Synthetic data only; no real customer records or insurance services.</p></div><div class="outro" style="margin-top:60px"><div><span class="eyebrow">SEE THE EXPERIENCE</span><h2>From architecture to something you can click.</h2><p>Walk the customer journey yourself, try the form, inspect the portal, and explore how the live Amazon Connect integrations will be layered in.</p></div><a class="button" href="https://neptune.hireedwardthornton.click/">Launch Live Demo ↗</a></div></div></section></main>
-<footer class="footer"><div class="container"><span>© 2026 Edward “E.T.” Thornton · Neptune Insurance architecture demonstration</span><a href="index.html">← Back to portfolio</a></div></footer></body></html>
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--ink);
+            font-family: 'DM Sans', sans-serif;
+            line-height: 1.7
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            letter-spacing: -.05em;
+            line-height: 1.1;
+            margin-top: 0
+        }
+
+        p {
+            color: var(--sub)
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit
+        }
+
+        .container {
+            width: min(1160px, calc(100% - 56px));
+            margin: 0 auto
+        }
+
+        .nav {
+            border-bottom: 1px solid #1f3242;
+            background: #0b1521ed;
+            backdrop-filter: blur(15px);
+            position: sticky;
+            top: 0;
+            z-index: 20
+        }
+
+        .navin {
+            min-height: 78px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 18px
+        }
+
+        .wordmark {
+            font-family: 'Space Grotesk';
+            font-weight: 700;
+            font-size: 18px;
+            letter-spacing: -.06em
+        }
+
+        .wordmark span {
+            color: #80e9d1
+        }
+
+        .navlinks {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+            font-size: 12px;
+            font-weight: 800;
+            color: #aebdca
+        }
+
+        .navlinks a:hover {
+            color: #a8efd9
+        }
+
+        .navbtn {
+            border: 1px solid #45626d;
+            padding: 10px 16px;
+            border-radius: 7px
+        }
+
+        .eyebrow {
+            color: #83e5ce;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: .19em;
+            text-transform: uppercase
+        }
+
+        .hero {
+            padding: 95px 0 70px;
+            position: relative;
+            overflow: hidden
+        }
+
+        .hero:before {
+            position: absolute;
+            content: '';
+            width: 650px;
+            height: 650px;
+            right: -220px;
+            top: -200px;
+            border-radius: 50%;
+            background: radial-gradient(circle, #146a70a8, transparent 65%);
+            pointer-events: none
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.05fr .95fr;
+            gap: 50px;
+            align-items: center;
+            position: relative
+        }
+
+        .hero h1 {
+            font-size: clamp(3.5rem, 7vw, 7rem);
+            margin: 24px 0 23px
+        }
+
+        .hero h1 span {
+            color: var(--aqua)
+        }
+
+        .hero p {
+            font-size: 17px;
+            max-width: 590px
+        }
+
+        .chips {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin: 25px 0 30px
+        }
+
+        .chips span,
+        .pill {
+            background: #152b36;
+            border: 1px solid #2b5660;
+            color: #a6d8d9;
+            border-radius: 100px;
+            padding: 8px 13px;
+            font-size: 11px;
+            font-weight: 800
+        }
+
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px
+        }
+
+        .button {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            gap: 13px;
+            min-height: 50px;
+            padding: 0 20px;
+            background: #74dec7;
+            color: #092f3d;
+            font-weight: 800;
+            font-size: 13px;
+            border-radius: 8px
+        }
+
+        .button.secondary {
+            background: transparent;
+            color: #d5eef0;
+            border: 1px solid #466674
+        }
+
+        .hero-screen {
+            position: relative;
+            padding: 20px;
+            border: 1px solid #315766;
+            border-radius: 23px;
+            background: #132430;
+            box-shadow: 0 30px 110px #061722
+        }
+
+        .hero-screen:before {
+            content: '';
+            position: absolute;
+            inset: -20px;
+            border-radius: 30px;
+            border: 1px solid #24616f44;
+            pointer-events: none
+        }
+
+        .browser-head {
+            display: flex;
+            gap: 7px;
+            padding: 8px 0 18px
+        }
+
+        .browser-head span {
+            width: 8px;
+            height: 8px;
+            background: #527482;
+            border-radius: 50%
+        }
+
+        .screen-img {
+            display: block;
+            overflow: hidden;
+            border-radius: 14px;
+            background: #e7f5f1;
+            min-height: 325px;
+            position: relative
+        }
+
+        .screen-img .nav-ui {
+            height: 50px;
+            background: #f8fffc;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 22px;
+            color: #0b5865;
+            font-weight: 800;
+            font-size: 14px
+        }
+
+        .screen-img .nav-ui small {
+            font-size: 10px;
+            color: #7b9ca5
+        }
+
+        .screen-body {
+            padding: 42px 27px;
+            background: radial-gradient(circle at 82% 50%, #b1ebd7, transparent 40%)
+        }
+
+        .screen-body small {
+            color: #137d84;
+            font-size: 9px;
+            font-weight: 800;
+            letter-spacing: .12em
+        }
+
+        .screen-body h3 {
+            font-size: 36px;
+            color: #0b3846;
+            margin: 10px 0
+        }
+
+        .screen-body h3 i {
+            color: #118e89;
+            font-style: normal
+        }
+
+        .screen-body p {
+            font-size: 12px;
+            color: #496d77;
+            max-width: 200px
+        }
+
+        .screen-button {
+            display: inline-block;
+            color: #fff;
+            background: #0a6b75;
+            border-radius: 6px;
+            font-size: 10px;
+            padding: 9px 12px;
+            margin-top: 10px
+        }
+
+        .screen-graphic {
+            position: absolute;
+            width: 190px;
+            height: 190px;
+            border-radius: 50%;
+            background: #7edecf;
+            bottom: 20px;
+            right: -30px;
+            box-shadow: 0 0 0 38px #54c3bc35
+        }
+
+        .screen-graphic:after {
+            content: '⌂';
+            position: absolute;
+            color: #0e5c70;
+            font-size: 150px;
+            line-height: 1;
+            top: 10px;
+            left: 30px
+        }
+
+        .screen-label {
+            position: absolute;
+            right: -24px;
+            bottom: -22px;
+            background: #fff;
+            color: #144e59;
+            padding: 13px 20px;
+            border-radius: 9px;
+            font-size: 12px;
+            font-weight: 800;
+            box-shadow: 0 13px 35px #0006
+        }
+
+        .stats {
+            border-top: 1px solid #1e3a49;
+            border-bottom: 1px solid #1e3a49;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            padding: 28px 0;
+            margin-top: 36px
+        }
+
+        .stat strong {
+            display: block;
+            font-family: 'Space Grotesk';
+            font-size: 29px;
+            letter-spacing: -.07em;
+            color: #dcfdf4
+        }
+
+        .stat span {
+            font-size: 11px;
+            color: #8dabb8;
+            letter-spacing: .02em
+        }
+
+        .section {
+            padding: 100px 0
+        }
+
+        .section-head {
+            max-width: 760px;
+            margin-bottom: 48px
+        }
+
+        .section-head h2 {
+            font-size: clamp(2.4rem, 4.6vw, 4rem);
+            margin: 17px 0
+        }
+
+        .section-head p {
+            font-size: 16px
+        }
+
+        .capabilities {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px
+        }
+
+        .capability {
+            border: 1px solid var(--line);
+            background: var(--panel);
+            border-radius: 16px;
+            padding: 32px
+        }
+
+        .capability span {
+            font-size: 10px;
+            color: var(--aqua);
+            letter-spacing: .16em;
+            font-weight: 800
+        }
+
+        .capability h3 {
+            font-size: 22px;
+            margin: 26px 0 14px
+        }
+
+        .capability p {
+            font-size: 13px
+        }
+
+        .journey {
+            background: #101d29
+        }
+
+        .journey-row {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 11px
+        }
+
+        .journey-node {
+            padding: 22px 17px;
+            background: #192d3a;
+            border: 1px solid #335260;
+            border-radius: 12px;
+            min-height: 180px
+        }
+
+        .journey-node strong {
+            display: block;
+            color: #c6f2e8;
+            font-size: 13px;
+            margin: 16px 0 10px
+        }
+
+        .journey-node p {
+            font-size: 11px;
+            line-height: 1.6
+        }
+
+        .journey-node .n {
+            display: inline-flex;
+            width: 29px;
+            height: 29px;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            background: #2e6b71;
+            font-size: 11px;
+            color: #d7fff3;
+            font-weight: 800
+        }
+
+        .architecture {
+            border: 1px solid #304956;
+            border-radius: 16px;
+            padding: 26px;
+            background: #0d1b27
+        }
+
+        .architecture-label {
+            color: #83d9ce;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: .14em;
+            margin-bottom: 20px
+        }
+
+        .architecture .entry {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap
+        }
+
+        .architecture .entry span {
+            flex: 1;
+            text-align: center;
+            min-width: 100px;
+            padding: 17px 12px;
+            background: #1b3e4d;
+            border: 1px solid #326779;
+            border-radius: 8px;
+            color: #c9f1e8;
+            font-size: 12px;
+            font-weight: 800
+        }
+
+        .architecture .down {
+            text-align: center;
+            font-size: 24px;
+            color: #78d8ca;
+            padding: 15px
+        }
+
+        .architecture .core {
+            padding: 22px;
+            border: 1px solid #4f9e92;
+            background: #18474c;
+            border-radius: 11px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 800
+        }
+
+        .architecture .core small {
+            display: block;
+            color: #c7e3dd;
+            font-size: 12px;
+            font-weight: 500
+        }
+
+        .architecture .downstream {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 13px
+        }
+
+        .architecture .downstream>div {
+            background: #132c3a;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #315366
+        }
+
+        .architecture .downstream strong {
+            display: block;
+            font-size: 12px;
+            color: #c9f6e8
+        }
+
+        .architecture .downstream p {
+            font-size: 11px;
+            margin-bottom: 0
+        }
+
+        .architecture-note {
+            font-size: 12px;
+            color: #9bb7bd;
+            margin-top: 18px
+        }
+
+        .roadmap {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 13px
+        }
+
+        .phase {
+            padding: 25px;
+            border: 1px solid #294854;
+            border-radius: 12px
+        }
+
+        .phase small {
+            color: #8ee9d2;
+            letter-spacing: .13em;
+            font-size: 10px;
+            font-weight: 800
+        }
+
+        .phase h3 {
+            font-size: 19px;
+            margin: 20px 0 10px
+        }
+
+        .phase p {
+            font-size: 12px
+        }
+
+        .status {
+            display: inline-block;
+            font-size: 10px;
+            border: 1px solid #487c77;
+            color: #b1e4d5;
+            padding: 5px 9px;
+            border-radius: 100px;
+            margin-top: 6px
+        }
+
+        .disclosure {
+            border-left: 3px solid var(--aqua);
+            padding: 5px 25px;
+            background: #0e202b
+        }
+
+        .disclosure p {
+            margin: 0;
+            font-size: 13px
+        }
+
+        .outro {
+            background: #0d3441;
+            border-radius: 19px;
+            padding: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 25px
+        }
+
+        .outro h2 {
+            font-size: 42px;
+            margin: 14px 0
+        }
+
+        .outro p {
+            max-width: 530px
+        }
+
+        .footer {
+            margin-top: 90px;
+            border-top: 1px solid #29404d;
+            padding: 25px 0;
+            color: #839caa;
+            font-size: 12px
+        }
+
+        .footer .container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px
+        }
+
+        @media(max-width:900px) {
+
+            .hero-grid,
+            .journey-row {
+                grid-template-columns: 1fr
+            }
+
+            .hero-screen {
+                max-width: 520px
+            }
+
+            .capabilities {
+                grid-template-columns: 1fr 1fr
+            }
+
+            .journey-row {
+                grid-template-columns: repeat(3, 1fr)
+            }
+
+            .stats {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .roadmap {
+                grid-template-columns: 1fr 1fr
+            }
+        }
+
+        @media(max-width:620px) {
+            .container {
+                width: calc(100% - 32px)
+            }
+
+            .navin {
+                min-height: 65px
+            }
+
+            .navlinks a:not(.navbtn) {
+                display: none
+            }
+
+            .hero {
+                padding: 55px 0 40px
+            }
+
+            .hero h1 {
+                font-size: 3.8rem
+            }
+
+            .hero p {
+                font-size: 15px
+            }
+
+            .hero-screen {
+                padding: 12px
+            }
+
+            .screen-img {
+                min-height: 280px
+            }
+
+            .screen-graphic {
+                width: 130px;
+                height: 130px
+            }
+
+            .screen-graphic:after {
+                font-size: 100px
+            }
+
+            .screen-body h3 {
+                font-size: 29px
+            }
+
+            .screen-label {
+                right: 0
+            }
+
+            .stats {
+                gap: 22px
+            }
+
+            .section {
+                padding: 70px 0
+            }
+
+            .capabilities,
+            .journey-row,
+            .roadmap,
+            .architecture .downstream {
+                grid-template-columns: 1fr
+            }
+
+            .outro {
+                padding: 30px;
+                display: block
+            }
+
+            .outro h2 {
+                font-size: 32px
+            }
+
+            .footer .container {
+                display: block
+            }
+
+            .architecture .entry span {
+                min-width: 110px
+            }
+        }
+
+        @media(prefers-reduced-motion:reduce) {
+            html {
+                scroll-behavior: auto
+            }
+        }
+
+        /* Integrates with the dark / lime portfolio aesthetic; Neptune's customer site retains its own branding. */
+        .project-notice {
+            background: #142115;
+            border: 1px solid #426a38;
+            color: #d9f2c0;
+            border-radius: 10px;
+            padding: 12px 16px;
+            margin: 18px 0 0;
+            font-size: 12px;
+            max-width: 600px
+        }
+
+        .project-notice strong {
+            color: #c1fa6a
+        }
+
+        .detail-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px
+        }
+
+        .detail-card {
+            background: #121b15;
+            border: 1px solid #314332;
+            border-radius: 14px;
+            padding: 27px
+        }
+
+        .detail-card .key {
+            display: block;
+            font-family: monospace;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: .14em;
+            color: #c1fa6a;
+            text-transform: uppercase;
+            margin-bottom: 17px
+        }
+
+        .detail-card h3 {
+            font-size: 20px;
+            margin: 0 0 12px
+        }
+
+        .detail-card p {
+            font-size: 13px;
+            margin: 0;
+            line-height: 1.7
+        }
+
+        .live-deployment {
+            margin-top: 36px;
+            padding: 26px;
+            border: 1px solid #4b633b;
+            border-radius: 14px;
+            background: linear-gradient(120deg, #17311d, #112019 72%);
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            justify-content: space-between
+        }
+
+        .live-deployment h3 {
+            font-size: 24px;
+            margin: 8px 0
+        }
+
+        .live-deployment p {
+            font-size: 13px;
+            margin: 0;
+            max-width: 670px
+        }
+
+        .live-deployment .button {
+            white-space: nowrap
+        }
+
+        .status-rows {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 13px
+        }
+
+        .status-row {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            padding: 19px 20px;
+            background: #121b15;
+            border: 1px solid #314332;
+            border-radius: 12px
+        }
+
+        .status-dot {
+            display: block;
+            width: 9px;
+            height: 9px;
+            margin-top: 6px;
+            flex-shrink: 0;
+            border-radius: 50%;
+            background: #c1fa6a
+        }
+
+        .status-dot.pending {
+            background: #9b9e8d
+        }
+
+        .status-row strong {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 5px
+        }
+
+        .status-row small {
+            display: block;
+            color: #a5b4a3;
+            font-size: 12px;
+            line-height: 1.6
+        }
+
+        .log-grid {
+            display: grid;
+            grid-template-columns: 170px 1fr;
+            gap: 16px;
+            border-top: 1px solid #314332;
+            padding: 19px 0
+        }
+
+        .log-grid time {
+            font-family: monospace;
+            font-size: 11px;
+            color: #b6ee80;
+            font-weight: 700
+        }
+
+        .log-grid h3 {
+            font-size: 18px;
+            margin-bottom: 5px
+        }
+
+        .log-grid p {
+            font-size: 13px;
+            margin: 0
+        }
+
+        .note {
+            font-size: 12px;
+            color: #a8b5a4;
+            margin-top: 23px
+        }
+
+        @media(max-width:850px) {
+            .detail-grid {
+                grid-template-columns: 1fr 1fr
+            }
+
+            .live-deployment {
+                flex-direction: column;
+                align-items: flex-start
+            }
+        }
+
+        @media(max-width:620px) {
+
+            .detail-grid,
+            .status-rows {
+                grid-template-columns: 1fr
+            }
+
+            .log-grid {
+                grid-template-columns: 1fr;
+                gap: 5px
+            }
+
+            .navlinks a[href="#build-log"] {
+                display: none
+            }
+        }
+    </style>
+    <style id="neptune-cosmic-refresh">
+        :root {
+            --bg: #080b09;
+            --ink: #f1f3e9;
+            --sub: #a5b5a6;
+            --aqua: #c1fa6a;
+            --panel: #111812;
+            --line: #2d432f
+        }
+
+        body {
+            background: #080b09;
+            color: #f1f3e9
+        }
+
+        p {
+            color: #a7b6a8
+        }
+
+        .nav {
+            background: #080b09eb;
+            border-color: #2b3e2b
+        }
+
+        .navlinks {
+            color: #b2bfab
+        }
+
+        .navlinks a:hover,
+        .wordmark span {
+            color: #c1fa6a
+        }
+
+        .navbtn {
+            border-color: #c1fa6a70
+        }
+
+        .eyebrow {
+            font-family: 'Courier New', monospace;
+            font-size: 10px;
+            color: #c1fa6a;
+            letter-spacing: .18em
+        }
+
+        .cosmic-hero {
+            padding: 90px 0 45px;
+            background: #080b09;
+            overflow: hidden;
+            isolation: isolate;
+            border-bottom: 1px solid #344b35;
+            position: relative
+        }
+
+        .cosmic-hero:before {
+            display: none
+        }
+
+        .cosmic-grid {
+            position: absolute;
+            inset: 0;
+            z-index: -2;
+            background: linear-gradient(#c1fa6a0b 1px, transparent 1px), linear-gradient(90deg, #c1fa6a0b 1px, transparent 1px);
+            background-size: 74px 74px;
+            mask-image: linear-gradient(90deg, #000, transparent 95%)
+        }
+
+        .cosmic-glow {
+            position: absolute;
+            z-index: -1;
+            inset: 0;
+            background: radial-gradient(circle at 82% 33%, #4f8a3470, transparent 28%), radial-gradient(circle at 0% 50%, #142b174d, transparent 42%)
+        }
+
+        .cosmic-hero .hero-grid {
+            grid-template-columns: 1.05fr .95fr;
+            gap: 50px;
+            align-items: center
+        }
+
+        .hero-copy {
+            position: relative;
+            z-index: 2
+        }
+
+        .hero-signal,
+        .hero-disclaimer {
+            font: 10px/1.7 'Courier New', monospace;
+            color: #a8c69c;
+            letter-spacing: 1.3px
+        }
+
+        .hero-signal {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            opacity: .92
+        }
+
+        .signal-led {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #c1fa6a;
+            box-shadow: 0 0 9px #aaff67;
+            display: inline-block;
+            flex: none
+        }
+
+        .hero-copy .eyebrow {
+            margin: 31px 0 13px
+        }
+
+        .cosmic-hero h1 {
+            font-size: clamp(64px, 7.2vw, 110px);
+            line-height: .94;
+            letter-spacing: -.075em;
+            margin: 12px 0 22px;
+            font-weight: 500
+        }
+
+        .cosmic-hero h1 span {
+            display: block;
+            color: #c1fa6a
+        }
+
+        .hero-tagline {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(21px, 2vw, 31px);
+            line-height: 1.2;
+            color: #f1f3e9;
+            margin: 0 0 17px
+        }
+
+        .hero-tagline strong {
+            color: #b6d6a5;
+            font-weight: 500
+        }
+
+        .hero-subcopy {
+            font-size: 15px !important;
+            line-height: 1.8 !important;
+            max-width: 605px;
+            color: #b5c2b0;
+            margin: 0 0 26px !important
+        }
+
+        .hero-primary,
+        .portal-launch {
+            background: #c1fa6a;
+            color: #12200a;
+            border-radius: 4px;
+            min-height: 55px;
+            letter-spacing: .02em
+        }
+
+        .hero-primary:hover,
+        .portal-launch:hover {
+            background: #e0ffb2
+        }
+
+        .hero-secondary {
+            color: #e7f1df;
+            border: 1px solid #8ab87977;
+            border-radius: 4px
+        }
+
+        .actions .button {
+            gap: 14px
+        }
+
+        .hero-disclaimer {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            font-size: 9px;
+            margin-top: 26px !important
+        }
+
+        .neptune-image-stage {
+            display: block;
+            position: relative;
+            aspect-ratio: 1.08;
+            min-height: 460px;
+            border-radius: 12px;
+            overflow: visible;
+            isolation: isolate;
+            transition: transform .2s
+        }
+
+        .neptune-image-stage:hover {
+            transform: translateY(-5px)
+        }
+
+        .neptune-image-stage:before {
+            content: "";
+            position: absolute;
+            inset: -10px;
+            z-index: -2;
+            border: 1px solid #9ad77a4f;
+            border-radius: 15px
+        }
+
+        .neptune-image-stage:after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            border-radius: 10px;
+            background: linear-gradient(0deg, #06140d 0%, #06140d22 28%, #06140d11 58%, #06140d7a 100%);
+            pointer-events: none
+        }
+
+        .neptune-image-stage>img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            object-fit: cover;
+            object-position: center;
+            box-shadow: 0 25px 90px #0009
+        }
+
+        .orb-ring {
+            position: absolute;
+            z-index: -1;
+            width: 460px;
+            height: 460px;
+            border-radius: 50%;
+            border: 1px solid #b3f18235;
+            top: -35px;
+            right: -40px;
+            pointer-events: none
+        }
+
+        .ring-two {
+            width: 590px;
+            height: 590px;
+            right: -105px;
+            top: -100px;
+            opacity: .5
+        }
+
+        .stage-topline,
+        .stage-live,
+        .stage-bottom {
+            z-index: 2;
+            position: absolute;
+            font-family: 'Courier New', monospace
+        }
+
+        .stage-topline {
+            top: 21px;
+            left: 22px;
+            font-size: 9px;
+            letter-spacing: 2px;
+            color: #e0faca
+        }
+
+        .stage-live {
+            top: 18px;
+            right: 18px;
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            color: #c1fa6a;
+            font-size: 10px;
+            background: #080f0bdc;
+            padding: 9px;
+            border: 1px solid #c1fa6a5c;
+            border-radius: 3px
+        }
+
+        .stage-bottom {
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 22px 24px;
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            align-items: center;
+            border-top: 1px solid #c1fa6a2b;
+            background: #0c1b14ac;
+            backdrop-filter: blur(10px)
+        }
+
+        .stage-bottom strong {
+            color: #c1fa6a;
+            font-size: 12px
+        }
+
+        .stage-bottom small {
+            color: #adbea5;
+            font-size: 10px
+        }
+
+        .stage-corner {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            z-index: 2
+        }
+
+        .stage-corner-tl {
+            left: -2px;
+            top: -2px;
+            border-top: 2px solid #c1fa6a;
+            border-left: 2px solid #c1fa6a
+        }
+
+        .stage-corner-br {
+            right: -2px;
+            bottom: -2px;
+            border-bottom: 2px solid #c1fa6a;
+            border-right: 2px solid #c1fa6a
+        }
+
+        .metrics-row {
+            border-top: 1px solid #344b354d;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin-top: 76px;
+            padding-top: 28px
+        }
+
+        .metrics-row>div {
+            border-left: 1px solid #3b563c;
+            padding-left: 20px
+        }
+
+        .metrics-row strong {
+            display: block;
+            font: clamp(28px, 3.5vw, 50px)/1 'Space Grotesk', sans-serif;
+            color: #c1fa6a
+        }
+
+        .metrics-row span {
+            display: block;
+            font: 9px/1.65 'Courier New', monospace;
+            color: #9cac96;
+            letter-spacing: .08em;
+            margin-top: 10px
+        }
+
+        .portal-spotlight {
+            padding: 100px 0;
+            background: radial-gradient(circle at 14% 40%, #254d2c30, transparent 50%), #101811;
+            border-bottom: 1px solid #29402c
+        }
+
+        .portal-grid {
+            display: grid;
+            grid-template-columns: 1.07fr .93fr;
+            align-items: center;
+            gap: 78px
+        }
+
+        .portal-visual {
+            background: #09120d;
+            border: 1px solid #506d4d;
+            border-radius: 13px;
+            padding: 15px;
+            box-shadow: 0 40px 100px #0008;
+            transform: perspective(1000px) rotateY(3deg)
+        }
+
+        .preview-browser-head {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 3px 15px;
+            color: #9fad9c
+        }
+
+        .preview-browser-head span {
+            width: 8px;
+            height: 8px;
+            background: #6c8069;
+            border-radius: 50%
+        }
+
+        .preview-browser-head small {
+            font: 9px 'Courier New', monospace;
+            margin-left: 12px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap
+        }
+
+        .preview-browser-page {
+            border-radius: 5px;
+            overflow: hidden;
+            background: #effaf7
+        }
+
+        .preview-mini-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 22px;
+            background: #fafffe;
+            color: #0b5d64;
+            font-weight: 800
+        }
+
+        .preview-mini-top small {
+            color: #6f8d8b;
+            font-size: 9px
+        }
+
+        .preview-mini-body {
+            position: relative;
+            overflow: hidden;
+            min-height: 320px;
+            padding: 43px 33px;
+            background: radial-gradient(circle at 85% 45%, #74d7c8, transparent 49%), #dff7f1
+        }
+
+        .preview-mini-body>span:first-child {
+            font-size: 10px;
+            color: #1a777e;
+            letter-spacing: .15em;
+            font-weight: 800
+        }
+
+        .preview-mini-body h3 {
+            position: relative;
+            z-index: 2;
+            font-size: clamp(36px, 4vw, 61px);
+            margin: 12px 0;
+            color: #0a3644
+        }
+
+        .preview-mini-body h3 em {
+            color: #088d90;
+            font-style: normal
+        }
+
+        .preview-mini-body p {
+            position: relative;
+            z-index: 2;
+            font-size: 12px;
+            max-width: 260px;
+            color: #376972
+        }
+
+        .mini-cta {
+            position: relative;
+            z-index: 2;
+            display: inline-flex;
+            padding: 12px 14px;
+            background: #0b626d;
+            color: #fff;
+            margin-top: 15px;
+            font-size: 10px;
+            font-weight: 700;
+            border-radius: 4px
+        }
+
+        .preview-planet {
+            position: absolute;
+            border-radius: 50%;
+            width: 250px;
+            height: 250px;
+            right: -65px;
+            bottom: -40px;
+            border: 30px solid #e3fffb77;
+            box-shadow: 0 0 0 40px #3cbbb424;
+            background: #74cfbe
+        }
+
+        .portal-copy .eyebrow {
+            margin-bottom: 20px
+        }
+
+        .portal-copy h2 {
+            font-size: clamp(36px, 4.7vw, 62px);
+            font-weight: 500;
+            letter-spacing: -.065em;
+            margin: 0 0 22px
+        }
+
+        .portal-copy h2 span {
+            color: #c1fa6a
+        }
+
+        .portal-copy>p {
+            line-height: 1.8;
+            font-size: 15px
+        }
+
+        .portal-copy ul {
+            padding: 0;
+            margin: 22px 0 32px;
+            list-style: none
+        }
+
+        .portal-copy li {
+            color: #d8e6d3;
+            padding: 11px 0;
+            border-bottom: 1px solid #ffffff17;
+            font-size: 13px
+        }
+
+        .portal-copy li span {
+            font: 10px 'Courier New', monospace;
+            color: #c1fa6a;
+            margin-right: 15px
+        }
+
+        .portal-copy .portal-caption {
+            font-size: 10px;
+            color: #94a594;
+            margin: 18px 0 0
+        }
+
+        .section-head h2 {
+            font-weight: 500
+        }
+
+        .capability,
+        .detail-card,
+        .status-row {
+            background: #121b14;
+            border-color: #304834
+        }
+
+        .capability span,
+        .detail-card .key,
+        .phase small {
+            color: #c1fa6a
+        }
+
+        .journey {
+            background: #0e160f
+        }
+
+        .journey-node {
+            background: #18231a;
+            border-color: #3a563b
+        }
+
+        .journey-node strong,
+        .architecture .downstream strong {
+            color: #d6e8c8
+        }
+
+        .journey-node .n {
+            background: #2d4e2c;
+            color: #ceffa6
+        }
+
+        .architecture {
+            background: #0b150e;
+            border-color: #39553a
+        }
+
+        .architecture-label {
+            color: #c1fa6a
+        }
+
+        .architecture .entry span {
+            background: #1a331e;
+            border-color: #3b653a;
+            color: #e2f7d8
+        }
+
+        .architecture .down {
+            color: #c1fa6a
+        }
+
+        .architecture .core {
+            background: #264323;
+            border-color: #7ca759;
+            color: #f1f5e9
+        }
+
+        .architecture .core small {
+            color: #bdccaf
+        }
+
+        .architecture .downstream>div {
+            background: #142817;
+            border-color: #315d3c
+        }
+
+        .architecture-note {
+            color: #acc1a6
+        }
+
+        .phase {
+            border-color: #365137
+        }
+
+        .status {
+            border-color: #6a945b;
+            color: #c1fa6a
+        }
+
+        .live-deployment {
+            border-color: #4b703c;
+            background: linear-gradient(110deg, #1e3c23, #112019)
+        }
+
+        .live-deployment .button,
+        .outro .button {
+            background: #c1fa6a;
+            color: #10200c
+        }
+
+        .outro {
+            background: #15321a;
+            border: 1px solid #3c663c
+        }
+
+        .disclosure {
+            border-color: #c1fa6a;
+            background: #112114
+        }
+
+        .log-grid {
+            border-color: #2e442e
+        }
+
+        .log-grid time {
+            color: #c1fa6a
+        }
+
+        .footer {
+            border-color: #29432c
+        }
+
+        .footer a:hover {
+            color: #c1fa6a
+        }
+
+        @media(max-width:1000px) {
+
+            .cosmic-hero .hero-grid,
+            .portal-grid {
+                grid-template-columns: 1fr;
+                gap: 44px
+            }
+
+            .neptune-image-stage {
+                min-height: 420px;
+                max-width: 690px;
+                aspect-ratio: 1.42
+            }
+
+            .portal-visual {
+                max-width: 670px;
+                transform: none
+            }
+
+            .metrics-row {
+                grid-template-columns: repeat(2, 1fr)
+            }
+        }
+
+        @media(max-width:650px) {
+            .cosmic-hero {
+                padding: 58px 0 36px
+            }
+
+            .cosmic-hero h1 {
+                font-size: clamp(55px, 12vw, 78px)
+            }
+
+            .hero-tagline {
+                font-size: 22px
+            }
+
+            .neptune-image-stage {
+                min-height: 315px;
+                aspect-ratio: 1
+            }
+
+            .stage-bottom {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 15px
+            }
+
+            .stage-live {
+                font-size: 8px
+            }
+
+            .stage-topline {
+                font-size: 8px
+            }
+
+            .metrics-row {
+                margin-top: 42px;
+                gap: 22px
+            }
+
+            .metrics-row span {
+                font-size: 8px
+            }
+
+            .portal-spotlight {
+                padding: 65px 0
+            }
+
+            .portal-copy h2 {
+                font-size: 41px
+            }
+
+            .preview-mini-top {
+                padding: 13px
+            }
+
+            .preview-mini-top small {
+                display: none
+            }
+
+            .preview-mini-body {
+                min-height: 300px;
+                padding: 38px 20px
+            }
+
+            .preview-planet {
+                opacity: .6
+            }
+
+            .navlinks a:not(.navbtn) {
+                display: none
+            }
+        }
+
+        @media(prefers-reduced-motion:reduce) {
+            .neptune-image-stage {
+                transition: none
+            }
+        }
+    </style>
+
+    <!-- NEPTUNE_IMAGE_DISPLAY_FIX_START -->
+    <style id="neptune-image-display-fix">
+        /* Full-width art in its native aspect ratio: no square cover-crop and no overlaid footer. */
+        .neptune-image-stage {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            aspect-ratio: auto !important;
+            min-height: 0 !important;
+            max-width: 100%;
+            overflow: hidden;
+            padding: 18px 18px 0;
+            border: 1px solid #557a40;
+            background: radial-gradient(circle at 75% 30%, #183422, #090f0b 73%)
+        }
+
+        .neptune-image-stage:after {
+            display: none
+        }
+
+        .neptune-image-stage>img {
+            position: relative;
+            inset: auto;
+            width: 100%;
+            height: auto;
+            max-height: none;
+            display: block;
+            object-fit: contain;
+            object-position: center;
+            border-radius: 8px;
+            box-shadow: 0 14px 40px #0008;
+            background: #0b160f
+        }
+
+        .neptune-image-stage .orb-ring,
+        .neptune-image-stage .stage-corner {
+            display: none
+        }
+
+        .neptune-image-stage .stage-topline,
+        .neptune-image-stage .stage-live,
+        .neptune-image-stage .stage-bottom {
+            position: static;
+            z-index: 2
+        }
+
+        .neptune-image-stage .stage-topline {
+            order: -2;
+            margin: 0 0 10px;
+            display: block;
+            line-height: 1.4
+        }
+
+        .neptune-image-stage .stage-live {
+            order: -1;
+            align-self: flex-start;
+            margin: 0 0 12px
+        }
+
+        .neptune-image-stage .stage-bottom {
+            order: 3;
+            margin: 15px -18px 0;
+            padding: 17px 18px;
+            background: #102017;
+            border-top: 1px solid #4b713b;
+            backdrop-filter: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between
+        }
+
+        @media(max-width:1000px) {
+            .neptune-image-stage {
+                aspect-ratio: auto !important;
+                min-height: 0 !important;
+                max-width: 690px
+            }
+        }
+
+        @media(max-width:650px) {
+            .neptune-image-stage {
+                aspect-ratio: auto !important;
+                min-height: 0 !important;
+                padding: 12px 12px 0
+            }
+
+            .neptune-image-stage .stage-bottom {
+                margin: 12px -12px 0;
+                padding: 14px
+            }
+
+            .neptune-image-stage .stage-live {
+                font-size: 9px
+            }
+        }
+    </style>
+    <!-- NEPTUNE_IMAGE_DISPLAY_FIX_END -->
+
+    <!-- Matching portfolio header only: copied branding geometry, palette and alien logo; Neptune page links preserved -->
+    <style id="et-portfolio-header-match">
+        .et-topbar {
+            --et-lime: #c1fa6a;
+            --et-ink: #f1f3e9;
+            position: relative;
+            z-index: 40;
+            background: #080b09ed;
+            border-bottom: 1px solid #ffffff17;
+            color: var(--et-ink);
+            font-family: 'DM Sans', Arial, sans-serif
+        }
+
+        .et-topbar * {
+            box-sizing: border-box
+        }
+
+        .et-topbar .et-nav-wrap {
+            width: min(1240px, calc(100% - 96px));
+            margin: 0 auto;
+            height: 94px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 28px
+        }
+
+        .et-topbar a {
+            color: inherit;
+            text-decoration: none
+        }
+
+        .et-topbar a:hover,
+        .et-topbar a:focus-visible {
+            color: var(--et-lime)
+        }
+
+        .et-topbar a:focus-visible,
+        .et-topbar button:focus-visible {
+            outline: 2px solid var(--et-lime);
+            outline-offset: 5px
+        }
+
+        .et-brand {
+            display: flex;
+            gap: 13px;
+            align-items: center;
+            flex-shrink: 0;
+            font-family: 'Space Grotesk', Arial, sans-serif;
+            font-size: 11px;
+            letter-spacing: 2px;
+            line-height: 1.4;
+            white-space: nowrap
+        }
+
+        .et-brand b {
+            font-size: 14px;
+            letter-spacing: 1.4px
+        }
+
+        .et-brand-et {
+            font-style: normal;
+            color: var(--et-lime);
+            font-size: 16px;
+            letter-spacing: 1px;
+            margin-left: 5px
+        }
+
+        .et-brand-dot {
+            color: var(--et-lime)
+        }
+
+        .et-alien-logo {
+            width: 31px;
+            height: 38px;
+            fill: var(--et-lime);
+            flex: none
+        }
+
+        .et-alien-logo .et-eyes {
+            fill: #111
+        }
+
+        .et-section-nav {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 25px;
+            font-size: 13px;
+            white-space: nowrap
+        }
+
+        .et-section-nav>a:not(.et-nav-cta) {
+            color: #b6bdb4
+        }
+
+        .et-section-nav>a:not(.et-nav-cta):hover {
+            color: var(--et-lime)
+        }
+
+        .et-nav-cta {
+            padding: 13px 18px;
+            border: 1px solid #c1fa6a55;
+            border-radius: 4px;
+            font-weight: 600
+        }
+
+        .et-nav-cta span {
+            margin-left: 18px;
+            color: var(--et-lime)
+        }
+
+        .et-top-socials {
+            display: flex;
+            align-items: center;
+            gap: 11px
+        }
+
+        .et-top-socials a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 29px;
+            height: 29px;
+            border: 1px solid #b9caac2e;
+            border-radius: 50%;
+            color: #b6bdb4
+        }
+
+        .et-top-socials svg {
+            width: 14px;
+            height: 14px;
+            fill: currentColor
+        }
+
+        .et-top-socials a span {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            clip-path: inset(50%);
+            white-space: nowrap
+        }
+
+        .et-menu-toggle {
+            display: none
+        }
+
+        @media(max-width:1160px) {
+            .et-topbar .et-nav-wrap {
+                width: calc(100% - 64px);
+                gap: 18px
+            }
+
+            .et-section-nav {
+                gap: 15px;
+                font-size: 12px
+            }
+
+            .et-nav-cta {
+                padding: 11px 12px
+            }
+
+            .et-nav-cta span {
+                margin-left: 7px
+            }
+        }
+
+        @media(max-width:940px) {
+            .et-topbar .et-nav-wrap {
+                height: 78px;
+                width: calc(100% - 48px)
+            }
+
+            .et-top-socials {
+                display: none
+            }
+
+            .et-section-nav {
+                gap: 13px;
+                font-size: 11px
+            }
+        }
+
+        @media(max-width:740px) {
+            .et-topbar .et-nav-wrap {
+                height: 76px;
+                width: calc(100% - 40px)
+            }
+
+            .et-brand {
+                font-size: 9px;
+                gap: 9px
+            }
+
+            .et-brand b {
+                font-size: 12px
+            }
+
+            .et-brand-et {
+                font-size: 14px
+            }
+
+            .et-alien-logo {
+                width: 26px;
+                height: 33px
+            }
+
+            .et-menu-toggle {
+                display: flex;
+                gap: 15px;
+                align-items: center;
+                background: none;
+                border: 1px solid #bbd4953d;
+                color: var(--et-ink);
+                padding: 9px 11px;
+                font: 9px 'Courier New', monospace;
+                letter-spacing: 1px;
+                border-radius: 3px;
+                cursor: pointer
+            }
+
+            .et-menu-toggle>span {
+                font-size: 16px;
+                color: var(--et-lime)
+            }
+
+            .et-section-nav {
+                display: none;
+                position: absolute;
+                top: 76px;
+                left: 0;
+                width: 100%;
+                padding: 25px;
+                background: #0d140e;
+                border-bottom: 1px solid #ffffff17;
+                font-size: 14px;
+                box-shadow: 0 20px 25px #0008
+            }
+
+            .et-section-nav.open {
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 22px
+            }
+
+            .et-nav-cta {
+                padding: 13px
+            }
+
+            .et-top-socials {
+                display: none
+            }
+        }
+
+        @media(prefers-reduced-motion:reduce) {
+            .et-topbar * {
+                scroll-behavior: auto
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="et-topbar">
+        <div class="et-nav-wrap"><a class="et-brand" href="https://hireedwardthornton.click/" aria-label="Edward E.T. Thornton home"><svg
+                    class="et-alien-logo" viewBox="0 0 40 46" aria-hidden="true">
+                    <path d="M20 2C-8 2 1 30 20 44C39 30 48 2 20 2Z" />
+                    <path class="et-eyes" d="M7 17Q20 17 16 29Q7 29 7 17M33 17Q20 17 24 29Q33 29 33 17" />
+                </svg><span>EDWARD <em class="et-brand-et">“E.T.”</em><br><b>THORNTON<span
+                            class="et-brand-dot">.</span></b></span></a>
+            <nav class="et-section-nav" aria-label="Neptune case study navigation">
+                <a href="#overview">Overview</a>
+                <a href="#architecture">Architecture</a>
+                <a href="#roadmap">Roadmap</a>
+                <a href="#build-log">Build log</a>
+                <a href="https://neptune.hireedwardthornton.click/" class="et-nav-cta" target="_blank"
+                    rel="noopener noreferrer">Open Neptune <span>↗</span></a>
+            </nav>
+            <div class="et-top-socials" aria-label="Connect with Edward"><a href="https://github.com/RedLeopard"
+                    target="_blank" rel="noopener" aria-label="Edward Thornton on GitHub"><svg viewBox="0 0 24 24"
+                        aria-hidden="true">
+                        <path
+                            d="M12 .8a11.3 11.3 0 0 0-3.57 22c.56.1.77-.24.77-.54v-2.1c-3.14.68-3.8-1.34-3.8-1.34-.51-1.3-1.26-1.64-1.26-1.64-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.16 1.74 1.16 1.01 1.73 2.65 1.23 3.3.94.1-.73.4-1.23.72-1.51-2.51-.29-5.15-1.26-5.15-5.59 0-1.23.44-2.24 1.16-3.03-.12-.28-.5-1.43.11-2.98 0 0 .95-.3 3.1 1.16a10.8 10.8 0 0 1 5.64 0c2.15-1.46 3.1-1.16 3.1-1.16.61 1.55.23 2.7.11 2.98a4.35 4.35 0 0 1 1.16 3.03c0 4.34-2.65 5.3-5.17 5.58.41.35.77 1.04.77 2.1v3.1c0 .3.2.65.78.54A11.3 11.3 0 0 0 12 .8Z" />
+                    </svg><span>GitHub</span></a><a href="https://www.linkedin.com/in/edwardtthornton/" target="_blank"
+                    rel="noopener" aria-label="Edward Thornton on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M20.5 1h-17A2.5 2.5 0 0 0 1 3.5v17A2.5 2.5 0 0 0 3.5 23h17a2.5 2.5 0 0 0 2.5-2.5v-17A2.5 2.5 0 0 0 20.5 1ZM7.5 19h-3V9h3V19ZM6 7.7a1.8 1.8 0 1 1 0-3.6 1.8 1.8 0 0 1 0 3.6ZM19.5 19h-3v-5.1c0-1.2-.1-2.7-1.7-2.7s-1.9 1.3-1.9 2.6V19h-3V9h2.9v1.4h.1a3.2 3.2 0 0 1 2.8-1.6c3 0 3.8 2 3.8 4.5V19Z" />
+                    </svg><span>LinkedIn</span></a></div><button class="et-menu-toggle" type="button"
+                aria-label="Open navigation" aria-expanded="false">MENU
+                <span>+</span></button>
+        </div>
+    </header>
+    <main>
+        <section class="hero cosmic-hero" id="top">
+            <div class="cosmic-grid" aria-hidden="true"></div>
+            <div class="cosmic-glow" aria-hidden="true"></div>
+            <div class="container hero-grid">
+                <div class="hero-copy"><span class="hero-signal"><span class="signal-led"></span> SIGNAL / 003
+                        &nbsp;•&nbsp; AWS PROJECT TRANSMISSION</span>
+                    <p class="eyebrow">ARCHITECTURE CASE STUDY / AMAZON CONNECT + AWS</p>
+                    <h1>Neptune <span>Insurance.</span></h1>
+                    <p class="hero-tagline">An entire customer experience.<br><strong>One otherworldly
+                            architecture.</strong></p>
+                    <p class="hero-subcopy">A real AWS-hosted insurance demo with interactive claims, policy and support
+                        experiences. Behind the interface: a staged omnichannel Amazon Connect architecture, designed to
+                        grow without losing the customer journey.</p>
+                    <div class="actions"><a class="button hero-primary" href="https://neptune.hireedwardthornton.click/"
+                            target="_blank" rel="noopener noreferrer">LAUNCH THE LIVE WEBSITE <b>↗</b></a><a
+                            class="button secondary hero-secondary" href="#architecture">EXPLORE ARCHITECTURE ↓</a>
+                    </div>
+                    <p class="hero-disclaimer"><span class="signal-led"></span> LIVE STATIC PROTOTYPE &nbsp; / &nbsp;
+                        CONNECT INTEGRATIONS IN PROGRESS</p>
+                </div>
+                <a class="neptune-image-stage" href="https://neptune.hireedwardthornton.click/" target="_blank"
+                    rel="noopener noreferrer" aria-label="Launch the Neptune Insurance live website">
+                    <div class="orb-ring ring-one" aria-hidden="true"></div>
+                    <div class="orb-ring ring-two" aria-hidden="true"></div>
+                    <img src="assets/neptune-website-hero.jpg"
+                        alt="Neptune Insurance Amazon Connect omnichannel contact center project artwork"
+                        decoding="async" fetchpriority="high" />
+                    <span class="stage-corner stage-corner-tl" aria-hidden="true"></span><span
+                        class="stage-corner stage-corner-br" aria-hidden="true"></span>
+                    <span class="stage-topline">MISSION VIEW / NEPTUNE</span><span class="stage-live"><span
+                            class="signal-led"></span> WEBSITE LIVE</span>
+                    <span class="stage-bottom"><strong>ENTER CUSTOMER EXPERIENCE
+                            ↗</strong><small>neptune.hireedwardthornton.click</small></span>
+                </a>
+            </div>
+            <div class="container metrics-row">
+                <div><strong>01</strong><span>LIVE CUSTOMER WEBSITE</span></div>
+                <div><strong>08</strong><span>INTERACTIVE DEMO PAGES</span></div>
+                <div><strong>04</strong><span>OMNICHANNEL DESIGN TARGETS</span></div>
+                <div><strong>500</strong><span>AGENT CAPACITY DESIGN TARGET · NOT TESTED</span></div>
+            </div>
+        </section>
+        <section class="section" id="overview">
+            <div class="container">
+                <div class="section-head"><span class="eyebrow">01 / THE BUSINESS CHALLENGE</span>
+                    <h2>A better way through the complicated moments.</h2>
+                    <p>Neptune is a fictional regional property-and-casualty insurer migrating from a legacy contact
+                        center. The challenge: give policyholders a clear next step without losing their context when
+                        they switch channels or teams.</p>
+                </div>
+                <div class="capabilities">
+                    <div class="capability"><span>EXPERIENCE 01</span>
+                        <h3>Guided FNOL</h3>
+                        <p>An interactive, step-by-step simulated first notice of loss captures bounded sample
+                            information, creates a browser-local reference, and demonstrates how a claims handoff can be
+                            structured.</p>
+                    </div>
+                    <div class="capability"><span>EXPERIENCE 02</span>
+                        <h3>Policyholder workspace</h3>
+                        <p>A synthetic customer dashboard surfaces example auto and home coverage, claim references and
+                            status timelines. No authentication or real insurance database is represented.</p>
+                    </div>
+                    <div class="capability"><span>EXPERIENCE 03</span>
+                        <h3>Connected support</h3>
+                        <p>Support discovery, scripted assistant preview, and precise placeholders for Connect voice,
+                            hosted web chat, SMS and email. Channels are only marked live after configuration and
+                            verification.</p>
+                    </div>
+                    <div class="capability"><span>ARCHITECTURE 04</span>
+                        <h3>Intent-aware routing</h3>
+                        <p>Designs for policy servicing, billing, auto claims, claim status, escalations, and
+                            after-hours tasks with queue and routing-profile boundaries.</p>
+                    </div>
+                    <div class="capability"><span>ARCHITECTURE 05</span>
+                        <h3>Guarded Agentic AI</h3>
+                        <p>Proposed conversation automation gathers structured intent and summarizes interactions, while
+                            authorized business APIs own validation and sensitive decisions.</p>
+                    </div>
+                    <div class="capability"><span>ARCHITECTURE 06</span>
+                        <h3>Observability by design</h3>
+                        <p>A traceable contact journey can correlate ContactIds, flow events, contact records, tasks,
+                            and secure, minimal customer-context attributes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section journey">
+            <div class="container">
+                <div class="section-head"><span class="eyebrow">02 / THE FLAGSHIP CUSTOMER JOURNEY</span>
+                    <h2>One claim. One continuous story.</h2>
+                    <p>A realistic demo scenario starts online and illustrates the future end-to-end journey across
+                        channels and the specialist team.</p>
+                </div>
+                <div class="journey-row">
+                    <div class="journey-node"><span class="n">01</span><strong>Start online</strong>
+                        <p>Policyholder initiates fictional auto FNOL on the Neptune website.</p>
+                    </div>
+                    <div class="journey-node"><span class="n">02</span><strong>Capture safely</strong>
+                        <p>Gather minimal structured details, validate and return a simulated reference.</p>
+                    </div>
+                    <div class="journey-node"><span class="n">03</span><strong>Continue by channel</strong>
+                        <p>After consent and approvals, offer voice, chat or message follow-up.</p>
+                    </div>
+                    <div class="journey-node"><span class="n">04</span><strong>Route with context</strong>
+                        <p>Connect targets the Auto Claims queue and passes only approved attributes.</p>
+                    </div>
+                    <div class="journey-node"><span class="n">05</span><strong>Trace and resolve</strong>
+                        <p>Agent or supervisor takes action with auditability and a next-step record.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section" id="architecture">
+            <div class="container">
+                <div class="section-head"><span class="eyebrow">03 / REFERENCE ARCHITECTURE</span>
+                    <h2>From the first interaction to a useful outcome.</h2>
+                    <p>Service boundaries matter: the contact platform routes, AI handles bounded conversation tasks,
+                        and authorized insurance APIs decide what can actually change.</p>
+                </div>
+                <div class="architecture">
+                    <div class="architecture-label">CUSTOMER ENTRY / DIGITAL &amp; PSTN</div>
+                    <div class="entry"><span>☎ Voice</span><span>◌ Web chat</span><span>✉ SMS</span><span>✧ Email</span>
+                    </div>
+                    <div class="down">↓</div>
+                    <div class="core">Amazon Connect <small>Contact entry · Flow orchestration · Queues · Routing
+                            profiles · Contact records</small></div>
+                    <div class="down">↓</div>
+                    <div class="downstream">
+                        <div><strong>Agentic CX + Lex</strong>
+                            <p>Intent, bounded self-service, contextual summaries, guarded transitions.</p>
+                        </div>
+                        <div><strong>Insurance services</strong>
+                            <p>AWS Lambda + mock policy / claim records in DynamoDB, authorization and validation.</p>
+                        </div>
+                        <div><strong>Human agent workspace</strong>
+                            <p>Policy servicing, billing, claims, escalation and after-hours task journeys.</p>
+                        </div>
+                    </div>
+                    <div class="down">↓</div>
+                    <div class="entry"><span>CloudWatch / EventBridge</span><span>S3 / KMS</span><span>IAM / MFA / least
+                            privilege</span></div>
+                    <p class="architecture-note">Blueprint, not a representation of a fully deployed system. No live
+                        ContactId, SMS verification, phone number assignment, or production data access is claimed.</p>
+                </div>
+            </div>
+        </section>
+        <section class="section journey" id="roadmap">
+            <div class="container">
+                <div class="section-head"><span class="eyebrow">04 / IMPLEMENTATION ROADMAP</span>
+                    <h2>What we're building, and in what order.</h2>
+                    <p>Small, testable increments for the 14-day lab. One practical integration at a time, with security
+                        and console evidence before moving on.</p>
+                </div>
+                <div class="roadmap">
+                    <div class="phase"><small>STAGE 01</small>
+                        <h3>Experience foundation</h3>
+                        <p>Responsive Neptune site, guided claim simulation, sample dashboard, help center and technical
+                            showcase.</p><span class="status">Frontend prototype created</span>
+                    </div>
+                    <div class="phase"><small>STAGE 02</small>
+                        <h3>Core Amazon Connect</h3>
+                        <p>Instance, numbers, call flows, queue/routing profiles, 2–3 training agents, baseline call
+                            testing.</p><span class="status">Lab build in progress</span>
+                    </div>
+                    <div class="phase"><small>STAGE 03</small>
+                        <h3>Omnichannel journeys</h3>
+                        <p>Hosted chat widget, callback/task patterns, messaging registration and consent, email
+                            prerequisites.</p><span class="status">Requires configuration</span>
+                    </div>
+                    <div class="phase"><small>STAGE 04</small>
+                        <h3>AI + operations</h3>
+                        <p>Agentic self-service, mock Lambda business APIs, secure context, failure tests, dashboards
+                            and teach-back.</p><span class="status">Planned capstone</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="decisions">
+            <div class="container">
+                <div class="section-head">
+                    <div class="eyebrow">05 / ARCHITECTURAL DECISIONS</div>
+                    <h2>Built like a real system.<br>Documented like one, too.</h2>
+                    <p>The goal is to practice how an architect makes tradeoffs, not just which buttons to click in the
+                        console. This is the deployed foundation and the design logic behind it.</p>
+                </div>
+                <div class="detail-grid">
+                    <article class="detail-card"><span class="key">Decision 01 / Edge delivery</span>
+                        <h3>CloudFront in front of private S3</h3>
+                        <p>The website is stored in a dedicated, private S3 bucket and served through a CloudFront
+                            distribution. Origin Access Control keeps the bucket from being used as a public website
+                            endpoint.</p>
+                    </article>
+                    <article class="detail-card"><span class="key">Decision 02 / Identity</span>
+                        <h3>Separate domain, shared portfolio</h3>
+                        <p>The live customer demo runs at <code>neptune.hireedwardthornton.click</code>. The portfolio
+                            case study lives on the main domain, preserving the existing project presentation.</p>
+                    </article>
+                    <article class="detail-card"><span class="key">Decision 03 / HTTPS</span>
+                        <h3>ACM and Route 53</h3>
+                        <p>Route 53 A and AAAA alias records point to CloudFront. An ACM certificate in us-east-1
+                            secures the custom hostname. DNS validation and HTTPS response were verified during
+                            deployment.</p>
+                    </article>
+                    <article class="detail-card"><span class="key">Decision 04 / CX boundary</span>
+                        <h3>Demo interactions before production APIs</h3>
+                        <p>Claims and sample policy journeys operate as a client-side prototype. Future real processing
+                            will require authenticated APIs, validation, durable storage, and auditable events.</p>
+                    </article>
+                    <article class="detail-card"><span class="key">Decision 05 / Capacity</span>
+                        <h3>Design for 500, test small</h3>
+                        <p>The 500-agent model is a reference architecture, not 500 provisioned Connect users or 500
+                            concurrent calls. Routing profiles, concurrency, and quotas will be modeled separately.</p>
+                    </article>
+                    <article class="detail-card"><span class="key">Decision 06 / Messaging</span>
+                        <h3>Consent is a real boundary</h3>
+                        <p>SMS will be added only after sender verification, compliant opt-in, and successful delivery
+                            tests. A fictional insurance demo is not presented as a licensed insurer.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="section journey" id="build-log">
+            <div class="container">
+                <div class="section-head">
+                    <div class="eyebrow">06 / BUILD LOG</div>
+                    <h2>Progress you can inspect.</h2>
+                    <p>This project is versioned by milestone. Completed work is separated from planned capabilities;
+                        the GitHub repository tracks source, architecture notes, and next steps.</p>
+                </div>
+                <div class="status-rows">
+                    <div class="status-row"><span class="status-dot"></span>
+                        <div><strong>Done / Static customer site</strong><small>Eight-page Neptune experience,
+                                responsive layouts, sample claims, sample policy portal, and help center.</small></div>
+                    </div>
+                    <div class="status-row"><span class="status-dot"></span>
+                        <div><strong>Done / AWS web foundation</strong><small>Private S3 origin, CloudFront delivery,
+                                Route 53 aliases, ACM HTTPS certificate, and a verified HTTP 200 response.</small></div>
+                    </div>
+                    <div class="status-row"><span class="status-dot pending"></span>
+                        <div><strong>Next / Amazon Connect channels</strong><small>Wire real voice and embedded web
+                                chat; validate routing, queues, agent workspace, and channel permissions.</small></div>
+                    </div>
+                    <div class="status-row"><span class="status-dot pending"></span>
+                        <div><strong>Later / Messaging + agentic AI</strong><small>Sender verification and consent,
+                                email/SMS journeys, identity and claims APIs, AI guardrails, and observability.</small>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-top:35px">
+                    <div class="log-grid"><time datetime="2026-11-17">17 NOV 2026</time>
+                        <div>
+                            <h3>Customer website + deployment architecture</h3>
+                            <p>Published Neptune via CloudFront and validated the custom hostname, certificate, private
+                                bucket, and homepage.</p>
+                        </div>
+                    </div>
+                    <div class="log-grid"><time datetime="2026-11-18">NEXT MILESTONE</time>
+                        <div>
+                            <h3>Source control + Connect foundations</h3>
+                            <p>Move project source into a dedicated workspace, track milestones in GitHub, and connect
+                                the website's first real contact channel.</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="note">This is a fictional training and portfolio project. No real policies are sold, and no
+                    real customer submissions should be entered.</p>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <div class="disclosure">
+                    <p><strong>Project integrity:</strong> This is a training and portfolio demonstration. Neptune
+                        Insurance is fictional. The website is runnable as a static prototype; the cloud architecture is
+                        a staged implementation and target design. The AWS toll-free messaging registration, if pursued,
+                        must truthfully identify the actual registering business (Cloud Systems Direct LLC), not use
+                        this fictional insurer as proof of an operating business. Synthetic data only; no real customer
+                        records or insurance services.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container"><span>© 2026 Edward “E.T.” Thornton · Neptune Insurance architecture
+                demonstration</span><a href="index.html">← Back to portfolio</a></div>
+    </footer>
+    <script id="et-portfolio-header-menu">
+        (() => {
+            const button = document.querySelector('.et-menu-toggle');
+            const nav = document.querySelector('.et-section-nav');
+            if (!button || !nav) return;
+            const close = () => {nav.classList.remove('open'); button.setAttribute('aria-expanded', 'false'); button.setAttribute('aria-label', 'Open navigation');};
+            button.addEventListener('click', () => {
+                const open = button.getAttribute('aria-expanded') !== 'true';
+                nav.classList.toggle('open', open);
+                button.setAttribute('aria-expanded', String(open));
+                button.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+            });
+            nav.querySelectorAll('a').forEach(link => link.addEventListener('click', close));
+            document.addEventListener('keydown', e => {if (e.key === 'Escape') close();});
+        })();
+    </script>
+</body>
+
+</html>
