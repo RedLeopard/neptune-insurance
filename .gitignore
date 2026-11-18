@@ -1,0 +1,26 @@
+# Never commit local secrets, credentials, or deployment tokens
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*credentials*
+.aws/
+secrets/
+# Generated/local files
+.DS_Store
+__pycache__/
+*.pyc
+.venv/
+node_modules/
+*.log
+*.pid
+*.bak
+*.zip
+*.tfstate
+*.tfstate.*
+.terraform/
+.coverage
+.cache/
