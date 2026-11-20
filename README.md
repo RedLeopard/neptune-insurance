@@ -44,7 +44,7 @@ NeptuneInsurance/
 1. Edit source locally, run `bash scripts/verify_site.sh`, and review your changes.
 2. `git add . && git commit -m "Describe milestone" && git push` once your GitHub repository is configured.
 3. `bash scripts/publish_site.sh` to publish *only* the Neptune customer site to the dedicated S3 bucket and invalidate CloudFront.
-4. To update the portfolio case study and carousel card, `python3 install_neptune.py ~/hireedward --dry-run`, then repeat without `--dry-run` using your **actual** portfolio folder. Deploy that portfolio separately using your existing portfolio pipeline.
+4. To sync the current portfolio homepage and Neptune case study locally, run `bash scripts/sync_portfolio.sh` (defaults to the existing `~/hireedward` folder). See [portfolio source notes](portfolio/README.md). This copies files only; deploy the portfolio separately when needed. Keep `install_neptune.py` for the earlier bootstrap workflow.
 
 ## Source control setup
 
