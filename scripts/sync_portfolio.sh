@@ -9,12 +9,12 @@ if [[ ! -f "$portfolio_dir/index.html" || ! -d "$portfolio_dir/assets" ]]; then
   exit 1
 fi
 
-for source in "$repo_root/portfolio/index.html" "$repo_root/neptune-insurance.html" "$repo_root/assets/neptune-website-hero.jpg" "$repo_root/assets/energy-transmission-cover.png"; do
+for source in "$repo_root/portfolio/index.html" "$repo_root/neptune-insurance.html" "$repo_root/assets/neptune-share.png" "$repo_root/assets/energy-transmission-cover.png"; do
   [[ -s "$source" ]] || { echo "Missing source: $source" >&2; exit 1; }
 done
 
 cp "$repo_root/portfolio/index.html" "$portfolio_dir/index.html"
 cp "$repo_root/neptune-insurance.html" "$portfolio_dir/neptune-insurance.html"
-cp "$repo_root/assets/neptune-website-hero.jpg" "$portfolio_dir/assets/neptune-website-hero.jpg"
+cp "$repo_root/assets/neptune-share.png" "$portfolio_dir/assets/neptune-share.png"
 cp "$repo_root/assets/energy-transmission-cover.png" "$portfolio_dir/assets/energy-transmission-cover.png"
 echo "Synced portfolio pages and artwork to $portfolio_dir"
