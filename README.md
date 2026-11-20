@@ -3,12 +3,15 @@
 A fictional, portfolio-grade insurance website deployed to AWS with a staged Amazon Connect integration plan. **This is a demonstration, not a licensed insurer.** Do not enter real customer or sensitive insurance information.
 
 **Live demo:** https://neptune.hireedwardthornton.click/  
+**Voice demo:** [1-800-810-5374](tel:+18008105374) (fictional lab; live-call tests pending)  
 **Portfolio case study (after installation):** https://hireedwardthornton.click/neptune-insurance.html  
 
 ## What's actually built
 
 - Eight responsive pages under `neptune-insurance/`: home, coverage, claims, portal, support, about, privacy, terms.
-- Interactive *simulated* claims workflow, sample policy portal, quote explorer, and scripted help preview. These do **not** use real insurance processing or live Amazon Connect channels.
+- Interactive *simulated* claims workflow, sample policy portal, quote explorer, and scripted help preview. Browser claims stay local and are not sent to the phone flow. Live web chat, email and SMS remain planned.
+- Amazon Connect voice entry: published `Neptune-Inbound-Voice` flow and existing toll-free number association, confirmed by the supplied export and number configuration. Logging, channel/hours checks, a three-choice menu, one retry and an Auto Claims queue transfer are configured. The four Day 5 voice tests remain pending.
+- [Sanitized flow export and resource-binding guide](connect/README.md). Source-account resource identifiers are replaced with placeholders; reselect hours and queue resources before publishing an imported copy.
 - Dedicated AWS S3 bucket with private origin, CloudFront distribution with Origin Access Control, HTTPS certificate in ACM, and Route 53 aliases.
 - Portfolio case study (`neptune-insurance.html`) and card installer (`install_neptune.py`) to keep the main portfolio's normal project format.
 
@@ -25,6 +28,7 @@ NeptuneInsurance/
 │   └── assets/
 ├── neptune-insurance.html     # Portfolio project case study
 ├── assets/                    # Portfolio project card artwork
+├── connect/                   # Sanitized Amazon Connect flow and lab notes
 ├── install_neptune.py        # Safe update to existing portfolio
 ├── deploy_neptune_subdomain.py # Infrastructure/bootstrap script (already deployed)
 ├── scripts/

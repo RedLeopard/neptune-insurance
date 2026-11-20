@@ -6,7 +6,13 @@ Browser → public Route 53 DNS alias → CloudFront (custom HTTPS certificate v
 
 **Why this choice:** low-maintenance demo delivery, low operational overhead, TLS at edge, versioned objects, and separate deployments from the personal portfolio. The bucket name need not match the domain with CloudFront OAC.
 
-## Customer experience path (planned)
+## Voice entry (configured; runtime tests pending)
+
+The existing voice demo number, `1-800-810-5374`, is mapped to the published `Neptune-Inbound-Voice` flow. Entry runs logging, a VOICE channel check, welcome and an explicitly selected hours check before the menu. One retry bounds invalid input and silence. Selection 3 sets and checks AutoClaims context, selects the existing queue and transfers into it. Selections 1 and 2 currently acknowledge and disconnect.
+
+See [the sanitized export and resource-binding guide](../connect/README.md). The four Day 5 live tests remain pending. Website phone links start a separate call; browser-stored claims are not transferred into Connect. Routing profiles govern agent eligibility after queue entry and are not caller-facing flow blocks.
+
+## Broader customer experience path (planned)
 
 Website, voice DID/toll-free, chat, email, and SMS → Amazon Connect contact flows → routing profile/queues → test agents, tasks, agentic self-service → controlled APIs (API Gateway/Lambda) → sample insurance data in DynamoDB/S3 → CloudWatch/CloudTrail.
 
