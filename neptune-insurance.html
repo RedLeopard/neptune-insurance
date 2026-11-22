@@ -12,7 +12,7 @@
     <meta property="og:site_name" content="Edward E.T. Thornton · Architecture Portfolio">
     <meta property="og:title" content="Neptune Insurance | Live AWS CX Experience">
     <meta property="og:description"
-        content="Explore the Neptune customer website, try the published voice demo, and inspect the AWS architecture through Day 5.">
+        content="Explore the Neptune customer website, try the published voice demo, and inspect the AWS architecture and deployed conversational app through Day 7.">
     <meta property="og:url" content="https://hireedwardthornton.click/neptune-insurance.html">
     <meta property="og:image" content="https://hireedwardthornton.click/assets/neptune-share.png">
     <meta property="og:image:secure_url" content="https://hireedwardthornton.click/assets/neptune-share.png">
@@ -973,8 +973,8 @@
         .progress-track>span {
             height: 3px;
             display: block;
-            width: calc(100% / 14 * 5 - 5px);
-            background: repeating-linear-gradient(90deg, var(--lime) 0 calc(100% / 5 - 5px), transparent calc(100% / 5 - 5px) calc(100% / 5))
+            width: calc(100% / 14 * 7 - 5px);
+            background: repeating-linear-gradient(90deg, var(--lime) 0 calc(100% / 7 - 5px), transparent calc(100% / 7 - 5px) calc(100% / 7))
         }
 
         .milestone-list article {
@@ -2261,8 +2261,8 @@
                     <p class="hero-summary">From the first click to the first conversation. An insurance demo that
                         brings a live customer website and a published voice journey into one evolving AWS project.</p>
                     <a class="quiet-link" href="#experience">Explore the experience</a>
-                    <div class="hero-progress"><span class="status-label"><i aria-hidden="true"></i>DAY 5
-                            COMPLETE</span><span>Voice entry published. Routing comes next.</span></div>
+                    <div class="hero-progress"><span class="status-label"><i aria-hidden="true"></i>DAY 7
+                            COMPLETE</span><span>Conversational app deployed. Human handoff comes next.</span></div>
                 </div>
                 <figure class="hero-art">
                     <div class="orbit orbit-one" aria-hidden="true"></div>
@@ -2348,13 +2348,13 @@
                         <p class="eyebrow">INSIDE THE SYSTEM</p>
                         <h2 id="architecture-title">The architecture.<br><span>One connected system.</span></h2>
                     </div>
-                    <p>Start with the overall AWS design, then inspect the voice path built through Day 5. Each view
+                    <p>Start with the overall AWS design, then inspect the published voice entry. Day 7 adds a separately deployed conversational application. Each view
                         shows its implementation scope.</p>
                 </div>
                 <div class="architecture-tabs" role="tablist" aria-label="Architecture views"><button id="target-tab"
                         type="button" role="tab" aria-selected="true" aria-controls="target-panel"
                         tabindex="0">Omnichannel target</button><button id="voice-tab" type="button" role="tab"
-                        aria-selected="false" aria-controls="voice-panel" tabindex="-1">Built through Day 5</button>
+                        aria-selected="false" aria-controls="voice-panel" tabindex="-1">Published voice entry</button>
                 </div>
                 <div id="voice-panel" class="architecture-panel" role="tabpanel" aria-labelledby="voice-tab"
                     tabindex="0" hidden>
@@ -2583,8 +2583,7 @@
                     </article>
                     <article><span class="principle-label">HONEST BOUNDARIES</span>
                         <h3>Build the foundation. Prove each layer.</h3>
-                        <p>The customer website and voice entry exist today. Cross-channel context, hosted chat,
-                            messaging, and business APIs are later work.</p>
+                        <p>The website, voice entry, routing configuration, and conversational app exist today. AI-to-human handoff, cross-channel context, hosted chat, messaging, and business APIs remain later work.</p>
                     </article>
                 </div>
             </div>
@@ -2597,16 +2596,16 @@
                 <div class="section-heading heading-with-aside">
                     <div>
                         <p class="eyebrow">A BUILD WITH DIRECTION</p>
-                        <h2 id="roadmap-title">Five days in.<br><span>A foundation you can follow.</span></h2>
+                        <h2 id="roadmap-title">Seven days in.<br><span>A foundation you can follow.</span></h2>
                     </div>
                     <p>A 14-day architecture lab, built in small increments. Each stage adds something tangible to the
                         customer journey.</p>
                 </div>
                 <div class="course-progress">
-                    <div><strong>5 of 14 days complete</strong><span>Next: queues, profiles, and contact delivery</span>
+                    <div><strong>7 of 14 days complete</strong><span>Next: AI controls, tools, and human handoff</span>
                     </div>
                     <div class="progress-track" role="progressbar" aria-label="Reported course progress"
-                        aria-valuemin="0" aria-valuemax="14" aria-valuenow="5"><span></span></div>
+                        aria-valuemin="0" aria-valuemax="14" aria-valuenow="7"><span></span></div>
                 </div>
                 <div class="milestone-list">
                     <article>
@@ -2630,20 +2629,33 @@
                         <div>
                             <h3>Build the voice entry.</h3>
                             <p>Greeting, menu attributes, a bounded retry, channel and hours checks, Auto Claims
-                                handoff, logging, publication, and the four-test voice suite.</p>
+                                handoff, logging, and publication. The archived voice-test checklist remains separate evidence.</p>
                         </div><span class="milestone-state">Complete</span>
                     </article>
-                    <article class="milestone-next">
+                    <article>
                         <div class="milestone-day">DAY 6</div>
                         <div>
                             <h3>Route to the right agent.</h3>
-                            <p>Billing and Auto Claims delivery, routing eligibility, agent state, channel capacity, and
-                                the Available-but-ineligible test.</p>
+                            <p>Billing and Auto Claims routing, agent eligibility, state, channel capacity, and a queue quick connect. Full quick-connect retest remains a follow-up.</p>
+                        </div><span class="milestone-state">Complete</span>
+                    </article>
+                    <article>
+                        <div class="milestone-day">DAY 7</div>
+                        <div>
+                            <h3>Build the conversation.</h3>
+                            <p>Deployed NeptuneInsurance v0.1.0 with billing, new-claim intake, claim-reference capture, typed slots, confirmation, and shared recovery. Billing and unsupported-request transcripts reviewed; intake tests reported successful.</p>
+                        </div><span class="milestone-state">Complete</span>
+                    </article>
+                    <article class="milestone-next">
+                        <div class="milestone-day">DAY 8</div>
+                        <div>
+                            <h3>Connect AI to controlled actions.</h3>
+                            <p>Add AI controls, tools, and an explicit human handoff. The deployed app is not yet connected to the phone or website.</p>
                         </div><span class="milestone-state">Up next</span>
                     </article>
                 </div>
                 <div class="future-scope"><span class="eyebrow">BEYOND THE VOICE FOUNDATION</span>
-                    <p>Hosted chat. Task and messaging journeys. Guarded AI. Mock insurance APIs. Cross-channel context
+                    <p>AI-to-human handoff. Hosted chat. Task and messaging journeys. Mock insurance APIs. Cross-channel context
                         and operational evidence. Each remains a distinct configuration and validation milestone.</p>
                 </div>
             </div>
@@ -2664,6 +2676,15 @@
                                 neptune-insurance</small></span></a>
                 </div>
                 <div class="build-entries">
+                    <article><time datetime="2026-11-21">21 NOV 2026</time>
+                        <h3>A deployed conversational application.</h3>
+                        <p>NeptuneInsurance v0.1.0 recognizes insurance requests, collects typed answers, repeats details for confirmation, and handles unsupported requests. No claim is filed or live status retrieved.</p>
+                        <a class="quiet-link" href="https://github.com/RedLeopard/neptune-insurance/blob/main/docs/DAY7.md" target="_blank" rel="noopener noreferrer">Read the conversation build notes</a>
+                    </article>
+                    <article><time datetime="2026-11-20">20 NOV 2026</time>
+                        <h3>Routing and transfer configuration.</h3>
+                        <p>Worked through queue eligibility, routing profiles, agent state, and channel capacity. Created the Billing-to-Auto Claims queue quick connect; a full transfer retest remains a follow-up.</p>
+                    </article>
                     <article><time datetime="2026-11-19">19 NOV 2026</time>
                         <h3>A published voice journey.</h3>
                         <p>The Neptune number is associated with the inbound flow. The exported 21-block configuration
