@@ -1,0 +1,653 @@
+{
+  "flowId": "NeptuneNewAutoClaim",
+  "nodes": {
+    "0b372aac-c81c-4f30-a6e2-541bd88d1a22": {
+      "nodeId": "0b372aac-c81c-4f30-a6e2-541bd88d1a22",
+      "childNodes": [
+        {
+          "nodeId": "a102d0c4-e34e-4e0d-a53d-9fdc2784c31e",
+          "name": "",
+          "conditions": [
+            {
+              "operator": "exists",
+              "left": {
+                "type": "slot",
+                "name": "lossDate"
+              }
+            }
+          ]
+        },
+        {
+          "nodeId": "3800bd60-71d6-4c1d-a1c3-7fe73c9bd792",
+          "name": "",
+          "conditions": [
+            {
+              "operator": "not_exists",
+              "left": {
+                "type": "slot",
+                "name": "lossDate"
+              }
+            }
+          ]
+        }
+      ],
+      "type": "user_choice",
+      "messages": [
+        {
+          "messageId": "9dcfff03-0aaa-446b-9f67-685376204070",
+          "body": "On what date did the vehicle loss occur?",
+          "type": "text",
+          "skipTranslation": false,
+          "metadata": {
+            "alternatePhrasings": []
+          }
+        }
+      ],
+      "modalities": {},
+      "metadata": {
+        "stateModifications": [],
+        "name": "",
+        "choice": {
+          "showChoices": false,
+          "multiSelect": false,
+          "choiceDisplayFormat": "dropdown",
+          "associatedSlotTypeIds": [],
+          "idField": "",
+          "labelField": "",
+          "source": "slotType",
+          "slotTypeId": "lossDate",
+          "selectedChoiceLabel": "lossDate"
+        }
+      },
+      "canvasMetadata": {
+        "x": 877.8047886168646,
+        "y": -1117.6335938909465,
+        "width": 240,
+        "height": 242,
+        "isMinimized": false
+      }
+    },
+    "0e89027a-4e5b-41c9-8db0-7876900957c0": {
+      "nodeId": "0e89027a-4e5b-41c9-8db0-7876900957c0",
+      "childNodes": [
+        {
+          "nodeId": "0b372aac-c81c-4f30-a6e2-541bd88d1a22",
+          "name": "",
+          "conditions": [
+            {
+              "operator": "eq",
+              "left": {
+                "type": "slot_value_id",
+                "name": "lossType"
+              },
+              "right": {
+                "type": "constant_id",
+                "value": "3PmCyd2EGx1VmIBg1hjET"
+              }
+            }
+          ]
+        },
+        {
+          "nodeId": "0b372aac-c81c-4f30-a6e2-541bd88d1a22",
+          "name": "",
+          "conditions": [
+            {
+              "operator": "eq",
+              "left": {
+                "type": "slot_value_id",
+                "name": "lossType"
+              },
+              "right": {
+                "type": "constant_id",
+                "value": "Q7M1dTxVrXKMM6hK9llvR"
+              }
+            }
+          ]
+        },
+        {
+          "nodeId": "0b372aac-c81c-4f30-a6e2-541bd88d1a22",
+          "name": "",
+          "conditions": [
+            {
+              "operator": "eq",
+              "left": {
+                "type": "slot_value_id",
+                "name": "lossType"
+              },
+              "right": {
+                "type": "constant_id",
+                "value": "iOMosKYu2PplTuMh9_tVV"
+              }
+            }
+          ]
+        },
+        {
+          "nodeId": "3800bd60-71d6-4c1d-a1c3-7fe73c9bd792",
+          "name": "",
+          "conditions": [
+            {
+              "operator": "not_exists",
+              "left": {
+                "type": "slot",
+                "name": "lossType"
+              }
+            }
+          ]
+        }
+      ],
+      "type": "user_choice",
+      "messages": [
+        {
+          "messageId": "b5c5b7c6-63fa-44ed-891c-3715d0c4f4c5",
+          "body": "What type of vehicle loss occurred: collision, theft, or other",
+          "type": "text",
+          "skipTranslation": false,
+          "metadata": {
+            "alternatePhrasings": []
+          }
+        }
+      ],
+      "modalities": {},
+      "metadata": {
+        "stateModifications": [],
+        "name": "",
+        "choice": {
+          "showChoices": false,
+          "multiSelect": false,
+          "choiceDisplayFormat": "dropdown",
+          "associatedSlotTypeIds": [],
+          "idField": "",
+          "labelField": "",
+          "source": "slotType",
+          "slotTypeId": "lossType",
+          "selectedChoiceLabel": "lossType"
+        }
+      },
+      "canvasMetadata": {
+        "x": 616.4433203054526,
+        "y": -890.6312090334995,
+        "width": 240,
+        "height": 348,
+        "isMinimized": false
+      }
+    },
+    "3800bd60-71d6-4c1d-a1c3-7fe73c9bd792": {
+      "nodeId": "3800bd60-71d6-4c1d-a1c3-7fe73c9bd792",
+      "childNodes": [
+        {
+          "name": "",
+          "conditions": [
+            {
+              "left": {
+                "type": "node_status"
+              },
+              "operator": "eq",
+              "right": {
+                "type": "constant",
+                "value": "continuation"
+              }
+            }
+          ]
+        }
+      ],
+      "type": "redirect",
+      "messages": [],
+      "modalities": {},
+      "metadata": {
+        "stateModifications": [],
+        "name": "",
+        "redirect": {
+          "flowId": "NeptuneRecovery",
+          "type": "flow"
+        }
+      },
+      "canvasMetadata": {
+        "x": 2273.364789939923,
+        "y": -122.46906494975775,
+        "width": 240,
+        "height": 111,
+        "isMinimized": false
+      }
+    },
+    "4f3f519c-c129-4304-a895-374266ea75cf": {
+      "nodeId": "4f3f519c-c129-4304-a895-374266ea75cf",
+      "childNodes": [
+        {
+          "nodeId": "84b0c1d2-059a-4d16-b6d0-a3bbb991dfe6",
+          "name": "",
+          "conditions": []
+        }
+      ],
+      "type": "basic",
+      "messages": [
+        {
+          "messageId": "223ce977-40b0-47e7-b49e-c5692fe8cb31",
+          "body": "I can help collect information about a new vehicle loss. This does not confirm coverage or file a claim.",
+          "type": "text",
+          "skipTranslation": false,
+          "metadata": {
+            "alternatePhrasings": []
+          }
+        }
+      ],
+      "modalities": {},
+      "metadata": {
+        "stateModifications": [],
+        "name": ""
+      },
+      "canvasMetadata": {
+        "x": 196.76061103069014,
+        "y": -896.4722747603118,
+        "width": 240,
+        "height": 181,
+        "isMinimized": false
+      }
+    },
+    "540f42b0-03a5-444e-a249-15a9f66ae439": {
+      "nodeId": "540f42b0-03a5-444e-a249-15a9f66ae439",
+      "childNodes": [
+        {
+          "nodeId": "ec4d20b1-aece-46db-ac9d-504208c125a3",
+          "name": "",
+          "conditions": []
+        }
+      ],
+      "type": "basic",
+      "messages": [
+        {
+          "messageId": "921bf0c0-02d3-40eb-a217-8beedbd66f61",
+          "body": "Your details have been confirmed. No claim has been filed.",
+          "type": "text",
+          "skipTranslation": false,
+          "metadata": {
+            "alternatePhrasings": []
+          }
+        }
+      ],
+      "modalities": {},
+      "metadata": {
+        "stateModifications": [],
+        "name": ""
+      },
+      "canvasMetadata": {
+        "x": 2068.622079983461,
+        "y": -1233.4124398753174,
+        "width": 240,
+        "height": 163,
+        "isMinimized": false
+      }
+    },
+    "6762921d-1973-4025-82eb-258b7bde7fff": {
+      "nodeId": "6762921d-1973-4025-82eb-258b7bde7fff",
+      "childNodes": [
+        {
+          "nodeId": "540f42b0-03a5-444e-a249-15a9f66ae439",
+          "name": "",
+          "conditions": [
+            {
+              "operator": "eq",
+              "left": {
+                "type": "slot_value_id",
+                "name": "intakeConfirmed"
+              },
+              "right": {
+                "type": "constant_id",
+                "value": "dqxH-5XPEbTkfd-RMYgMG"
+              }
+            }
+          ]
+        },
+        {
+          "nodeId": "c2a11a4a-f45c-45d1-b4ae-dcd2a75c71dd",
+          "name": "",
+          "conditions": [
+            {
+              "operator": "eq",
+              "left": {
+                "type": "slot_value_id",
+                "name": "intakeConfirmed"
+              },
+              "right": {
+                "type": "constant_id",
+                "value": "VU8de-UihMtoVZRgdPTPV"
+              }
+            }
+          ]
+        },
+        {
+          "nodeId": "3800bd60-71d6-4c1d-a1c3-7fe73c9bd792",
+          "name": "",
+          "conditions": [
+            {
+              "operator": "not_exists",
+              "left": {
+                "type": "slot",
+                "name": "intakeConfirmed"
+              }
+            }
+          ]
+        }
+      ],
+      "type": "user_choice",
+      "messages": [
+        {
+          "messageId": "43671a83-1317-4bc7-a757-32df775cdd29",
+          "body": "Your policy reference is {policyReference:NLX.Text}. The loss type is {lossType:NeptuneLossType}, occurring on {lossDate:NLX.Date}. Vehicle drivable: {drivable:NeptuneYesNo}. Are these details correct? Please answer yes or no.",
+          "type": "text",
+          "skipTranslation": false,
+          "metadata": {
+            "alternatePhrasings": []
+          }
+        }
+      ],
+      "modalities": {},
+      "metadata": {
+        "stateModifications": [],
+        "name": "",
+        "choice": {
+          "showChoices": false,
+          "multiSelect": false,
+          "choiceDisplayFormat": "dropdown",
+          "associatedSlotTypeIds": [],
+          "idField": "",
+          "labelField": "",
+          "source": "slotType",
+          "slotTypeId": "intakeConfirmed",
+          "selectedChoiceLabel": "intakeConfirmed"
+        }
+      },
+      "canvasMetadata": {
+        "x": 1592.1280369072497,
+        "y": -1210.818222861367,
+        "width": 240,
+        "height": 358,
+        "isMinimized": false
+      }
+    },
+    "84b0c1d2-059a-4d16-b6d0-a3bbb991dfe6": {
+      "nodeId": "84b0c1d2-059a-4d16-b6d0-a3bbb991dfe6",
+      "childNodes": [
+        {
+          "nodeId": "0e89027a-4e5b-41c9-8db0-7876900957c0",
+          "name": "",
+          "conditions": [
+            {
+              "operator": "exists",
+              "left": {
+                "type": "slot",
+                "name": "policyReference"
+              }
+            }
+          ]
+        },
+        {
+          "nodeId": "3800bd60-71d6-4c1d-a1c3-7fe73c9bd792",
+          "name": "",
+          "conditions": [
+            {
+              "operator": "not_exists",
+              "left": {
+                "type": "slot",
+                "name": "policyReference"
+              }
+            }
+          ]
+        }
+      ],
+      "type": "user_choice",
+      "messages": [
+        {
+          "messageId": "0e1f7cb7-e700-406a-a7c5-9d703a53802d",
+          "body": "What is your policy reference?",
+          "type": "text",
+          "skipTranslation": false,
+          "metadata": {
+            "alternatePhrasings": []
+          }
+        }
+      ],
+      "modalities": {},
+      "metadata": {
+        "stateModifications": [],
+        "name": "",
+        "choice": {
+          "showChoices": false,
+          "multiSelect": false,
+          "choiceDisplayFormat": "dropdown",
+          "associatedSlotTypeIds": [],
+          "idField": "",
+          "labelField": "",
+          "source": "slotType",
+          "slotTypeId": "policyReference",
+          "selectedChoiceLabel": "policyReference"
+        }
+      },
+      "canvasMetadata": {
+        "x": 278.4292528164134,
+        "y": -697.744568422594,
+        "width": 240,
+        "height": 224,
+        "isMinimized": false
+      }
+    },
+    "a102d0c4-e34e-4e0d-a53d-9fdc2784c31e": {
+      "nodeId": "a102d0c4-e34e-4e0d-a53d-9fdc2784c31e",
+      "childNodes": [
+        {
+          "nodeId": "6762921d-1973-4025-82eb-258b7bde7fff",
+          "name": "",
+          "conditions": [
+            {
+              "operator": "eq",
+              "left": {
+                "type": "slot_value_id",
+                "name": "drivable"
+              },
+              "right": {
+                "type": "constant_id",
+                "value": "dqxH-5XPEbTkfd-RMYgMG"
+              }
+            }
+          ]
+        },
+        {
+          "nodeId": "6762921d-1973-4025-82eb-258b7bde7fff",
+          "name": "",
+          "conditions": [
+            {
+              "operator": "eq",
+              "left": {
+                "type": "slot_value_id",
+                "name": "drivable"
+              },
+              "right": {
+                "type": "constant_id",
+                "value": "VU8de-UihMtoVZRgdPTPV"
+              }
+            }
+          ]
+        },
+        {
+          "nodeId": "3800bd60-71d6-4c1d-a1c3-7fe73c9bd792",
+          "name": "",
+          "conditions": [
+            {
+              "operator": "not_exists",
+              "left": {
+                "type": "slot",
+                "name": "drivable"
+              }
+            }
+          ]
+        }
+      ],
+      "type": "user_choice",
+      "messages": [
+        {
+          "messageId": "01b25499-72aa-4f29-b44a-6c72a498eba6",
+          "body": "Is the vehicle drivable? Please answer yes or no.",
+          "type": "text",
+          "skipTranslation": false,
+          "metadata": {
+            "alternatePhrasings": []
+          }
+        }
+      ],
+      "modalities": {},
+      "metadata": {
+        "stateModifications": [],
+        "name": "",
+        "choice": {
+          "showChoices": false,
+          "multiSelect": false,
+          "choiceDisplayFormat": "dropdown",
+          "associatedSlotTypeIds": [],
+          "idField": "",
+          "labelField": "",
+          "source": "slotType",
+          "slotTypeId": "drivable",
+          "selectedChoiceLabel": "drivable"
+        }
+      },
+      "canvasMetadata": {
+        "x": 1254.4963900008584,
+        "y": -1155.7356490265734,
+        "width": 240,
+        "height": 286,
+        "isMinimized": false
+      }
+    },
+    "ae2ffb38-446f-4131-8939-602483d094ef": {
+      "nodeId": "ae2ffb38-446f-4131-8939-602483d094ef",
+      "childNodes": [
+        {
+          "nodeId": "4f3f519c-c129-4304-a895-374266ea75cf",
+          "name": "",
+          "conditions": []
+        }
+      ],
+      "type": "start",
+      "messages": [],
+      "modalities": {},
+      "metadata": {
+        "stateModifications": [],
+        "name": ""
+      },
+      "canvasMetadata": {
+        "x": -87.85373591793302,
+        "y": -1020.7741006985912,
+        "width": 240,
+        "height": 137,
+        "isMinimized": false
+      }
+    },
+    "c2a11a4a-f45c-45d1-b4ae-dcd2a75c71dd": {
+      "nodeId": "c2a11a4a-f45c-45d1-b4ae-dcd2a75c71dd",
+      "childNodes": [
+        {
+          "nodeId": "ec4d20b1-aece-46db-ac9d-504208c125a3",
+          "name": "",
+          "conditions": []
+        }
+      ],
+      "type": "basic",
+      "messages": [
+        {
+          "messageId": "6d32ae10-fc2d-4640-a0ad-1576c4389243",
+          "body": "No claim has been filed. Please restart this session to correct the details.",
+          "type": "text",
+          "skipTranslation": false,
+          "metadata": {
+            "alternatePhrasings": []
+          }
+        }
+      ],
+      "modalities": {},
+      "metadata": {
+        "stateModifications": [],
+        "name": ""
+      },
+      "canvasMetadata": {
+        "x": 2087.6481950485986,
+        "y": -1009.2204627534558,
+        "width": 240,
+        "height": 163,
+        "isMinimized": false
+      }
+    },
+    "ec4d20b1-aece-46db-ac9d-504208c125a3": {
+      "nodeId": "ec4d20b1-aece-46db-ac9d-504208c125a3",
+      "childNodes": [],
+      "type": "terminate",
+      "messages": [],
+      "modalities": {},
+      "metadata": {
+        "stateModifications": [],
+        "name": "",
+        "retainConversationState": false
+      },
+      "canvasMetadata": {
+        "x": 2470.2407373657893,
+        "y": -267.27046194589457,
+        "width": 240,
+        "height": 84,
+        "isMinimized": false
+      }
+    }
+  },
+  "description": "",
+  "aiDescription": "Use this flow when the customer wants to report a new auto accident or vehicle loss.",
+  "untrained": false,
+  "slotTypes": [
+    {
+      "name": "lossType",
+      "type": "NeptuneLossType",
+      "examples": [],
+      "sensitive": false,
+      "aiDescription": "",
+      "multiSelect": false
+    },
+    {
+      "name": "drivable",
+      "type": "NeptuneYesNo",
+      "examples": [],
+      "sensitive": false,
+      "aiDescription": "",
+      "multiSelect": false
+    },
+    {
+      "name": "intakeConfirmed",
+      "type": "NeptuneYesNo",
+      "examples": [],
+      "sensitive": false,
+      "aiDescription": "",
+      "multiSelect": false
+    },
+    {
+      "name": "policyReference",
+      "type": "NLX.Text",
+      "examples": [],
+      "sensitive": false,
+      "aiDescription": "",
+      "multiSelect": false
+    },
+    {
+      "name": "lossDate",
+      "type": "NLX.Date",
+      "examples": [],
+      "sensitive": false,
+      "aiDescription": "",
+      "multiSelect": false
+    }
+  ],
+  "metadata": {
+    "path": "",
+    "tags": [],
+    "scopeTagsCache": {}
+  },
+  "mainLanguageCode": "en-US",
+  "languageCodes": [
+    "en-US"
+  ],
+  "mirroring": "none"
+}
