@@ -1,5 +1,20 @@
 # Neptune Insurance | Build journal
 
+## 2026-11-21 (America/Chicago) — Day 7 conversational application
+
+- Saved `NeptuneInsurance` in `Neptune Insurance Lab`; deployment v0.1.0 displayed successful and Live.
+- Built Welcome, Recovery, Billing, New Auto Claim, and Claim Status flows; added typed slots, recap placeholders, confirmation endings, and connected No match recovery paths.
+- Reviewed the supplied 11-node claim-flow export for graph connectivity and matching placeholder types.
+- Observed pasted test evidence: billing recognized `NeptuneBilling` and exited via Default; an unsupported pizza request reached recovery and exited via Default. Additional intake tests were reported successful by the learner, without full transcripts.
+- The app collects synthetic information only. It does not file a claim, determine coverage, or retrieve live status. Phone/web invocation and human handoff remain future work.
+- Updated the portfolio case study to Day 7, with 7/14 progress and the next Day 8 milestone. Publication to the personal portfolio is separate.
+
+## 2026-11-20 (America/Chicago) — Day 6 routing configuration
+
+- Worked through Billing and Auto Claims queues, routing-profile eligibility, agent state, and channel capacity.
+- Console reported `Neptune-To-AutoClaims` saved: Queue type, Auto Claims destination, Default queue transfer flow.
+- Learner requested a full quick-connect retest on return. Keep this open; AI application tests do not verify a queue transfer or agent delivery.
+
 ## 2026-11-19 (America/Chicago) — Voice entry source and public demo links
 
 - Confirmed the existing voice demo number, `1-800-810-5374`, is associated with `Neptune-Inbound-Voice` in the supplied Connect configuration.
@@ -22,7 +37,7 @@
 
 - [ ] Relocate Neptune source folder from Mac Downloads to home projects directory.
 - [ ] Review case-study page and add portfolio carousel card.
-- [ ] Push project to a dedicated GitHub repository and record first commit SHA.
+- [x] Dedicated source repository: https://github.com/RedLeopard/neptune-insurance (established before this update).
 - [ ] Verify public portfolio link.
 - [ ] Capture architecture screenshots for an interview-ready walkthrough.
 
