@@ -12,6 +12,12 @@ The existing voice demo number, `1-800-810-5374`, is mapped to the published `Ne
 
 See [the sanitized export and resource-binding guide](../connect/README.md). The four Day 5 live tests remain pending. Website phone links start a separate call; browser-stored claims are not transferred into Connect. Routing profiles govern agent eligibility after queue entry and are not caller-facing flow blocks.
 
+## Conversation layer (Day 7 deployment)
+
+`NeptuneInsurance` v0.1.0 is deployed in Agentic CX Designer. Its Welcome flow recognizes Billing, New Auto Claim, and Claim Status requests. Typed slots hold synthetic inputs; deterministic recap and Yes/No confirmation bound the intake. A shared Recovery flow handles unsupported or unresolved input.
+
+This is a separately deployed conversation layer. The existing phone entry and static website do not invoke it yet. Exiting the application via Default is not a queue transfer, an agent connection, or an insurance backend transaction. See [configuration and observed evidence](DAY7.md).
+
 ## Broader customer experience path (planned)
 
 Website, voice DID/toll-free, chat, email, and SMS → Amazon Connect contact flows → routing profile/queues → test agents, tasks, agentic self-service → controlled APIs (API Gateway/Lambda) → sample insurance data in DynamoDB/S3 → CloudWatch/CloudTrail.
