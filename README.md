@@ -6,11 +6,15 @@ A fictional, portfolio-grade insurance website deployed to AWS with a staged Ama
 **Voice demo:** [1-800-810-5374](tel:+18008105374) (fictional lab; live-call tests pending)  
 **Portfolio case study (after installation):** https://hireedwardthornton.click/neptune-insurance.html  
 
+**Current milestone:** Day 7 of 14, reported complete on November 21, 2026. Next: AI controls, tools, and human handoff.
+
 ## What's actually built
 
 - Eight responsive pages under `neptune-insurance/`: home, coverage, claims, portal, support, about, privacy, terms.
 - Interactive *simulated* claims workflow, sample policy portal, quote explorer, and scripted help preview. Browser claims stay local and are not sent to the phone flow. Live web chat, email and SMS remain planned.
 - Amazon Connect voice entry: published `Neptune-Inbound-Voice` flow and existing toll-free number association, confirmed by the supplied export and number configuration. Logging, channel/hours checks, a three-choice menu, one retry and an Auto Claims queue transfer are configured. The four Day 5 voice tests remain pending.
+- Routing lab: Billing and Auto Claims eligibility, routing profiles, agent state, capacity, and the `Neptune-To-AutoClaims` queue quick connect. Full quick-connect retest remains a follow-up.
+- Agentic CX Designer: `NeptuneInsurance` v0.1.0 deployed Live in `Neptune Insurance Lab`. Billing, new-claim intake, claim-reference capture, typed slots, confirmation, and shared recovery are configured. Billing and unsupported-request transcripts were reviewed; intake success is learner-reported. The application is not yet invoked by the phone or website. See [Day 7 configuration and evidence](docs/DAY7.md).
 - [Sanitized flow export and resource-binding guide](connect/README.md). Source-account resource identifiers are replaced with placeholders; reselect hours and queue resources before publishing an imported copy.
 - Dedicated AWS S3 bucket with private origin, CloudFront distribution with Origin Access Control, HTTPS certificate in ACM, and Route 53 aliases.
 - Portfolio case study (`neptune-insurance.html`) and card installer (`install_neptune.py`) to keep the main portfolio's normal project format.
