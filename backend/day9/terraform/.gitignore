@@ -1,0 +1,14 @@
+# Keep state, plans, downloads and local inputs out of Git.
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+*.tfvars
+*.tfvars.json
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+# Commit .terraform.lock.hcl after terraform init; it is not ignored.
