@@ -1,4 +1,4 @@
-# Adopt the table already created during Day 9.
+# Manage the existing Neptune Insurance data table after import.
 # Seed items are managed separately; this resource manages the table itself.
 resource "aws_dynamodb_table" "insurance_lab" {
   name         = "NeptuneInsuranceLab"

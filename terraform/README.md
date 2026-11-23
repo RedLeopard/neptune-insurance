@@ -1,43 +1,46 @@
-# Day 9: adopt the insurance table with Terraform
+# Neptune Insurance infrastructure
 
-## Verified checkpoint
+Terraform configuration for the existing Neptune Insurance lookup table in
+us-west-2 (Oregon), AWS account 690405831841.
 
-Learner-reported terminal evidence on November 23, 2026:
+## Existing resources
 
-- AWS identity: Edward in account 690405831841.
-- Neptune Connect instance: neptune-insurance-lab in us-west-2.
-- NeptuneInsuranceLab is ACTIVE with String partition key pk.
-- The seed write returned an empty UnprocessedItems object.
-- The verification scan returned POLICY#POL-1001 (DEMO-1001, ACTIVE), CLAIM#CLM-1001 (DEMO-1001, IN_REVIEW), and CLAIM#CLM-2002 (DEMO-2002, RECEIVED). All have product AUTO.
+- Connect instance: neptune-insurance-lab.
+- DynamoDB table: NeptuneInsuranceLab, on-demand billing, String partition key pk.
+- Synthetic records: POLICY#POL-1001, CLAIM#CLM-1001 and CLAIM#CLM-2002.
 
-The table and three synthetic records already exist. Do not create a second table.
+The table and records were created and verified through AWS CLI. Terraform has
+not been initialized or applied. Adoption is deferred until the insurance lookup
+and its integration are working.
 
-## Current scope
+## Configuration scope
 
-This first Terraform stage manages the existing DynamoDB table only.
-Lambda, IAM, logging, Connect association and conversational integration are later
-guided tasks, not completed resources. Seed records remain separate from
-infrastructure state; do not use aws_dynamodb_table_item for these mutable lab records.
+The current configuration covers the existing table only. Lambda, IAM, logging
+and Connect integration are implemented incrementally. Seed items are maintained
+separately from Terraform infrastructure state.
 
-The provider explicitly selects Oregon, regardless of the CLI's default region,
-and restricts execution to the verified account. No credentials belong in these files.
-Terraform prevent_destroy guards plans while this lifecycle rule is present; it is
-not AWS-side deletion protection and does not prevent deletion through other tools.
+The provider explicitly selects us-west-2 and restricts execution to the account
+above. imports.tf identifies the existing table by name. It must be adopted
+without creating a replacement or rewriting its item contents.
 
-## Bring the configuration to the laptop
+prevent_destroy guards Terraform plans while the lifecycle rule is present; it
+is not AWS-side deletion protection.
 
-From the existing checkout:
+## Project files
 
-```bash
-git -C "$HOME/NeptuneInsurance" pull --ff-only origin main
-terraform version
-```
+- main.tf: table definition.
+- versions.tf: Terraform/provider requirements and AWS configuration.
+- imports.tf: existing-table import declaration.
+- outputs.tf: table name, ARN and region.
+- iam/: Neptune Insurance role trust and permission documents.
+- table.json: original AWS CLI table configuration, when present locally.
+- seed-records.json: synthetic record fixtures, when present locally.
 
-If Terraform is unavailable, resolve installation before continuing. The source
-requires Terraform 1.5 or later, below 2.0. If pull reports an overwrite conflict,
-stop and inspect it; do not reset or clean the working tree.
+All project paths use the repository's top-level terraform/ directory.
 
-## Initialize, validate and inspect the import plan
+## Adoption workflow (deferred)
+
+Terraform 1.5 or later, below 2.0, is required. After the backend is working:
 
 ```bash
 terraform -chdir="$HOME/NeptuneInsurance/terraform" init
@@ -46,30 +49,23 @@ terraform -chdir="$HOME/NeptuneInsurance/terraform" validate
 terraform -chdir="$HOME/NeptuneInsurance/terraform" plan -out=adopt-table.tfplan
 ```
 
-Run these sequentially and stop if one fails. No apply has been authorized by this
-README. Review the actual plan in the lesson before applying. Expected first plan:
-one table to import, zero resources to add/change/destroy. Output values may also
-be added to state. If the provider detects any drift, inspect it before proceeding.
-The import block records the existing table in state during apply rather than
-creating a new table, and does not import or rewrite its item contents.
+Run commands sequentially and resolve failures before continuing. Review the
+actual plan before applying. The expected initial plan imports one table with
+zero resources to add, change or destroy. Inspect any drift rather than assuming
+the configuration matches the account. After adoption, confirm a subsequent
+plan shows no infrastructure changes.
 
-After the import-only plan is reviewed and applied, rerun plan and confirm no
-infrastructure changes. Keep imports.tf as a record of adoption.
+## Version control
 
-## Source and state
-
-Commit .tf files, this README, synthetic fixtures and .terraform.lock.hcl.
-Keep .terraform/, state files, saved plans, credentials and secret variable files
-out of Git. State is local for this single-operator lab; preserve it securely.
-An access-controlled remote state backend can be added as a separate task before
+Commit configuration, Python source, synthetic fixtures and .terraform.lock.hcl.
+Keep state files, saved plans, .terraform/, credentials and secret inputs out of
+Git. Local state is appropriate only for the current single-operator workflow;
+preserve it securely and configure an access-controlled remote backend before
 using multiple operators or automated applies.
 
-The existing terraform/table.json and terraform/seed-records.json were created on the
-learner's laptop. They are not overwritten by this commit. The former documents
-the CLI bootstrap; do not use it to recreate a table once managed by Terraform.
-Inspect and stage those two exact synthetic files separately when syncing them.
-Never use git add . for the whole repository because unrelated website files
-are currently untracked.
+Stage exact project paths so unrelated website files are not accidentally
+included. If a pull reports a conflict, inspect it rather than resetting or
+cleaning the working tree.
 
 ## References
 
