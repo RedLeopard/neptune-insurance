@@ -1,0 +1,9 @@
+{
+  "Details": {
+    "Parameters": {
+      "recordType": "claim",
+      "reference": "CLM-1001",
+      "ownerId": "DEMO-2002"
+    }
+  }
+}
