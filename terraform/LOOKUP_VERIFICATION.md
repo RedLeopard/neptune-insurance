@@ -22,7 +22,7 @@ service response boundary for these synthetic records and requests.
 
 ## Pending
 
-- Connect invocation permission and Lambda association.
+- Connect Lambda association; currently blocked by Edward's missing identity permission.
 - Published lookup module and Agentic CX data request.
 - Real conversational lookup with backend correlation.
 - Previously outstanding live agent delivery and received context.
@@ -67,3 +67,19 @@ connect/lambda-permission.json scopes lambda:InvokeFunction to the existing
 Neptune Connect instance and account. connect/lambda-association.json identifies
 that instance and this lookup function. These are AWS CLI request documents,
 not proof that either change has been applied.
+
+## Connect invocation setup observed
+
+The supplied terminal output confirmed that AllowNeptuneConnectInvoke was
+added to NeptuneInsuranceLookup, allowing connect.amazonaws.com to invoke it
+only from account 690405831841 and the existing Neptune instance ARN.
+
+The subsequent AssociateLambdaFunction call failed with AccessDeniedException:
+IAM user Edward has no identity-based permission for
+connect:AssociateLambdaFunction on that instance. The association is not
+complete, and the successful Lambda permission must not be added again.
+
+iam/neptune-connect-association.json is the proposed narrow operator policy:
+AssociateLambdaFunction and ListLambdaFunctions on the Neptune instance only.
+It has not yet been reported applied. It belongs on the operator identity,
+not on the Lambda execution role.
