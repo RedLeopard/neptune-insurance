@@ -22,7 +22,6 @@ service response boundary for these synthetic records and requests.
 
 ## Pending
 
-- Controlled function timeout and verified recovery.
 - Connect invocation permission and Lambda association.
 - Published lookup module and Agentic CX data request.
 - Real conversational lookup with backend correlation.
@@ -46,3 +45,25 @@ Expected output includes controlled-timeout, restored-settings and recovery
 PASS messages. A STOP or FAIL result must be resolved before integration. If the
 process is forcibly terminated or AWS access is lost, verify and restore the
 normal timeout/environment before using the function.
+
+## Timeout and recovery observed
+
+The supplied terminal output confirmed the controlled timeout and subsequent
+recovery on November 23, 2026:
+
+- Fault settings: Timeout=1 second, LOOKUP_DELAY_SECONDS=2.
+- Runtime error: Sandbox.Timedout, task timed out after 1.00 seconds.
+- Timeout RequestId: 1e39eb65-08b5-4edc-86bf-795a19f6969b.
+- Original settings restored and checked: Timeout=3, delay=0.
+- Recovery claim lookup returned OK.
+- Recovery RequestId: f6043775-2c91-490c-8c02-96dbe48b16ad.
+
+This verifies the direct Lambda timeout/recovery drill. Connect routing of an
+invocation error or timeout remains separate integration work.
+
+## Connect setup source
+
+connect/lambda-permission.json scopes lambda:InvokeFunction to the existing
+Neptune Connect instance and account. connect/lambda-association.json identifies
+that instance and this lookup function. These are AWS CLI request documents,
+not proof that either change has been applied.

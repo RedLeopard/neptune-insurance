@@ -1,0 +1,8 @@
+{
+  "FunctionName": "NeptuneInsuranceLookup",
+  "StatementId": "AllowNeptuneConnectInvoke",
+  "Action": "lambda:InvokeFunction",
+  "Principal": "connect.amazonaws.com",
+  "SourceArn": "arn:aws:connect:us-west-2:690405831841:instance/44c21257-bcc6-4039-a904-ec0ab83ac0a0",
+  "SourceAccount": "690405831841"
+}
