@@ -1,0 +1,28 @@
+{
+  "type": "object",
+  "properties": {
+    "resultCode": {
+      "type": "string"
+    },
+    "reference": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "product": {
+      "type": "string"
+    },
+    "requestId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "resultCode",
+    "reference",
+    "status",
+    "product",
+    "requestId"
+  ],
+  "additionalProperties": false
+}

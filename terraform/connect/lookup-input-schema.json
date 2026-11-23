@@ -1,0 +1,16 @@
+{
+  "type": "object",
+  "properties": {
+    "recordType": {
+      "type": "string"
+    },
+    "reference": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "recordType",
+    "reference"
+  ],
+  "additionalProperties": false
+}
