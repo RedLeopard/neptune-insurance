@@ -40,10 +40,10 @@ stop and inspect it; do not reset or clean the working tree.
 ## Initialize, validate and inspect the import plan
 
 ```bash
-terraform -chdir="$HOME/NeptuneInsurance/backend/day9/terraform" init
-terraform -chdir="$HOME/NeptuneInsurance/backend/day9/terraform" fmt -check
-terraform -chdir="$HOME/NeptuneInsurance/backend/day9/terraform" validate
-terraform -chdir="$HOME/NeptuneInsurance/backend/day9/terraform" plan -out=adopt-table.tfplan
+terraform -chdir="$HOME/NeptuneInsurance/terraform" init
+terraform -chdir="$HOME/NeptuneInsurance/terraform" fmt -check
+terraform -chdir="$HOME/NeptuneInsurance/terraform" validate
+terraform -chdir="$HOME/NeptuneInsurance/terraform" plan -out=adopt-table.tfplan
 ```
 
 Run these sequentially and stop if one fails. No apply has been authorized by this
@@ -64,9 +64,9 @@ out of Git. State is local for this single-operator lab; preserve it securely.
 An access-controlled remote state backend can be added as a separate task before
 using multiple operators or automated applies.
 
-The existing backend/day9/table.json and seed-records.json were created on the
+The existing terraform/table.json and terraform/seed-records.json were created on the
 learner's laptop. They are not overwritten by this commit. The former documents
-the CLI bootstrap; do not use it to recreate a table now managed by Terraform.
+the CLI bootstrap; do not use it to recreate a table once managed by Terraform.
 Inspect and stage those two exact synthetic files separately when syncing them.
 Never use git add . for the whole repository because unrelated website files
 are currently untracked.
