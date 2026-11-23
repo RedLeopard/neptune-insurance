@@ -1,5 +1,20 @@
 # Neptune Insurance | Build journal
 
+## 2026-11-22 (America/Chicago) — Day 8 AI controls and handoff configuration
+
+- Saved `NeptuneHumanHandoff` and `NeptuneSupervisorHandoff` with Start → Escalate, fixed customer messages, and five Set state modifications on each path.
+- Created `handoffReason`, `handoffSummary`, `handoffClaimReference`, `customerIntent` as String context variables and `supervisorRequested` as Boolean. The schema generator was given unquoted `false` to produce the Boolean type.
+- Saved `NeptuneHumanRequests` (Input): supervisor/manager keywords route to the supervisor flow; human/representative keywords route to the general flow. The second rule required a nonempty enforcement message and was saved using Override → Static plus the Route to field.
+- Saved `NeptuneInsuranceOutput` (Output), with the `NoInsuranceDecisions` LLM-judge rule and a fixed Override → Static response. Its intended scope is unsupported case-specific coverage, liability, fraud and payment decisions; effectiveness is not certified by saving the rule.
+- Attached both guardrails and both handoff flows to `NeptuneInsurance`. A new build and deployment were reported; its version/build identifier was not captured. Existing Welcome, Fallback, Unknown and Incomprehension defaults were retained.
+- Observed supervisor test transcript: the correct supervisor-request message, then **Application exited via Escalation**. General-human test success was learner-reported; no full transcript was supplied.
+- Connected the existing claims-context check to `Neptune Agentic CX`; its Escalation path reads all five returned Agentic CX context values into Current contact / User defined attributes, then selects and transfers to Auto Claims. Error goes to the existing claims acknowledgement/queue path; Idle chat timeout goes to technical fallback; Default disconnects.
+- Added `Neptune AI Voice` near the entry. Reviewed supplied export `(27)`: 26 blocks reachable from Entry, no empty targets or missing graph references, correct dynamic handoff mappings, and connected routing/error paths. The supplied file contains `TextToSpeechVoice: Joanna` but no explicit language attribute.
+- After that review, the learner reported enabling the English (United States) language attribute and publishing. No updated export or live phone-call result followed. This final correction/publication is recorded as reported, not inferred into the archived JSON.
+- Updated GitHub documentation, the sanitized latest supplied flow snapshot, and the portfolio case study. The live customer website and live personal portfolio were not deployed by this source update.
+
+**Resume:** confirm the published flow and lab number association, sign an eligible Auto Claims test agent into the workspace and set Available, then make one controlled synthetic call: press 3, ask for a representative, confirm agent acceptance/audio and inspect the returned handoff attributes. Record the real result; obtain a final post-language-fix export. Day 6 quick-connect retest and unexecuted negative/failure checks remain pending.
+
 ## 2026-11-21 (America/Chicago) — Day 7 conversational application
 
 - Saved `NeptuneInsurance` in `Neptune Insurance Lab`; deployment v0.1.0 displayed successful and Live.
@@ -44,3 +59,4 @@
 ## Note for future entries
 
 Use format: date, change made, service/component, proof/test, architectural decision, next action.
+

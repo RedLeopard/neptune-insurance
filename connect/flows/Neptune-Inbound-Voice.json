@@ -3,44 +3,277 @@
   "StartAction": "Enable Flow Logging",
   "Metadata": {
     "entryPointPosition": {
-      "x": -272,
-      "y": 212.8
+      "x": -415.2,
+      "y": 215.2
     },
     "ActionMetadata": {
-      "Set Claims Context": {
-        "position": {
-          "x": 927.2,
-          "y": 475.2
-        },
-        "isFriendlyName": true,
-        "dynamicParams": []
-      },
-      "Final goodbye": {
-        "position": {
-          "x": 1392,
-          "y": 449.6
-        },
-        "isFriendlyName": true
-      },
-      "Retry message": {
-        "position": {
-          "x": 1173.6,
-          "y": 681.6
-        },
-        "isFriendlyName": true
-      },
-      "dafb2868-7c6d-4c92-9404-5fe4fe105b61": {
-        "position": {
-          "x": 242.4,
-          "y": 208
-        }
-      },
       "After-hours message": {
         "position": {
           "x": 696.8,
           "y": 200
         },
         "isFriendlyName": true
+      },
+      "Set Policy Context": {
+        "position": {
+          "x": 921.6,
+          "y": 261.6
+        },
+        "isFriendlyName": true,
+        "dynamicParams": []
+      },
+      "Policy acknowledgement": {
+        "position": {
+          "x": 695.2,
+          "y": 395.2
+        },
+        "isFriendlyName": true
+      },
+      "Retry message": {
+        "position": {
+          "x": 1616.8,
+          "y": 653.6
+        },
+        "isFriendlyName": true
+      },
+      "Set Billing Context": {
+        "position": {
+          "x": 1411.2,
+          "y": 656.8
+        },
+        "isFriendlyName": true,
+        "dynamicParams": []
+      },
+      "Billing acknowledgement": {
+        "position": {
+          "x": 696.8,
+          "y": 596.8
+        },
+        "isFriendlyName": true
+      },
+      "Transfer to Billing": {
+        "position": {
+          "x": 1161.6,
+          "y": 672
+        },
+        "isFriendlyName": true
+      },
+      "Set Billing Queue": {
+        "position": {
+          "x": 935.2,
+          "y": 674.4
+        },
+        "isFriendlyName": true,
+        "parameters": {
+          "QueueId": {
+            "displayName": "Neptune-Billing"
+          }
+        },
+        "queue": {
+          "text": "Neptune-Billing"
+        }
+      },
+      "Final goodbye": {
+        "position": {
+          "x": 1403.2,
+          "y": 444
+        },
+        "isFriendlyName": true
+      },
+      "Main Menu": {
+        "position": {
+          "x": 467.2,
+          "y": 730.4
+        },
+        "isFriendlyName": true,
+        "conditionMetadata": [
+          {
+            "id": "242925d2-1f9e-4e17-ae42-5ecbf8d5365f",
+            "value": "1"
+          },
+          {
+            "id": "2988ebfe-acdc-466b-bc03-bed20f0d7a03",
+            "value": "2"
+          },
+          {
+            "id": "f9ab5d3c-27d4-4755-9cf3-19599a612361",
+            "value": "3"
+          }
+        ]
+      },
+      "Retry menu": {
+        "position": {
+          "x": 458.4,
+          "y": 405.6
+        },
+        "isFriendlyName": true,
+        "conditionMetadata": [
+          {
+            "id": "dd1c992c-470d-490c-93a6-be2e27233c82",
+            "value": "1"
+          },
+          {
+            "id": "a311f9aa-3a6d-4159-8bba-a25d3bd5fe6e",
+            "value": "2"
+          },
+          {
+            "id": "aea4d4f1-7570-4354-8eb3-1ad3f1155236",
+            "value": "3"
+          }
+        ]
+      },
+      "Check Claims Service": {
+        "position": {
+          "x": 1154.4,
+          "y": 902.4
+        },
+        "isFriendlyName": true,
+        "conditionMetadata": [
+          {
+            "id": "bd377917-15bd-407a-b3c3-8dd7ab977eb3",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "AutoClaims"
+          }
+        ]
+      },
+      "Set Claims Context": {
+        "position": {
+          "x": 723.2,
+          "y": 844.8
+        },
+        "isFriendlyName": true,
+        "dynamicParams": []
+      },
+      "Claims acknowledgement": {
+        "position": {
+          "x": 1612,
+          "y": 900.8
+        },
+        "isFriendlyName": true
+      },
+      "Transfer to Auto Claims": {
+        "position": {
+          "x": 2118.4,
+          "y": 753.6
+        },
+        "isFriendlyName": true
+      },
+      "Claims at capacity": {
+        "position": {
+          "x": 2417.6,
+          "y": 761.6
+        },
+        "isFriendlyName": true
+      },
+      "Neptune Agentic CX": {
+        "position": {
+          "x": 1387.2,
+          "y": 892
+        },
+        "isFriendlyName": true,
+        "parameters": {
+          "AgentConfiguration": {
+            "WorkspaceId": {
+              "displayName": "Neptune Insurance Lab",
+              "useDropdown": "true"
+            },
+            "ApplicationId": {
+              "displayName": "NeptuneInsurance"
+            },
+            "Alias": {
+              "displayName": "Production"
+            }
+          },
+          "SpeechRecognitionConfiguration": {
+            "SpeechRecognitionEngine": {
+              "displayName": "Amazon Connect agentic voice (recommended)"
+            }
+          }
+        }
+      },
+      "Set Auto Claims Queue": {
+        "position": {
+          "x": 1892.8,
+          "y": 741.6
+        },
+        "isFriendlyName": true,
+        "parameters": {
+          "QueueId": {
+            "displayName": "Auto Claims"
+          }
+        },
+        "queue": {
+          "text": "Auto Claims"
+        }
+      },
+      "Neptune Save AI Handoff": {
+        "position": {
+          "x": 1960,
+          "y": 1048
+        },
+        "isFriendlyName": true,
+        "parameters": {
+          "Attributes": {
+            "handoffReason": {
+              "useDynamic": true
+            },
+            "handoffSummary": {
+              "useDynamic": true
+            },
+            "handoffClaimReference": {
+              "useDynamic": true
+            },
+            "supervisorRequested": {
+              "useDynamic": true
+            },
+            "customerIntent": {
+              "useDynamic": true
+            }
+          }
+        },
+        "dynamicParams": [
+          "handoffReason",
+          "handoffSummary",
+          "handoffClaimReference",
+          "supervisorRequested",
+          "customerIntent"
+        ]
+      },
+      "735859a0-2b78-46f9-9303-b6ea91375389": {
+        "position": {
+          "x": 1634.4,
+          "y": 492
+        }
+      },
+      "Enable Flow Logging": {
+        "position": {
+          "x": -334.4,
+          "y": 216
+        },
+        "isFriendlyName": true
+      },
+      "Check Voice Channel": {
+        "position": {
+          "x": -142.4,
+          "y": 222.4
+        },
+        "isFriendlyName": true,
+        "conditions": [],
+        "conditionMetadata": [
+          {
+            "id": "26cb1996-c9c0-4490-9485-d23662cad0a2",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "VOICE"
+          }
+        ]
       },
       "Check Neptune Hours": {
         "position": {
@@ -58,110 +291,6 @@
           "text": "Neptune-Lab-Hours"
         }
       },
-      "Set Policy Context": {
-        "position": {
-          "x": 921.6,
-          "y": 261.6
-        },
-        "isFriendlyName": true,
-        "dynamicParams": []
-      },
-      "Policy acknowledgement": {
-        "position": {
-          "x": 695.2,
-          "y": 395.2
-        },
-        "isFriendlyName": true
-      },
-      "735859a0-2b78-46f9-9303-b6ea91375389": {
-        "position": {
-          "x": 1634.4,
-          "y": 492
-        }
-      },
-      "Retry menu": {
-        "position": {
-          "x": 458.4,
-          "y": 405.6
-        },
-        "isFriendlyName": true,
-        "conditionMetadata": [
-          {
-            "id": "94593bd3-81d3-43d2-9ade-10beb8ded6a4",
-            "value": "1"
-          },
-          {
-            "id": "f9b7dc0a-f71b-4e6d-af83-5e9573a45ade",
-            "value": "2"
-          },
-          {
-            "id": "2fdd4144-10a9-4777-a968-6091f6facba6",
-            "value": "3"
-          }
-        ]
-      },
-      "Main Menu": {
-        "position": {
-          "x": 467.2,
-          "y": 730.4
-        },
-        "isFriendlyName": true,
-        "conditionMetadata": [
-          {
-            "id": "1d5a4cdd-876f-4980-8ce4-c3e19a327160",
-            "value": "1"
-          },
-          {
-            "id": "329ef4ac-8728-46a3-bf88-b43da4a86462",
-            "value": "2"
-          },
-          {
-            "id": "e0cdbdc6-fba4-402d-8c1f-276a86442134",
-            "value": "3"
-          }
-        ]
-      },
-      "Billing acknowledgement": {
-        "position": {
-          "x": 696.8,
-          "y": 596.8
-        },
-        "isFriendlyName": true
-      },
-      "Set Billing Context": {
-        "position": {
-          "x": 933.6,
-          "y": 663.2
-        },
-        "isFriendlyName": true,
-        "dynamicParams": []
-      },
-      "Check Claims Service": {
-        "position": {
-          "x": 1160,
-          "y": 485.6
-        },
-        "isFriendlyName": true,
-        "conditions": [],
-        "conditionMetadata": [
-          {
-            "id": "b0fe1c69-ff38-4b2b-b420-c89e52f0dbbd",
-            "operator": {
-              "name": "Equals",
-              "value": "Equals",
-              "shortDisplay": "="
-            },
-            "value": "AutoClaims"
-          }
-        ]
-      },
-      "Claims acknowledgement": {
-        "position": {
-          "x": 692.8,
-          "y": 797.6
-        },
-        "isFriendlyName": true
-      },
       "Technical fallback prompt": {
         "position": {
           "x": 1161.6,
@@ -169,60 +298,24 @@
         },
         "isFriendlyName": true
       },
-      "Set Auto Claims Queue": {
+      "Neptune AI Voice": {
         "position": {
-          "x": 936.8,
-          "y": 859.2
+          "x": 55.2,
+          "y": 233.6
         },
         "isFriendlyName": true,
         "parameters": {
-          "QueueId": {
-            "displayName": "Auto Claims"
+          "TextToSpeechVoice": {
+            "languageCode": "en-US"
           }
         },
-        "queue": {
-          "text": "Auto Claims"
+        "overrideConsoleVoice": false
+      },
+      "dafb2868-7c6d-4c92-9404-5fe4fe105b61": {
+        "position": {
+          "x": 258.4,
+          "y": 184
         }
-      },
-      "Transfer to Auto Claims": {
-        "position": {
-          "x": 1170.4,
-          "y": 874.4
-        },
-        "isFriendlyName": true
-      },
-      "Claims at capacity": {
-        "position": {
-          "x": 1391.2,
-          "y": 867.2
-        },
-        "isFriendlyName": true
-      },
-      "Check Voice Channel": {
-        "position": {
-          "x": 42.4,
-          "y": 194.4
-        },
-        "isFriendlyName": true,
-        "conditions": [],
-        "conditionMetadata": [
-          {
-            "id": "94a08d3a-ab54-48a9-bca2-fd85d573a108",
-            "operator": {
-              "name": "Equals",
-              "value": "Equals",
-              "shortDisplay": "="
-            },
-            "value": "VOICE"
-          }
-        ]
-      },
-      "Enable Flow Logging": {
-        "position": {
-          "x": -169.6,
-          "y": 212
-        },
-        "isFriendlyName": true
       }
     },
     "Annotations": [],
@@ -235,77 +328,6 @@
   "Actions": [
     {
       "Parameters": {
-        "Attributes": {
-          "menuSelection": "3",
-          "serviceLine": "AutoClaims"
-        },
-        "TargetContact": "Current"
-      },
-      "Identifier": "Set Claims Context",
-      "Type": "UpdateContactAttributes",
-      "Transitions": {
-        "NextAction": "Check Claims Service",
-        "Errors": [
-          {
-            "NextAction": "Technical fallback prompt",
-            "ErrorType": "NoMatchingError"
-          }
-        ]
-      }
-    },
-    {
-      "Parameters": {
-        "SkipWhenDTMFBufferEnabled": "false",
-        "Text": "We did not receive a valid selection. Please call again when you are ready. Goodbye."
-      },
-      "Identifier": "Final goodbye",
-      "Type": "MessageParticipant",
-      "Transitions": {
-        "NextAction": "735859a0-2b78-46f9-9303-b6ea91375389",
-        "Errors": [
-          {
-            "NextAction": "735859a0-2b78-46f9-9303-b6ea91375389",
-            "ErrorType": "NoMatchingError"
-          }
-        ]
-      }
-    },
-    {
-      "Parameters": {
-        "SkipWhenDTMFBufferEnabled": "false",
-        "Text": "Sorry, we did not receive a valid selection. Please try once more"
-      },
-      "Identifier": "Retry message",
-      "Type": "MessageParticipant",
-      "Transitions": {
-        "NextAction": "Retry menu",
-        "Errors": [
-          {
-            "NextAction": "735859a0-2b78-46f9-9303-b6ea91375389",
-            "ErrorType": "NoMatchingError"
-          }
-        ]
-      }
-    },
-    {
-      "Parameters": {
-        "SkipWhenDTMFBufferEnabled": "false",
-        "Text": "Welcome to Neptune Insurance"
-      },
-      "Identifier": "dafb2868-7c6d-4c92-9404-5fe4fe105b61",
-      "Type": "MessageParticipant",
-      "Transitions": {
-        "NextAction": "Check Neptune Hours",
-        "Errors": [
-          {
-            "NextAction": "Technical fallback prompt",
-            "ErrorType": "NoMatchingError"
-          }
-        ]
-      }
-    },
-    {
-      "Parameters": {
         "SkipWhenDTMFBufferEnabled": "false",
         "Text": "Neptune Insurance is currently closed. Please contact us during our published service hours. Goodbye"
       },
@@ -316,42 +338,6 @@
         "Errors": [
           {
             "NextAction": "735859a0-2b78-46f9-9303-b6ea91375389",
-            "ErrorType": "NoMatchingError"
-          }
-        ]
-      }
-    },
-    {
-      "Parameters": {
-        "HoursOfOperationId": "arn:aws:connect:us-west-2:000000000000:instance/00000000-0000-0000-0000-000000000000/operating-hours/11111111-1111-1111-1111-111111111111"
-      },
-      "Identifier": "Check Neptune Hours",
-      "Type": "CheckHoursOfOperation",
-      "Transitions": {
-        "NextAction": "Technical fallback prompt",
-        "Conditions": [
-          {
-            "NextAction": "Main Menu",
-            "Condition": {
-              "Operator": "Equals",
-              "Operands": [
-                "True"
-              ]
-            }
-          },
-          {
-            "NextAction": "After-hours message",
-            "Condition": {
-              "Operator": "Equals",
-              "Operands": [
-                "False"
-              ]
-            }
-          }
-        ],
-        "Errors": [
-          {
-            "NextAction": "Technical fallback prompt",
             "ErrorType": "NoMatchingError"
           }
         ]
@@ -395,61 +381,105 @@
       }
     },
     {
-      "Parameters": {},
-      "Identifier": "735859a0-2b78-46f9-9303-b6ea91375389",
-      "Type": "DisconnectParticipant",
-      "Transitions": {}
+      "Parameters": {
+        "SkipWhenDTMFBufferEnabled": "false",
+        "Text": "Sorry, we did not receive a valid selection. Please try once more"
+      },
+      "Identifier": "Retry message",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "Retry menu",
+        "Errors": [
+          {
+            "NextAction": "735859a0-2b78-46f9-9303-b6ea91375389",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
     },
     {
       "Parameters": {
-        "StoreInput": "False",
-        "InputTimeLimitSeconds": "5",
-        "Text": "For Policy Service, press 1. For Billing, press 2. For Auto Claims, press 3."
+        "Attributes": {
+          "menuSelection": "2",
+          "serviceLine": "Billing"
+        },
+        "TargetContact": "Current"
       },
-      "Identifier": "Retry menu",
-      "Type": "GetParticipantInput",
+      "Identifier": "Set Billing Context",
+      "Type": "UpdateContactAttributes",
       "Transitions": {
-        "NextAction": "Final goodbye",
-        "Conditions": [
-          {
-            "NextAction": "Set Policy Context",
-            "Condition": {
-              "Operator": "Equals",
-              "Operands": [
-                "1"
-              ]
-            }
-          },
-          {
-            "NextAction": "Set Billing Context",
-            "Condition": {
-              "Operator": "Equals",
-              "Operands": [
-                "2"
-              ]
-            }
-          },
-          {
-            "NextAction": "Set Claims Context",
-            "Condition": {
-              "Operator": "Equals",
-              "Operands": [
-                "3"
-              ]
-            }
-          }
-        ],
+        "NextAction": "Billing acknowledgement",
         "Errors": [
           {
-            "NextAction": "Final goodbye",
-            "ErrorType": "InputTimeLimitExceeded"
-          },
+            "NextAction": "Technical fallback prompt",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "SkipWhenDTMFBufferEnabled": "false",
+        "Text": "You selected Billing. Please hold while we connect you to our billing team."
+      },
+      "Identifier": "Billing acknowledgement",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "Set Billing Queue",
+        "Errors": [
           {
-            "NextAction": "Final goodbye",
-            "ErrorType": "NoMatchingCondition"
+            "NextAction": "Technical fallback prompt",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {},
+      "Identifier": "Transfer to Billing",
+      "Type": "TransferContactToQueue",
+      "Transitions": {
+        "NextAction": "Technical fallback prompt",
+        "Errors": [
+          {
+            "NextAction": "Technical fallback prompt",
+            "ErrorType": "QueueAtCapacity"
           },
           {
             "NextAction": "Technical fallback prompt",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "QueueId": "arn:aws:connect:us-west-2:000000000000:instance/00000000-0000-0000-0000-000000000000/queue/33333333-3333-3333-3333-333333333333"
+      },
+      "Identifier": "Set Billing Queue",
+      "Type": "UpdateContactTargetQueue",
+      "Transitions": {
+        "NextAction": "Transfer to Billing",
+        "Errors": [
+          {
+            "NextAction": "Technical fallback prompt",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "SkipWhenDTMFBufferEnabled": "false",
+        "Text": "We did not receive a valid selection. Please call again when you are ready. Goodbye."
+      },
+      "Identifier": "Final goodbye",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "735859a0-2b78-46f9-9303-b6ea91375389",
+        "Errors": [
+          {
+            "NextAction": "735859a0-2b78-46f9-9303-b6ea91375389",
             "ErrorType": "NoMatchingError"
           }
         ]
@@ -512,34 +542,52 @@
     },
     {
       "Parameters": {
-        "SkipWhenDTMFBufferEnabled": "false",
-        "Text": "You selected billing. This lab route is not connected to a billing agent yet. Goodbye."
+        "StoreInput": "False",
+        "InputTimeLimitSeconds": "5",
+        "Text": "For Policy Service, press 1. For Billing, press 2. For Auto Claims, press 3."
       },
-      "Identifier": "Billing acknowledgement",
-      "Type": "MessageParticipant",
+      "Identifier": "Retry menu",
+      "Type": "GetParticipantInput",
       "Transitions": {
-        "NextAction": "735859a0-2b78-46f9-9303-b6ea91375389",
+        "NextAction": "Final goodbye",
+        "Conditions": [
+          {
+            "NextAction": "Set Policy Context",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "1"
+              ]
+            }
+          },
+          {
+            "NextAction": "Set Billing Context",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "2"
+              ]
+            }
+          },
+          {
+            "NextAction": "Set Claims Context",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "3"
+              ]
+            }
+          }
+        ],
         "Errors": [
           {
-            "NextAction": "735859a0-2b78-46f9-9303-b6ea91375389",
-            "ErrorType": "NoMatchingError"
-          }
-        ]
-      }
-    },
-    {
-      "Parameters": {
-        "Attributes": {
-          "menuSelection": "2",
-          "serviceLine": "Billing"
-        },
-        "TargetContact": "Current"
-      },
-      "Identifier": "Set Billing Context",
-      "Type": "UpdateContactAttributes",
-      "Transitions": {
-        "NextAction": "Billing acknowledgement",
-        "Errors": [
+            "NextAction": "Final goodbye",
+            "ErrorType": "InputTimeLimitExceeded"
+          },
+          {
+            "NextAction": "Final goodbye",
+            "ErrorType": "NoMatchingCondition"
+          },
           {
             "NextAction": "Technical fallback prompt",
             "ErrorType": "NoMatchingError"
@@ -557,7 +605,7 @@
         "NextAction": "Technical fallback prompt",
         "Conditions": [
           {
-            "NextAction": "Claims acknowledgement",
+            "NextAction": "Neptune Agentic CX",
             "Condition": {
               "Operator": "Equals",
               "Operands": [
@@ -576,13 +624,16 @@
     },
     {
       "Parameters": {
-        "SkipWhenDTMFBufferEnabled": "false",
-        "Text": "You selected auto claims. Please hold while we connect you to our claims team"
+        "Attributes": {
+          "menuSelection": "3",
+          "serviceLine": "AutoClaims"
+        },
+        "TargetContact": "Current"
       },
-      "Identifier": "Claims acknowledgement",
-      "Type": "MessageParticipant",
+      "Identifier": "Set Claims Context",
+      "Type": "UpdateContactAttributes",
       "Transitions": {
-        "NextAction": "Set Auto Claims Queue",
+        "NextAction": "Check Claims Service",
         "Errors": [
           {
             "NextAction": "Technical fallback prompt",
@@ -594,28 +645,12 @@
     {
       "Parameters": {
         "SkipWhenDTMFBufferEnabled": "false",
-        "Text": "We are unable to complete this request right now. Please try again later. Goodbye."
+        "Text": "You selected auto claims. Please hold while we connect you to our claims team"
       },
-      "Identifier": "Technical fallback prompt",
+      "Identifier": "Claims acknowledgement",
       "Type": "MessageParticipant",
       "Transitions": {
-        "NextAction": "735859a0-2b78-46f9-9303-b6ea91375389",
-        "Errors": [
-          {
-            "NextAction": "735859a0-2b78-46f9-9303-b6ea91375389",
-            "ErrorType": "NoMatchingError"
-          }
-        ]
-      }
-    },
-    {
-      "Parameters": {
-        "QueueId": "arn:aws:connect:us-west-2:000000000000:instance/00000000-0000-0000-0000-000000000000/queue/22222222-2222-2222-2222-222222222222"
-      },
-      "Identifier": "Set Auto Claims Queue",
-      "Type": "UpdateContactTargetQueue",
-      "Transitions": {
-        "NextAction": "Transfer to Auto Claims",
+        "NextAction": "Set Auto Claims Queue",
         "Errors": [
           {
             "NextAction": "Technical fallback prompt",
@@ -660,6 +695,106 @@
       }
     },
     {
+      "Identifier": "Neptune Agentic CX",
+      "Type": "ConnectParticipantWithAgenticCX",
+      "Parameters": {
+        "AgentConfiguration": {
+          "WorkspaceId": "44444444-4444-4444-4444-444444444444",
+          "ApplicationId": "55555555-5555-5555-5555-555555555555",
+          "Alias": "RESELECT_DEPLOYED_ALIAS"
+        },
+        "SpeechRecognitionConfiguration": {
+          "SpeechRecognitionEngine": "AMAZON_AGENTIC_VOICE"
+        },
+        "AudioFillerConfiguration": {
+          "Enabled": false
+        }
+      },
+      "Transitions": {
+        "NextAction": "Claims acknowledgement",
+        "Errors": [
+          {
+            "NextAction": "Claims acknowledgement",
+            "ErrorType": "NoMatchingError"
+          },
+          {
+            "NextAction": "735859a0-2b78-46f9-9303-b6ea91375389",
+            "ErrorType": "NoMatchingCondition"
+          },
+          {
+            "NextAction": "Technical fallback prompt",
+            "ErrorType": "InputTimeLimitExceeded"
+          }
+        ],
+        "Conditions": [
+          {
+            "NextAction": "Neptune Save AI Handoff",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "Escalation"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "QueueId": "arn:aws:connect:us-west-2:000000000000:instance/00000000-0000-0000-0000-000000000000/queue/22222222-2222-2222-2222-222222222222"
+      },
+      "Identifier": "Set Auto Claims Queue",
+      "Type": "UpdateContactTargetQueue",
+      "Transitions": {
+        "NextAction": "Transfer to Auto Claims",
+        "Errors": [
+          {
+            "NextAction": "Technical fallback prompt",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Attributes": {
+          "handoffReason": "$.AgenticCX.ContextVariables.handoffReason",
+          "handoffSummary": "$.AgenticCX.ContextVariables.handoffSummary",
+          "handoffClaimReference": "$.AgenticCX.ContextVariables.handoffClaimReference",
+          "supervisorRequested": "$.AgenticCX.ContextVariables.supervisorRequested",
+          "customerIntent": "$.AgenticCX.ContextVariables.customerIntent"
+        },
+        "TargetContact": "Current"
+      },
+      "Identifier": "Neptune Save AI Handoff",
+      "Type": "UpdateContactAttributes",
+      "Transitions": {
+        "NextAction": "Set Auto Claims Queue",
+        "Errors": [
+          {
+            "NextAction": "Technical fallback prompt",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {},
+      "Identifier": "735859a0-2b78-46f9-9303-b6ea91375389",
+      "Type": "DisconnectParticipant",
+      "Transitions": {}
+    },
+    {
+      "Parameters": {
+        "FlowLoggingBehavior": "Enabled"
+      },
+      "Identifier": "Enable Flow Logging",
+      "Type": "UpdateFlowLoggingBehavior",
+      "Transitions": {
+        "NextAction": "Check Voice Channel"
+      }
+    },
+    {
       "Parameters": {
         "ComparisonValue": "$.Channel"
       },
@@ -669,7 +804,7 @@
         "NextAction": "735859a0-2b78-46f9-9303-b6ea91375389",
         "Conditions": [
           {
-            "NextAction": "dafb2868-7c6d-4c92-9404-5fe4fe105b61",
+            "NextAction": "Neptune AI Voice",
             "Condition": {
               "Operator": "Equals",
               "Operands": [
@@ -688,12 +823,88 @@
     },
     {
       "Parameters": {
-        "FlowLoggingBehavior": "Enabled"
+        "HoursOfOperationId": "arn:aws:connect:us-west-2:000000000000:instance/00000000-0000-0000-0000-000000000000/operating-hours/11111111-1111-1111-1111-111111111111"
       },
-      "Identifier": "Enable Flow Logging",
-      "Type": "UpdateFlowLoggingBehavior",
+      "Identifier": "Check Neptune Hours",
+      "Type": "CheckHoursOfOperation",
       "Transitions": {
-        "NextAction": "Check Voice Channel"
+        "NextAction": "Technical fallback prompt",
+        "Conditions": [
+          {
+            "NextAction": "Main Menu",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "True"
+              ]
+            }
+          },
+          {
+            "NextAction": "After-hours message",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "False"
+              ]
+            }
+          }
+        ],
+        "Errors": [
+          {
+            "NextAction": "Technical fallback prompt",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "SkipWhenDTMFBufferEnabled": "false",
+        "Text": "We are unable to complete this request right now. Please try again later. Goodbye."
+      },
+      "Identifier": "Technical fallback prompt",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "735859a0-2b78-46f9-9303-b6ea91375389",
+        "Errors": [
+          {
+            "NextAction": "735859a0-2b78-46f9-9303-b6ea91375389",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "TextToSpeechVoice": "Joanna"
+      },
+      "Identifier": "Neptune AI Voice",
+      "Type": "UpdateContactTextToSpeechVoice",
+      "Transitions": {
+        "NextAction": "dafb2868-7c6d-4c92-9404-5fe4fe105b61",
+        "Errors": [
+          {
+            "NextAction": "Technical fallback prompt",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "SkipWhenDTMFBufferEnabled": "false",
+        "Text": "Welcome to Neptune Insurance"
+      },
+      "Identifier": "dafb2868-7c6d-4c92-9404-5fe4fe105b61",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "Check Neptune Hours",
+        "Errors": [
+          {
+            "NextAction": "Technical fallback prompt",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
       }
     }
   ]

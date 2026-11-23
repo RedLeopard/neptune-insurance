@@ -15,7 +15,8 @@ Status: `DONE` means verified, not simply designed. Design target: 500-agent ref
 | Messaging | Email channel and delivery evidence | TODO | Test email reaches controlled inbox |
 | Messaging | Toll-free sender registration + compliant SMS opt-in | TODO | Sender approved, actual consent implemented, delivery confirmed |
 | Agentic / Day 7 | Conversation, typed slots, confirmation, recovery | DEPLOYED / PARTIAL TEST EVIDENCE | v0.1.0 Live; Billing/recovery transcripts reviewed; intake success learner-reported |
-| Agentic / Day 8 | Tools, guardrails, AI-to-human handoff | TODO | Controlled actions and real handoff evidence |
+| Agentic / Day 8 | Guardrails, typed handoff context, AI-to-queue wiring | CONFIGURED / PUBLICATION REPORTED | Supervisor app transcript reached Escalation; 26-block supplied snapshot reviewed; real phone-to-agent handoff and final export pending |
+| Integration / Day 9 | Approved tools and synthetic policy/claim API | TODO | Read-only contracts, least privilege and bounded failure behavior; no backend tool integration is claimed for Day 8 |
 | Scale | 500-agent target capacity and routing model | DESIGN ONLY | Load assumptions, quotas and design doc, not a performance claim |
 | Operations | Observability, security, cost review | TODO | Metrics, alarms and budget alerts |
 
@@ -25,3 +26,8 @@ Status: `DONE` means verified, not simply designed. Design target: 500-agent ref
 2. Decision + tradeoff documented in `docs/ARCHITECTURE.md`.
 3. Relevant source committed to GitHub.
 4. Smoke test passed; no real personal information used.
+
+
+## Current resume point — Day 8
+
+The configuration session is saved and publication was reported. Verify one real call into Auto Claims, agent receipt of context, and the final language setting in a fresh export before marking the live handoff pass gate complete. The website remains a separate browser-only simulation. See [DAY8.md](docs/DAY8.md).

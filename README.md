@@ -6,15 +6,17 @@ A fictional, portfolio-grade insurance website deployed to AWS with a staged Ama
 **Voice demo:** [1-800-810-5374](tel:+18008105374) (fictional lab; live-call tests pending)  
 **Portfolio case study (after installation):** https://hireedwardthornton.click/neptune-insurance.html  
 
-**Current milestone:** Day 7 of 14, reported complete on November 21, 2026. Next: AI controls, tools, and human handoff.
+**Current milestone:** Day 8 of 14: AI guardrails and human handoff configured; final language setting and flow publication reported on November 22, 2026 (America/Chicago). **End-to-end phone handoff and agent receipt of context remain pending.** See [Day 8 configuration, evidence, and resume point](docs/DAY8.md).
 
 ## What's actually built
 
 - Eight responsive pages under `neptune-insurance/`: home, coverage, claims, portal, support, about, privacy, terms.
 - Interactive *simulated* claims workflow, sample policy portal, quote explorer, and scripted help preview. Browser claims stay local and are not sent to the phone flow. Live web chat, email and SMS remain planned.
-- Amazon Connect voice entry: published `Neptune-Inbound-Voice` flow and existing toll-free number association, confirmed by the supplied export and number configuration. Logging, channel/hours checks, a three-choice menu, one retry and an Auto Claims queue transfer are configured. The four Day 5 voice tests remain pending.
+- Amazon Connect voice entry: published `Neptune-Inbound-Voice` flow and existing toll-free number association, confirmed by the supplied export and number configuration. Logging, a voice/language block, channel/hours checks, a three-choice menu, one retry, Billing routing and an AI-to-Auto Claims escalation path are configured. The latest supplied 26-block export was reviewed for reachability and valid targets. The four Day 5 voice tests remain pending.
 - Routing lab: Billing and Auto Claims eligibility, routing profiles, agent state, capacity, and the `Neptune-To-AutoClaims` queue quick connect. Full quick-connect retest remains a follow-up.
-- Agentic CX Designer: `NeptuneInsurance` v0.1.0 deployed Live in `Neptune Insurance Lab`. Billing, new-claim intake, claim-reference capture, typed slots, confirmation, and shared recovery are configured. Billing and unsupported-request transcripts were reviewed; intake success is learner-reported. The application is not yet invoked by the phone or website. See [Day 7 configuration and evidence](docs/DAY7.md).
+- Agentic CX Designer: `NeptuneInsurance` in `Neptune Insurance Lab`, with the [Day 7 conversation foundation](docs/DAY7.md) and a new Day 8 build/deployment reported. `NeptuneHumanHandoff`, `NeptuneSupervisorHandoff`, five typed context variables, an input guardrail and an output guardrail are configured. A supplied supervisor test transcript ends via **Escalation**; the general-human test was reported successful.
+- Phone integration: the inbound flow now invokes the application on the Auto Claims branch and copies five returned context values before selecting the existing claims queue. AI errors retain a human queue fallback; Default ends the contact. This is configured and publication is reported, **not yet verified through a real phone-to-agent call**. The static website still does not invoke the conversational application.
+- Export provenance: the public flow is the latest **provided** snapshot, `Neptune-Inbound-Voice (27).json`. It contains Joanna but predates the final reported language-attribute correction and republish. The final post-correction export has not been supplied; do not treat this snapshot as that final export.
 - [Sanitized flow export and resource-binding guide](connect/README.md). Source-account resource identifiers are replaced with placeholders; reselect hours and queue resources before publishing an imported copy.
 - Dedicated AWS S3 bucket with private origin, CloudFront distribution with Origin Access Control, HTTPS certificate in ACM, and Route 53 aliases.
 - Portfolio case study (`neptune-insurance.html`) and card installer (`install_neptune.py`) to keep the main portfolio's normal project format.
@@ -71,3 +73,4 @@ git push -u origin main
 ```
 
 See `docs/SECURITY.md` before publishing publicly. Never commit AWS access keys, `.env` files, personal information, real customer data, or actual call recordings.
+
