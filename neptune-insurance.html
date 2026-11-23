@@ -12,7 +12,7 @@
     <meta property="og:site_name" content="Edward E.T. Thornton · Architecture Portfolio">
     <meta property="og:title" content="Neptune Insurance | Live AWS CX Experience">
     <meta property="og:description"
-        content="Explore the Neptune customer website and Day 8 AWS voice configuration, with guarded AI, human handoff and mapped context. Live handoff verification is pending.">
+        content="Explore the Neptune customer website, try the published voice demo, and inspect the AWS architecture and deployed conversational app through Day 8.">
     <meta property="og:url" content="https://hireedwardthornton.click/neptune-insurance.html">
     <meta property="og:image" content="https://hireedwardthornton.click/assets/neptune-share.png">
     <meta property="og:image:secure_url" content="https://hireedwardthornton.click/assets/neptune-share.png">
@@ -2217,12 +2217,6 @@
             display: block
         }
     </style>
-
-    <style id="day8-entry-layout">
-        .entry-path.voice-entry-six { grid-template-columns: repeat(6, minmax(0, 1fr)); }
-        @media (max-width:1000px) { .entry-path.voice-entry-six { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-        @media (max-width:620px) { .entry-path.voice-entry-six { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-    </style>
 </head>
 
 <body>
@@ -2268,7 +2262,7 @@
                         brings a live customer website and a published voice journey into one evolving AWS project.</p>
                     <a class="quiet-link" href="#experience">Explore the experience</a>
                     <div class="hero-progress"><span class="status-label"><i aria-hidden="true"></i>DAY 8
-                            CONFIGURED</span><span>Guarded AI handoff published. Live-call verification pending.</span></div>
+                            COMPLETE</span><span>AI controls and human handoff configured. Live-call verification pending.</span></div>
                 </div>
                 <figure class="hero-art">
                     <div class="orbit orbit-one" aria-hidden="true"></div>
@@ -2285,7 +2279,7 @@
             </div>
             <div class="container project-facts" aria-label="Project at a glance">
                 <div><strong>08</strong><span>Customer website pages</span></div>
-                <div><strong>26</strong><span>Flow blocks reviewed</span></div>
+                <div><strong>21</strong><span>Voice flow blocks</span></div>
                 <div><strong>03</strong><span>Phone menu choices</span></div>
                 <div><strong>500</strong><span>Agent architecture target</span></div>
             </div>
@@ -2327,16 +2321,19 @@
                                     d="M8 4h5l2 7-4 3a21 21 0 0 0 7 7l3-4 7 2v5c0 3-3 5-6 4C12 25 7 20 4 10 3 7 5 4 8 4Z" />
                             </svg></div>
                         <h3>Hear the journey.</h3>
-                        <p>A published Amazon Connect configuration with a voice persona, hours check, three-choice menu, guarded AI conversation, and an explicit Auto Claims handoff path.</p>
+                        <p>A published Amazon Connect flow with a welcome, hours check, a three-choice menu, and an Auto
+                            Claims queue handoff.</p>
                         <a class="voice-number" href="tel:+18008105374"
                             aria-label="Call the Neptune voice demo at 1 800 810 5374">1-800-810-5374</a>
-                        <span class="phone-caption">Voice demo · end-to-end AI handoff verification pending</span>
+                        <span class="phone-caption">Select the number to call the voice demo</span>
                         <div class="phone-menu" aria-label="Phone menu options">
                             <div><kbd>1</kbd><span>Policy Service</span></div>
                             <div><kbd>2</kbd><span>Billing</span></div>
-                            <div><kbd>3</kbd><span>Auto Claims</span><span class="menu-note">AI + HANDOFF</span></div>
+                            <div><kbd>3</kbd><span>Auto Claims</span><span class="menu-note">QUEUE HANDOFF</span></div>
                         </div>
-                        <p class="experience-note">Policy Service plays an acknowledgement. Billing has a queue-transfer path; Auto Claims invokes the AI and can escalate to the claims queue. Agent delivery and receipt of context still need a live call. Use synthetic information only.</p>
+                        <p class="experience-note">Policy Service and Billing currently play an acknowledgement. Auto
+                            Claims enters the queue path; agent availability varies. Use synthetic test information
+                            only.</p>
                     </article>
                 </div>
                 <p class="experience-boundary">The website's claim form is a browser-only simulation. Calling the demo
@@ -2351,7 +2348,8 @@
                         <p class="eyebrow">INSIDE THE SYSTEM</p>
                         <h2 id="architecture-title">The architecture.<br><span>One connected system.</span></h2>
                     </div>
-                    <p>Inspect the Day 8 voice-flow configuration, including the conversational application, input/output guardrails and mapped human handoff. The broader omnichannel design retains its own implementation scope.</p>
+                    <p>Start with the overall AWS design, then inspect the published voice entry. Day 7 adds a separately deployed conversational application. Each view
+                        shows its implementation scope.</p>
                 </div>
                 <div class="architecture-tabs" role="tablist" aria-label="Architecture views"><button id="target-tab"
                         type="button" role="tab" aria-selected="true" aria-controls="target-panel"
@@ -2366,10 +2364,9 @@
                         </div>
                         <p>One initial attempt. One retry.<br>Explicit hours and failure handling.</p>
                     </div>
-                    <ol class="entry-path voice-entry-six" aria-label="Voice entry sequence">
+                    <ol class="entry-path" aria-label="Voice entry sequence">
                         <li><span>Enable</span><strong>Flow logging</strong></li>
                         <li><span>Check</span><strong>VOICE channel</strong></li>
-                        <li><span>Set</span><strong>Voice + language</strong></li>
                         <li><span>Play</span><strong>Welcome</strong></li>
                         <li><span>Check</span><strong>Lab hours</strong></li>
                         <li><span>Collect</span><strong>Menu choice</strong></li>
@@ -2387,24 +2384,17 @@
                             <div class="branch-heading"><kbd>2</kbd>
                                 <h4>Billing</h4>
                             </div><code>serviceLine = Billing</code>
-                            <p>Save context<br>Play acknowledgement<br>Set Billing queue<br>Transfer to Billing</p><span class="route-state">Queue transfer configured</span>
+                            <p>Save context<br>Play acknowledgement<br>Disconnect</p><span class="route-state">Next
+                                routing milestone</span>
                         </article>
                         <article class="claims-branch">
                             <div class="branch-heading"><kbd>3</kbd>
                                 <h4>Auto Claims</h4>
                             </div><code>serviceLine = AutoClaims</code>
-                            <p>Save and check context<br>Invoke guarded AI<br>Map escalation context<br>Transfer to Auto Claims</p><span class="route-state">Live handoff check pending</span>
+                            <p>Save and check context<br>Play claims acknowledgement<br>Set working queue<br>Transfer to
+                                Auto Claims</p><span class="route-state">Queue entry configured</span>
                         </article>
                     </div>
-                    <div class="branch-label">AI ESCALATION / CONFIGURED HANDOFF PATH</div>
-                    <ol class="entry-path" aria-label="Configured AI handoff sequence">
-                        <li><span>Validate</span><strong>Claims context</strong></li>
-                        <li><span>Invoke</span><strong>Agentic CX</strong></li>
-                        <li><span>Preserve</span><strong>5 context fields</strong></li>
-                        <li><span>Select</span><strong>Claims queue</strong></li>
-                        <li><span>Transfer</span><strong>Auto Claims queue</strong></li>
-                    </ol>
-                    <p class="diagram-note">Input rules handle general-human and supervisor requests. An output LLM judge checks unsupported insurance decisions. Escalation maps the reason, fallback summary, reference state, intent and supervisor flag. The application supervisor test reached Escalation; phone-to-agent delivery remains pending.</p>
                     <div class="recovery-path">
                         <div><strong>Invalid input or silence</strong><span>Retry message, then a second menu. A second
                                 failed attempt plays the final goodbye and disconnects.</span></div>
@@ -2433,7 +2423,7 @@
                                 email feed Amazon Connect flows, queues and routing profiles. Agentic CX and human
                                 agents connect to Lambda and proposed insurance services. The existing Neptune customer
                                 website is hosted separately on Route 53, CloudFront, and a private S3 origin. Website
-                                the AI phone-flow integration is configured; live handoff verification remains pending.</desc>
+                                integration with Connect is planned, not yet live.</desc>
                             <defs>
                                 <pattern id="ndi-grid" width="20" height="20" patternUnits="userSpaceOnUse">
                                     <path d="M20 0 H0 V20" fill="none" stroke="#6a9163" stroke-opacity=".07"
@@ -2559,7 +2549,9 @@
                                     origin</text><text x="13" y="39" class="ndi-node-sub">HTML / CSS / JavaScript</text>
                             </g>
                         </svg></div>
-                    <p class="diagram-note">The static web foundation, voice entry, guarded AI and handoff mappings are configured. This diagram extends that foundation toward hosted chat, messaging, approved business APIs and cross-channel continuity. Those later integrations are separate from the published voice configuration.</p>
+                    <p class="diagram-note">The static web foundation and voice entry are built. This diagram shows the
+                        broader target: hosted chat, messaging, guarded AI, controlled business APIs, and deliberate
+                        context continuity. Those integrations are not implied by publishing the voice flow.</p>
                 </div>
             </div>
         </section>
@@ -2581,7 +2573,8 @@
                 <div class="principles">
                     <article><span class="principle-label">CLEAR ROUTING</span>
                         <h3>Capture intent before the handoff.</h3>
-                        <p>Menu choices set explicit service context. The claims branch invokes the AI, then maps the returned handoff context before selecting and transferring to Auto Claims.</p>
+                        <p>Menu choices set explicit service context. The claims branch checks that value before
+                            selecting and transferring to Auto Claims.</p>
                     </article>
                     <article><span class="principle-label">DELIBERATE RECOVERY</span>
                         <h3>Every failure needs a destination.</h3>
@@ -2590,7 +2583,7 @@
                     </article>
                     <article><span class="principle-label">HONEST BOUNDARIES</span>
                         <h3>Build the foundation. Prove each layer.</h3>
-                        <p>The website, voice entry, guardrails and AI handoff configuration exist today. App-side supervisor escalation was observed; real phone-to-agent delivery and received context remain to be verified. Hosted chat, messaging and insurance APIs remain planned.</p>
+                        <p>The website, voice entry, routing configuration, and conversational app exist today. AI-to-human handoff, cross-channel context, hosted chat, messaging, and business APIs remain later work.</p>
                     </article>
                 </div>
             </div>
@@ -2603,15 +2596,15 @@
                 <div class="section-heading heading-with-aside">
                     <div>
                         <p class="eyebrow">A BUILD WITH DIRECTION</p>
-                        <h2 id="roadmap-title">Day eight.<br><span>AI control. Human handoff.</span></h2>
+                        <h2 id="roadmap-title">Eight days in.<br><span>A foundation you can follow.</span></h2>
                     </div>
                     <p>A 14-day architecture lab, built in small increments. Each stage adds something tangible to the
                         customer journey.</p>
                 </div>
                 <div class="course-progress">
-                    <div><strong>Day 8 of 14: configuration published</strong><span>Next checkpoint: verify the live agent handoff</span>
+                    <div><strong>8 of 14 days complete</strong><span>Next: live handoff verification and insurance tools</span>
                     </div>
-                    <div class="progress-track" role="progressbar" aria-label="Current configuration day; live handoff verification pending"
+                    <div class="progress-track" role="progressbar" aria-label="Reported course progress"
                         aria-valuemin="0" aria-valuemax="14" aria-valuenow="8"><span></span></div>
                 </div>
                 <div class="milestone-list">
@@ -2656,13 +2649,14 @@
                     <article class="milestone-next">
                         <div class="milestone-day">DAY 8</div>
                         <div>
-                            <h3>Guard the conversation. Preserve the handoff.</h3>
-                            <p>Configured general-human and supervisor Escalate flows, typed context, input/output guardrails and the AI-to-Auto Claims contact-flow path. Final voice/language setup and publication reported. Live phone-to-agent delivery and received context remain pending.</p>
+                            <h3>Connect AI to controlled actions.</h3>
+                            <p>Saved input/output guardrails, human and supervisor handoff flows, and five context mappings. Connected and published the AI phone path; live phone-to-agent verification remains pending.</p>
                         </div><span class="milestone-state">Configured</span>
                     </article>
                 </div>
                 <div class="future-scope"><span class="eyebrow">BEYOND THE VOICE FOUNDATION</span>
-                    <p>Verify the live AI-to-human handoff, then add approved synthetic insurance lookup tools. Hosted chat, task and messaging journeys, cross-channel continuity and operational evidence retain their own milestones.</p>
+                    <p>AI-to-human handoff. Hosted chat. Task and messaging journeys. Mock insurance APIs. Cross-channel context
+                        and operational evidence. Each remains a distinct configuration and validation milestone.</p>
                 </div>
             </div>
         </section>
@@ -2682,12 +2676,6 @@
                                 neptune-insurance</small></span></a>
                 </div>
                 <div class="build-entries">
-                    <article><time datetime="2026-11-22">22 NOV 2026</time>
-                        <h3>Guarded AI and an explicit human handoff.</h3>
-                        <p>Saved human and supervisor escalation flows, five typed context variables, input request rules and an output insurance-decision guardrail. Connected Agentic CX to the claims path, preserved returned context and retained queue/error handling. Publication reported; end-to-end voice handoff remains pending.</p>
-                        <a class="quiet-link" href="https://github.com/RedLeopard/neptune-insurance/blob/main/docs/DAY8.md" target="_blank" rel="noopener noreferrer">Read the Day 8 configuration and evidence</a>
-                        <a class="quiet-link" href="https://github.com/RedLeopard/neptune-insurance/blob/main/connect/flows/Neptune-Inbound-Voice.json" target="_blank" rel="noopener noreferrer">Inspect the sanitized flow snapshot</a>
-                    </article>
                     <article><time datetime="2026-11-21">21 NOV 2026</time>
                         <h3>A deployed conversational application.</h3>
                         <p>NeptuneInsurance v0.1.0 recognizes insurance requests, collects typed answers, repeats details for confirmation, and handles unsupported requests. No claim is filed or live status retrieved.</p>
