@@ -1,0 +1,528 @@
+{
+  "flowId": "NeptuneClaimStatus",
+  "nodes": {
+    "18c71de3-9ee6-4efb-a623-2c983be86a73": {
+      "nodeId": "18c71de3-9ee6-4efb-a623-2c983be86a73",
+      "childNodes": [
+        {
+          "nodeId": "76e56adb-0558-4715-89c5-a89f6236e230",
+          "name": "",
+          "conditions": []
+        }
+      ],
+      "type": "basic",
+      "messages": [
+        {
+          "messageId": "533f93e8-8021-4603-993c-87cf1f8b1432",
+          "body": "{NeptuneInsuranceLookup.status:NLX.Local}",
+          "type": "text",
+          "skipTranslation": false,
+          "metadata": {
+            "alternatePhrasings": []
+          }
+        }
+      ],
+      "modalities": {},
+      "metadata": {
+        "stateModifications": [],
+        "name": ""
+      },
+      "canvasMetadata": {
+        "x": 994.6666666666671,
+        "y": -471.8333333333334,
+        "width": 240,
+        "height": 138,
+        "isMinimized": false
+      }
+    },
+    "31128384-7355-49ed-91d1-2ac778527961": {
+      "nodeId": "31128384-7355-49ed-91d1-2ac778527961",
+      "childNodes": [
+        {
+          "name": "",
+          "conditions": [
+            {
+              "left": {
+                "type": "node_status"
+              },
+              "operator": "eq",
+              "right": {
+                "type": "constant",
+                "value": "in_progress"
+              }
+            }
+          ]
+        },
+        {
+          "nodeId": "cc9aace2-621f-4488-8fe7-b73fa80ded70",
+          "name": "",
+          "conditions": [
+            {
+              "left": {
+                "type": "node_status"
+              },
+              "operator": "eq",
+              "right": {
+                "type": "constant",
+                "value": "success"
+              }
+            }
+          ]
+        },
+        {
+          "nodeId": "65d8fe17-13e1-4fcf-a6c6-06a7f5518d15",
+          "name": "",
+          "conditions": [
+            {
+              "left": {
+                "type": "node_status"
+              },
+              "operator": "eq",
+              "right": {
+                "type": "constant",
+                "value": "timeout"
+              }
+            }
+          ]
+        },
+        {
+          "nodeId": "65d8fe17-13e1-4fcf-a6c6-06a7f5518d15",
+          "name": "",
+          "conditions": [
+            {
+              "left": {
+                "type": "node_status"
+              },
+              "operator": "eq",
+              "right": {
+                "type": "constant",
+                "value": "failure"
+              }
+            }
+          ]
+        }
+      ],
+      "type": "data_request",
+      "messages": [],
+      "modalities": {},
+      "metadata": {
+        "stateModifications": [],
+        "name": "",
+        "async": false,
+        "inProgressEnabled": true,
+        "inProgressTimeout": 0
+      },
+      "canvasMetadata": {
+        "x": 441.7333333333333,
+        "y": -377.48333333333335,
+        "width": 240,
+        "height": 171,
+        "isMinimized": false
+      },
+      "dataRequests": [
+        {
+          "type": "custom",
+          "dataRequestId": "NeptuneInsuranceLookup",
+          "name": "NeptuneInsuranceLookup",
+          "payload": {
+            "type": "recursive",
+            "value": {
+              "recordType": {
+                "type": "constant",
+                "value": "claim"
+              },
+              "reference": {
+                "type": "constant",
+                "value": "{claimReference:NLX.Text}"
+              }
+            }
+          },
+          "urlParams": {},
+          "headers": {},
+          "alwaysRetrigger": false
+        }
+      ]
+    },
+    "65d8fe17-13e1-4fcf-a6c6-06a7f5518d15": {
+      "nodeId": "65d8fe17-13e1-4fcf-a6c6-06a7f5518d15",
+      "childNodes": [
+        {
+          "name": "",
+          "conditions": [
+            {
+              "left": {
+                "type": "node_status"
+              },
+              "operator": "eq",
+              "right": {
+                "type": "constant",
+                "value": "continuation"
+              }
+            }
+          ]
+        }
+      ],
+      "type": "redirect",
+      "messages": [],
+      "modalities": {},
+      "metadata": {
+        "stateModifications": [],
+        "name": "",
+        "redirect": {
+          "flowId": "NeptuneRecovery",
+          "type": "flow"
+        }
+      },
+      "canvasMetadata": {
+        "x": 1608.8,
+        "y": 418.0333333333332,
+        "width": 240,
+        "height": 111,
+        "isMinimized": false
+      }
+    },
+    "6764741d-c565-4225-bd23-80f4aeab517a": {
+      "nodeId": "6764741d-c565-4225-bd23-80f4aeab517a",
+      "childNodes": [
+        {
+          "nodeId": "fc8c75b2-fb2e-480c-8597-1996180bb8e0",
+          "name": "",
+          "conditions": []
+        }
+      ],
+      "type": "start",
+      "messages": [],
+      "modalities": {},
+      "metadata": {
+        "stateModifications": [],
+        "name": ""
+      },
+      "canvasMetadata": {
+        "x": -400,
+        "y": -300,
+        "width": 240,
+        "height": 137,
+        "isMinimized": false
+      }
+    },
+    "76e56adb-0558-4715-89c5-a89f6236e230": {
+      "nodeId": "76e56adb-0558-4715-89c5-a89f6236e230",
+      "childNodes": [
+        {
+          "nodeId": "e02d1e80-1f29-43cc-a253-fb09ff66838d",
+          "name": "",
+          "conditions": [
+            {
+              "operator": "eq",
+              "left": {
+                "type": "slot_value_id",
+                "name": "continueChoice"
+              },
+              "right": {
+                "type": "constant_id",
+                "value": "a_a12Z_t2TwysAzGQWvsv"
+              }
+            }
+          ]
+        },
+        {
+          "nodeId": "80a92622-2daa-4ff6-9bb8-44ee4da31ab6",
+          "name": "",
+          "conditions": [
+            {
+              "operator": "eq",
+              "left": {
+                "type": "slot_value_id",
+                "name": "continueChoice"
+              },
+              "right": {
+                "type": "constant_id",
+                "value": "Awh8evkP4qHBY0E9ue2rL"
+              }
+            }
+          ]
+        },
+        {
+          "nodeId": "65d8fe17-13e1-4fcf-a6c6-06a7f5518d15",
+          "name": "",
+          "conditions": [
+            {
+              "operator": "not_exists",
+              "left": {
+                "type": "slot",
+                "name": "continueChoice"
+              }
+            }
+          ]
+        }
+      ],
+      "type": "user_choice",
+      "messages": [
+        {
+          "messageId": "d54f2d23-d481-4da8-9d36-db6cca66918a",
+          "body": "Can I help you with anything else? Please say yes or no.",
+          "type": "text",
+          "skipTranslation": false,
+          "metadata": {
+            "alternatePhrasings": []
+          }
+        }
+      ],
+      "modalities": {},
+      "metadata": {
+        "stateModifications": [],
+        "name": "",
+        "choice": {
+          "showChoices": false,
+          "multiSelect": false,
+          "choiceDisplayFormat": "dropdown",
+          "associatedSlotTypeIds": [],
+          "idField": "",
+          "labelField": "",
+          "source": "slotType",
+          "slotTypeId": "continueChoice",
+          "selectedChoiceLabel": "continueChoice"
+        }
+      },
+      "canvasMetadata": {
+        "x": 1412.0000000000002,
+        "y": -397.66666666666686,
+        "width": 240,
+        "height": 286,
+        "isMinimized": false
+      }
+    },
+    "80a92622-2daa-4ff6-9bb8-44ee4da31ab6": {
+      "nodeId": "80a92622-2daa-4ff6-9bb8-44ee4da31ab6",
+      "childNodes": [],
+      "type": "terminate",
+      "messages": [],
+      "modalities": {},
+      "metadata": {
+        "stateModifications": [],
+        "name": "",
+        "retainConversationState": false
+      },
+      "canvasMetadata": {
+        "x": 1821.3333333333333,
+        "y": 37.66666666666646,
+        "width": 240,
+        "height": 84,
+        "isMinimized": false
+      }
+    },
+    "a6d9337b-a66b-4c19-b132-8a4478f71ae3": {
+      "nodeId": "a6d9337b-a66b-4c19-b132-8a4478f71ae3",
+      "childNodes": [
+        {
+          "nodeId": "31128384-7355-49ed-91d1-2ac778527961",
+          "name": "",
+          "conditions": [
+            {
+              "operator": "exists",
+              "left": {
+                "type": "slot",
+                "name": "claimReference"
+              }
+            }
+          ]
+        },
+        {
+          "nodeId": "65d8fe17-13e1-4fcf-a6c6-06a7f5518d15",
+          "name": "",
+          "conditions": [
+            {
+              "operator": "not_exists",
+              "left": {
+                "type": "slot",
+                "name": "claimReference"
+              }
+            }
+          ]
+        }
+      ],
+      "type": "user_choice",
+      "messages": [
+        {
+          "messageId": "245d71b1-cd53-406b-bb0c-2c02b2b55cdb",
+          "body": "Please say the four digits of your claim reference, one digit at a time. For example, for CLM-1001, say one zero zero one.",
+          "type": "text",
+          "skipTranslation": false,
+          "metadata": {
+            "alternatePhrasings": []
+          }
+        }
+      ],
+      "modalities": {},
+      "metadata": {
+        "stateModifications": [],
+        "name": "",
+        "choice": {
+          "showChoices": false,
+          "multiSelect": false,
+          "choiceDisplayFormat": "dropdown",
+          "associatedSlotTypeIds": [],
+          "idField": "",
+          "labelField": "",
+          "source": "slotType",
+          "slotTypeId": "claimReference",
+          "selectedChoiceLabel": "claimReference"
+        }
+      },
+      "canvasMetadata": {
+        "x": 173.33333333333331,
+        "y": -227.5666666666668,
+        "width": 240,
+        "height": 278,
+        "isMinimized": false
+      }
+    },
+    "cc9aace2-621f-4488-8fe7-b73fa80ded70": {
+      "nodeId": "cc9aace2-621f-4488-8fe7-b73fa80ded70",
+      "childNodes": [
+        {
+          "nodeId": "18c71de3-9ee6-4efb-a623-2c983be86a73",
+          "name": "",
+          "conditions": [
+            {
+              "operator": "eq",
+              "left": {
+                "type": "variable",
+                "name": "NeptuneInsuranceLookup.resultCode"
+              },
+              "right": {
+                "type": "constant",
+                "value": "OK"
+              }
+            }
+          ]
+        },
+        {
+          "nodeId": "65d8fe17-13e1-4fcf-a6c6-06a7f5518d15",
+          "name": "",
+          "conditions": []
+        }
+      ],
+      "type": "split",
+      "messages": [],
+      "modalities": {},
+      "metadata": {
+        "stateModifications": [],
+        "name": "",
+        "split": {
+          "modelType": "amazon-nova-2-lite"
+        }
+      },
+      "canvasMetadata": {
+        "x": 693.7333333333331,
+        "y": -528.2166666666667,
+        "width": 240,
+        "height": 201,
+        "isMinimized": false
+      }
+    },
+    "e02d1e80-1f29-43cc-a253-fb09ff66838d": {
+      "nodeId": "e02d1e80-1f29-43cc-a253-fb09ff66838d",
+      "childNodes": [
+        {
+          "name": "",
+          "conditions": [
+            {
+              "left": {
+                "type": "node_status"
+              },
+              "operator": "eq",
+              "right": {
+                "type": "constant",
+                "value": "continuation"
+              }
+            }
+          ]
+        }
+      ],
+      "type": "redirect",
+      "messages": [],
+      "modalities": {},
+      "metadata": {
+        "stateModifications": [],
+        "name": "",
+        "redirect": {
+          "flowId": "NeptuneWelcome",
+          "type": "flow"
+        }
+      },
+      "canvasMetadata": {
+        "x": 1792.3999999999994,
+        "y": -291.1916666666661,
+        "width": 240,
+        "height": 111,
+        "isMinimized": false
+      }
+    },
+    "fc8c75b2-fb2e-480c-8597-1996180bb8e0": {
+      "nodeId": "fc8c75b2-fb2e-480c-8597-1996180bb8e0",
+      "childNodes": [
+        {
+          "nodeId": "a6d9337b-a66b-4c19-b132-8a4478f71ae3",
+          "name": "",
+          "conditions": []
+        }
+      ],
+      "type": "basic",
+      "messages": [
+        {
+          "messageId": "915dc44c-552c-4d39-af8e-d71b4f1879b7",
+          "body": "I can help collect your claim reference for a status inquiry. No live claim status has been retrieved yet.",
+          "type": "text",
+          "skipTranslation": false,
+          "metadata": {
+            "alternatePhrasings": []
+          }
+        }
+      ],
+      "modalities": {},
+      "metadata": {
+        "stateModifications": [],
+        "name": ""
+      },
+      "canvasMetadata": {
+        "x": -114.6666666666666,
+        "y": -289,
+        "width": 240,
+        "height": 181,
+        "isMinimized": false
+      }
+    }
+  },
+  "description": "",
+  "aiDescription": "Use this flow when the customer wants to check the status or progress of an existing insurance claim.",
+  "untrained": false,
+  "slotTypes": [
+    {
+      "name": "claimReference",
+      "type": "NLX.Text",
+      "examples": [],
+      "sensitive": false,
+      "aiDescription": "",
+      "multiSelect": false
+    },
+    {
+      "name": "continueChoice",
+      "type": "NeptuneContinueChoice",
+      "examples": [],
+      "sensitive": false,
+      "aiDescription": "",
+      "multiSelect": false
+    }
+  ],
+  "metadata": {
+    "path": "",
+    "tags": [],
+    "scopeTagsCache": {}
+  },
+  "mainLanguageCode": "en-US",
+  "languageCodes": [
+    "en-US"
+  ],
+  "mirroring": "none"
+}

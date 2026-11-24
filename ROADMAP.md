@@ -16,7 +16,7 @@ Status: `DONE` means verified, not simply designed. Design target: 500-agent ref
 | Messaging | Toll-free sender registration + compliant SMS opt-in | TODO | Sender approved, actual consent implemented, delivery confirmed |
 | Agentic / Day 7 | Conversation, typed slots, confirmation, recovery | DEPLOYED / PARTIAL TEST EVIDENCE | v0.1.0 Live; Billing/recovery transcripts reviewed; intake success learner-reported |
 | Agentic / Day 8 | Guardrails, typed handoff context, AI-to-queue wiring | CONFIGURED / PUBLICATION REPORTED | Supervisor app transcript reached Escalation; 26-block supplied snapshot reviewed; real phone-to-agent handoff and final export pending |
-| Integration / Day 9 | Approved tools and synthetic policy/claim API | DAY 9 COMPLETE / LIVE TESTS CARRIED TO DAY 10 | Backend/direct checks and mock conversation verified; phone reaches Lambda. Spoken-reference fix added; latest phone attempt still failed. Successful live lookup and final failure-path evidence remain pending. |
+| Integration / Day 9 | Approved tools and synthetic policy/claim API | DONE — LOOKUP TESTING COMPLETE | 8/8 direct checks passed; live Lambda OK and spoken IN_REVIEW confirmed November 24. Digit prompt and continuation fix accepted by owner; corrected claim flow archived. |
 | Scale | 500-agent target capacity and routing model | DESIGN ONLY | Load assumptions, quotas and design doc, not a performance claim |
 | Operations | Observability, security, cost review | TODO | Metrics, alarms and budget alerts |
 
@@ -28,10 +28,8 @@ Status: `DONE` means verified, not simply designed. Design target: 500-agent ref
 4. Smoke test passed; no real personal information used.
 
 
-## Current resume point — Start Day 10
+## Current resume point — Main Day 10 work
 
-Day 9 is complete (9/14) per the owner's decision. Remaining live-call tests and troubleshooting are the first task of Day 10. Resume with fresh evidence from the failed live lookup. Confirm the active Lambda package and deployed application environment, inspect the reference reaching the tool copy, and resolve the failure to close live verification. The mock response is not live backend proof. See [lookup verification](terraform/LOOKUP_VERIFICATION.md).
+Day 9 is complete (9/14). The carried-over CLM-1001 troubleshooting and testing are DONE as of November 24, 2026: all eight direct tests passed, live lookup returned OK, the caller heard IN_REVIEW, and the owner confirmed the continuation fix. See [lookup verification](terraform/LOOKUP_VERIFICATION.md). Continue the real Day 10 syllabus; Day 10 itself is not complete. Defer portfolio/page updates until the end of Day 10.
 
-After the lookup works, capture final corrected flow/module exports and any remaining controlled failure-path evidence. Review the backend explanation of backend authorization and the approved cross-channel data contract. Terraform adoption remains deferred until the functional integration is verified.
-
-Earlier follow-ups remain separate: real phone-to-agent acceptance and received context, a final inbound-flow export after the language correction, and the quick-connect retest. The customer website remains a separate browser-only simulation. See [DAY8.md](docs/DAY8.md).
+Separate follow-ups remain: final tool-copy/custom-slot export packaging, any unexecuted live failure-branch evidence, real phone-to-agent acceptance and received context, final inbound-flow export after the language correction, and the quick-connect retest. Terraform adoption remains separate. The customer website remains a browser-only simulation. See [DAY8.md](docs/DAY8.md).

@@ -1,5 +1,20 @@
 # Neptune Insurance | Build journal
 
+## 2026-11-24 (America/Chicago) — CLM-1001 fix verified; carryover testing DONE
+
+**Status: carried-over lookup troubleshooting and testing DONE. Day 9 remains complete (9/14); the main Day 10 work is not marked complete.** Portfolio/page updates are deferred until Day 10 is finished.
+
+- Supplied AWS CLI configuration: active NeptuneInsuranceLookup, handler neptune_insurance_lookup.lambda_handler, successful update, 3-second timeout.
+- Supplied regression output: 8/8 checks passed, including canonical/spoken owned claims, denied owner access, policy, missing record, malformed input and injected identity.
+- Fresh live diagnostics identified reference_format rejection of the captured synthetic text "Just calling one thousand and one." The handler correctly rejected that unsupported wording before a database read; the broader parser was not loosened.
+- The next controlled phone call used "one zero zero one": CloudWatch returned OK at 2026-11-24T21:32:31Z; the owner confirmed hearing IN_REVIEW. This verifies the live voice-to-backend lookup rather than only a mock.
+- Updated the claim-reference User choice prompt to request four digits individually.
+- Added a separate follow-up User choice using attached continueChoice / custom NeptuneContinueChoice. The intended Yes path redirects to NeptuneWelcome, No ends via Exit application, and No match redirects to NeptuneRecovery. The latest supplied export has all three destinations connected; custom value IDs require the matching slot resource.
+- Reviewed and archived the supplied NeptuneClaimStatus.flow (7).json as connect/agentic/NeptuneClaimStatus.flow.json. The owner subsequently confirmed "problem fixed" and requested testing marked done. This is owner-reported acceptance; no separate transcript for each continuation branch was supplied.
+- Temporary bounded validation diagnostics from commit 727cdaef remain in the Lambda source; lookup permissions, validation and the five-field output contract are unchanged.
+
+**Next:** continue the actual Day 10 syllabus. Do not replay the completed lookup tests. Earlier agent handoff/context, quick-connect evidence, module/slot export packaging and unexecuted live failure-branch checks remain separate from this completed fix.
+
 ## 2026-11-23 (America/Chicago) — Day 9 complete; live-call verification carried into Day 10
 
 **Checkpoint: Day 9 complete (9/14), per the owner's completion decision.** Remaining live-call tests and troubleshooting are explicitly carried into the start of Day 10. The owner stopped testing for the evening. Do not replay resource creation or the completed direct timeout drill.

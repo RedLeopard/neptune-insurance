@@ -63,3 +63,7 @@ This is a sanitized source snapshot, **not directly runnable** against either AW
 | D6-Retest | Repeat the Billing-to-Auto Claims quick connect | Pending |
 
 Use synthetic inputs and bounded test calls. Store real ContactIds, unredacted logs and call recordings privately. Website claims remain browser-only; SMS, hosted chat and email integration are not established by this phone-flow configuration.
+
+## November 24 — claim lookup testing complete
+
+The live CLM-1001 lookup returned Lambda OK and the caller heard IN_REVIEW. The owner confirmed the digit-prompt/continuation fix and testing done. The corrected [claim flow export](agentic/NeptuneClaimStatus.flow.json) includes status → follow-up User choice, welcome/exit value paths and No match recovery. Reuse requires the custom NeptuneContinueChoice slot (attached as continueChoice), external lookup tool/data request, and destination flows; these resources are not bundled in this JSON. This closes lookup carryover testing, not the earlier phone-to-agent tests listed above. See [lookup evidence](../terraform/LOOKUP_VERIFICATION.md).
