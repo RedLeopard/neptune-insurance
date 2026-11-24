@@ -3,10 +3,10 @@
 A fictional, portfolio-grade insurance website deployed to AWS with a staged Amazon Connect integration plan. **This is a demonstration, not a licensed insurer.** Do not enter real customer or sensitive insurance information.
 
 **Live demo:** https://neptune.hireedwardthornton.click/  
-**Voice demo:** [1-800-810-5374](tel:+18008105374) (fictional lab; live-call tests pending)  
+**Voice demo:** [1-800-810-5374](tel:+18008105374) (fictional lab; AI reached by phone, claim lookup unresolved)  
 **Portfolio case study (after installation):** https://hireedwardthornton.click/neptune-insurance.html  
 
-**Current milestone:** Day 8 of 14: AI guardrails and human handoff configured; final language setting and flow publication reported on November 22, 2026 (America/Chicago). **End-to-end phone handoff and agent receipt of context remain pending.** See [Day 8 configuration, evidence, and resume point](docs/DAY8.md).
+**Current milestone:** Day 9 of 14 is complete; remaining live-call verification starts Day 10. The read-only insurance backend and conversational tool are configured; the mock conversation returned IN_REVIEW, and real phone calls reached Lambda. **The latest live claim lookup still failed after the spoken-reference fix; end-to-end success is not verified.** Start Day 10 with [lookup verification and remaining work](terraform/LOOKUP_VERIFICATION.md). Day 8 phone-to-agent handoff and received context also remain pending.
 
 ## What's actually built
 
@@ -16,6 +16,7 @@ A fictional, portfolio-grade insurance website deployed to AWS with a staged Ama
 - Routing lab: Billing and Auto Claims eligibility, routing profiles, agent state, capacity, and the `Neptune-To-AutoClaims` queue quick connect. Full quick-connect retest remains a follow-up.
 - Agentic CX Designer: `NeptuneInsurance` in `Neptune Insurance Lab`, with the [Day 7 conversation foundation](docs/DAY7.md) and a new Day 8 build/deployment reported. `NeptuneHumanHandoff`, `NeptuneSupervisorHandoff`, five typed context variables, an input guardrail and an output guardrail are configured. A supplied supervisor test transcript ends via **Escalation**; the general-human test was reported successful.
 - Phone integration: the inbound flow now invokes the application on the Auto Claims branch and copies five returned context values before selecting the existing claims queue. AI errors retain a human queue fallback; Default ends the contact. This is configured and publication is reported, **not yet verified through a real phone-to-agent call**. The static website still does not invoke the conversational application.
+- Insurance lookup: DynamoDB synthetic records, a scoped read-only Lambda role, field filtering, direct success/error tests and controlled timeout recovery. A tool-enabled module and Data request connect claim-reference capture to the backend. The mock passes; real calls reached Lambda but a successful live claim-status retrieval is still unverified. Spoken-reference normalization and its offline security checks are committed. See [current evidence and next actions](terraform/LOOKUP_VERIFICATION.md).
 - Export provenance: the public flow is the latest **provided** snapshot, `Neptune-Inbound-Voice (27).json`. It contains Joanna but predates the final reported language-attribute correction and republish. The final post-correction export has not been supplied; do not treat this snapshot as that final export.
 - [Sanitized flow export and resource-binding guide](connect/README.md). Source-account resource identifiers are replaced with placeholders; reselect hours and queue resources before publishing an imported copy.
 - Dedicated AWS S3 bucket with private origin, CloudFront distribution with Origin Access Control, HTTPS certificate in ACM, and Route 53 aliases.
@@ -35,6 +36,7 @@ NeptuneInsurance/
 ├── neptune-insurance.html     # Portfolio project case study
 ├── assets/                    # Portfolio project card artwork
 ├── connect/                   # Sanitized Amazon Connect flow and lab notes
+├── terraform/                 # Lookup source/contracts/tests; Terraform adoption deferred
 ├── install_neptune.py        # Safe update to existing portfolio
 ├── deploy_neptune_subdomain.py # Infrastructure/bootstrap script (already deployed)
 ├── scripts/

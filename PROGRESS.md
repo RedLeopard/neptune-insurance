@@ -1,5 +1,27 @@
 # Neptune Insurance | Build journal
 
+## 2026-11-23 (America/Chicago) — Day 9 complete; live-call verification carried into Day 10
+
+**Checkpoint: Day 9 complete (9/14), per the owner's completion decision.** Remaining live-call tests and troubleshooting are explicitly carried into the start of Day 10. The owner stopped testing for the evening. Do not replay resource creation or the completed direct timeout drill.
+
+- Created the on-demand `NeptuneInsuranceLab` DynamoDB table with a String partition key and three synthetic policy/claim records.
+- Created `NeptuneInsuranceLookupRole`: Lambda service trust, GetItem on the lab table, and basic execution logging. Deployed `NeptuneInsuranceLookup` with Python 3.13, a 3-second timeout and read-only behavior.
+- Verified canonical claim and policy success, not-found, unauthorized, malformed-reference and unexpected-identity responses through supplied terminal output. The five-field response excludes owner IDs and internal notes, including the synthetic injection-test note.
+- Verified a controlled direct Lambda timeout, restoration of the original timeout/environment and a successful recovery lookup.
+- Added the scoped Connect invocation permission, resolved the operator's Lambda-association permission, and confirmed the function association in the instance.
+- Built input/output contracts and synchronous Lambda mappings in a flow module. Saving as a tool produced/selected `NeptuneInsuranceLookupModule-Copy`; the original module's tool flag remained false. The Data request points to the tool copy, not the original.
+- Saved the `NeptuneInsuranceLookup` Data request and inserted it after claim-reference capture in `NeptuneClaimStatus`. Success routes to a Split; non-OK results, Failure and Timeout route to `NeptuneRecovery`; the approved result path reaches the existing Basic response and Exit application.
+- Observed the canvas mock returning OK / CLM-1001 / IN_REVIEW. After correcting the Split selection and the response variable, the pasted test transcript displayed IN_REVIEW. This was a mock, not a DynamoDB call.
+- The owner reported deploying the application. Real calls entered through keypad option 3 and reached the AI and Lambda; CloudWatch showed MALFORMED. A temporary diagnostic revealed a full spoken sentence where the handler expected a canonical reference.
+- Added bounded spoken-reference normalization in commit `87f0e94`. Seven offline test groups passed, including the actual spoken phrase, authorization and malformed/ambiguous input cases. Added an eight-case AWS CLI regression runner. The owner reported running the deployment commands, but its regression transcript was not supplied.
+- The owner reported that the subsequent phone test still failed. No post-fix result code or successful live claim-status response has been supplied. The cause of this latest failure remains unresolved.
+- The normalizer release removes the temporary diagnostic from source. Confirm the active deployed code and recent logs when resuming; do not assume an older log describes the current build.
+- Portfolio update is limited to progress text and the Day 9 milestone. Existing hero image, styling, scripts and project ordering are retained; live publication is separate.
+
+**Start Day 10:** obtain fresh logs from the latest failed call and confirm the deployed handler/package. Inspect the actual reference, the tool-copy input mapping and the deployed application environment. Confirm a real OK lookup and returned status to close the carried-over live verification. Then capture final corrected flow/tool exports and remaining controlled failure-path evidence. See [lookup verification and remaining work](terraform/LOOKUP_VERIFICATION.md).
+
+**Still open from earlier sessions:** phone-to-agent acceptance and received handoff context; the full quick-connect retest. Terraform adoption stays last, after the functional lookup works.
+
 ## 2026-11-22 (America/Chicago) — Day 8 AI controls and handoff configuration
 
 - Saved `NeptuneHumanHandoff` and `NeptuneSupervisorHandoff` with Start → Escalate, fixed customer messages, and five Set state modifications on each path.
