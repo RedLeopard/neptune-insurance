@@ -127,30 +127,42 @@ def lambda_handler(event, context):
             "requestId": request_id,
         }
 
-    if not isinstance(event, dict):
+    def malformed(reason, **diagnostic):
+        # Temporary diagnostics for synthetic lab calls; never log the full event.
+        print(json.dumps({
+            "requestId": request_id, "validationFailure": reason, **diagnostic,
+        }))
         return respond("MALFORMED")
+
+    if not isinstance(event, dict):
+        return malformed("event_not_object")
 
     details = event.get("Details")
     if not isinstance(details, dict):
-        return respond("MALFORMED")
+        return malformed("details_not_object")
 
     parameters = details.get("Parameters")
     if not isinstance(parameters, dict):
-        return respond("MALFORMED")
+        return malformed("parameters_not_object")
 
     if set(parameters) != {"recordType", "reference"}:
-        return respond("MALFORMED")
+        return malformed("parameter_keys", parameterKeys=sorted(str(k)[:80] for k in parameters)[:10])
 
     record_type = parameters["recordType"]
     reference = parameters["reference"]
     if not isinstance(record_type, str) or record_type not in PREFIXES:
-        return respond("MALFORMED")
+        return malformed("record_type", valueType=type(record_type).__name__, recordType=record_type[:80] if isinstance(record_type, str) else None)
 
+    raw_reference = reference
     reference = normalize_reference(record_type, reference)
     if not isinstance(reference, str) or not re.fullmatch(
         PREFIXES[record_type] + r"-[0-9]{4}", reference
     ):
-        return respond("MALFORMED")
+        return malformed(
+            "reference_format", recordType=record_type,
+            valueType=type(raw_reference).__name__,
+            syntheticReference=raw_reference[:160] if isinstance(raw_reference, str) else None,
+        )
 
     # Only administrator configuration can introduce the bounded test delay.
     try:
