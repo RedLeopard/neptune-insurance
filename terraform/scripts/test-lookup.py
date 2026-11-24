@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run the remaining synthetic Neptune Insurance lookup checks via AWS CLI."""
+"""Run synthetic Neptune Insurance lookup checks via AWS CLI."""
 
 import json
 import subprocess
@@ -13,6 +13,9 @@ FUNCTION = "NeptuneInsuranceLookup"
 REGION = "us-west-2"
 FIELDS = {"resultCode", "reference", "status", "product", "requestId"}
 CASES = [
+    ("claim-owned", "OK", "CLM-1001", "IN_REVIEW"),
+    ("voice-claim-owned", "OK", "CLM-1001", "IN_REVIEW"),
+    ("voice-claim-unauthorized", "UNAUTHORIZED", "", ""),
     ("policy-owned", "OK", "POL-1001", "ACTIVE"),
     ("claim-not-found", "NOT_FOUND", "", ""),
     ("claim-unauthorized", "UNAUTHORIZED", "", ""),
@@ -86,8 +89,8 @@ def main():
             except (OSError, ValueError, TypeError) as error:
                 print("FAIL " + case[0] + ": " + str(error), file=sys.stderr)
                 return 1
-    print("5/5 lookup checks passed.")
-    print("Timeout recovery and Connect conversation integration remain pending.")
+    print(str(len(CASES)) + "/" + str(len(CASES)) + " lookup checks passed.")
+    print("Direct Lambda checks do not verify a live Connect conversation.")
     return 0
 
 

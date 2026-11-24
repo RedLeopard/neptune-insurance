@@ -29,6 +29,89 @@ ALLOWED_STATUSES = {
     "claim": {"RECEIVED", "IN_REVIEW", "CLOSED"},
 }
 
+SMALL_NUMBERS = dict(zip(
+    "zero one two three four five six seven eight nine ten eleven twelve "
+    "thirteen fourteen fifteen sixteen seventeen eighteen nineteen".split(),
+    range(20),
+))
+TENS = dict(zip("twenty thirty forty fifty sixty seventy eighty ninety".split(),
+                range(20, 100, 10)))
+
+
+def _under_hundred(words):
+    if len(words) == 1:
+        return SMALL_NUMBERS.get(words[0], TENS.get(words[0]))
+    if (len(words) == 2 and words[0] in TENS
+            and 1 <= SMALL_NUMBERS.get(words[1], -1) <= 9):
+        return TENS[words[0]] + SMALL_NUMBERS[words[1]]
+    return None
+
+
+def _under_thousand(words):
+    if not words:
+        return 0
+    if len(words) >= 2 and words[1] == "hundred":
+        hundreds = SMALL_NUMBERS.get(words[0], -1)
+        if not 1 <= hundreds <= 9:
+            return None
+        rest = words[2:]
+        if rest[:1] == ["and"]:
+            rest = rest[1:]
+            if not rest:
+                return None
+        remainder = _under_hundred(rest) if rest else 0
+        return None if remainder is None else hundreds * 100 + remainder
+    return _under_hundred(words)
+
+
+def normalize_reference(record_type, reference):
+    """Accept one bounded spoken reference; never infer or search for an ID.
+
+    Unrecognized/ambiguous text is returned unchanged for strict validation.
+    No customer identity or database lookup is involved in normalization.
+    """
+    if not isinstance(reference, str) or len(reference) > 160:
+        return reference
+    prefix = PREFIXES[record_type]
+    if re.fullmatch(prefix + r"-[0-9]{4}", reference):
+        return reference
+
+    text = reference.strip().lower().replace("\u2019", "'")
+    if len(text) >= 2 and text[0] == text[-1] and text[0] in "\"'":
+        text = text[1:-1].strip()
+    text = re.sub(r"[.!?]$", "", text).strip()
+    text = re.sub(r"^(?:it's|it is)\s+", "", text)
+    label = "claim" if record_type == "claim" else "policy"
+    spoken_prefix = r"\s*".join(prefix.lower())
+    match = re.fullmatch(
+        r"(?:(?:my|the)\s+)?(?:" + label
+        + r"(?:\s+(?:number|reference))?|" + spoken_prefix
+        + r")(?:\s+is)?\s*(?:(?:-|dash|hyphen)\s*)?(.+)", text
+    )
+    if match:
+        text = match[1].strip()
+    if re.fullmatch(r"[0-9]{4}", text):
+        return prefix + "-" + text
+
+    words = text.replace("-", " ").split()
+    digits = {word: str(number) for word, number in SMALL_NUMBERS.items()
+              if number < 10}
+    digits["oh"] = "0"
+    if len(words) == 4 and all(word in digits for word in words):
+        return prefix + "-" + "".join(digits[word] for word in words)
+
+    if len(words) >= 2 and words[1] == "thousand":
+        thousands = SMALL_NUMBERS.get(words[0], -1)
+        rest = words[2:]
+        if rest[:1] == ["and"]:
+            rest = rest[1:]
+            if not rest:
+                return reference
+        remainder = _under_thousand(rest)
+        if 1 <= thousands <= 9 and remainder is not None:
+            return prefix + "-" + str(thousands * 1000 + remainder)
+    return reference
+
 
 def lambda_handler(event, context):
     """Validate a Connect request and return a flat, sanitized String map."""
@@ -63,6 +146,7 @@ def lambda_handler(event, context):
     if not isinstance(record_type, str) or record_type not in PREFIXES:
         return respond("MALFORMED")
 
+    reference = normalize_reference(record_type, reference)
     if not isinstance(reference, str) or not re.fullmatch(
         PREFIXES[record_type] + r"-[0-9]{4}", reference
     ):
@@ -112,3 +196,4 @@ def lambda_handler(event, context):
 
     # Build an explicit response; internalNotes and ownerId stay in the backend.
     return respond("OK", reference, status, item["product"])
+
