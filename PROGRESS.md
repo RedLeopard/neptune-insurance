@@ -1,8 +1,8 @@
 # Neptune Insurance | Build journal
 
-## 2026-11-24 (America/Chicago) — Day 10 channels live; resume at Mission 6
+## 2026-11-24 (America/Chicago) — Day 10 complete (10/14); Day 11 next
 
-**Checkpoint: Day 10 in progress; nine days complete.** Channel delivery is verified through the owner's reported observations and supplied terminal/transcript evidence. Cross-contact continuity has not been demonstrated. The portfolio update changes progress content in the existing layout.
+**Checkpoint: Day 10 complete (10/14), explicitly confirmed by the owner. Next: Day 11 — security, resilience and observability.** Channel delivery is verified through the owner's reported observations and supplied terminal/transcript evidence. Cross-contact continuity has not been demonstrated. The portfolio update changes progress content in the existing layout.
 
 - Web chat: Neptune-Claims and Neptune-Training saved Chat capacity 1 and existing business-queue eligibility. Jordin remains outside Auto Claims. Neptune-Inbound-Chat uses the existing NeptuneInsurance Production alias, Default/idle/error messages, five dynamic handoff mappings and customerIntent department checks.
 - Billing and confirmed new-claim app paths now escalate with Billing and AutoClaims respectively. The generic human handoff export still returns NeedsTriage; it is not silently treated as a Claims request. Application deployment was reported.
@@ -19,7 +19,7 @@
 
 **Scope decisions:** workload-type concurrency remains deferred, retaining working channel-level Task/Email capacity. The owner removed isolated closed-hours testing and voice callback build/test from current project scope; these are excluded, not incomplete deliverables. The test-copy script stopped at denied ListHoursOfOperations before creating its test hours or test flow. A test-hours permission addition succeeded; no cleanup of those IAM permissions is claimed.
 
-**Resume:** Day 10, Mission 6 — continuity contract, fresh ownership checks, voice-to-chat follow-up and negative/wrong-owner evidence, then the channel matrix. Identity/claim ownership must be re-established on new contacts. Customer Profiles, automatic history retrieval, persistent chat and end-to-end cross-contact continuity are not claimed deployed or verified. Do not repeat passed channel tests.
+**Resume:** Day 11 — security, resilience and observability. Day 10 is closed per the owner's completion decision. Existing limits on evidence remain: identity/ownership checks must be re-established on new contacts; Customer Profiles, automatic history retrieval, persistent chat and end-to-end cross-contact continuity are not claimed deployed or verified. Excluded optional work is not an incomplete Day 10 requirement. Do not repeat passed channel tests.
 
 ## 2026-11-24 (America/Chicago) — CLM-1001 fix verified; carryover testing DONE
 

@@ -6,7 +6,7 @@ A fictional, portfolio-grade insurance website deployed to AWS with a staged Ama
 **Voice demo:** [1-800-810-5374](tel:+18008105374) (synthetic demonstration; live claim lookup tested successfully)  
 **Portfolio case study (after installation):** https://hireedwardthornton.click/neptune-insurance.html  
 
-**Current milestone:** Day 10 channel implementation and live tests recorded November 24, 2026; resume at Mission 6, cross-contact continuity. Nine days are complete; Day 10 is in progress. Claims and Billing chat delivery, the website chat entry, two-way SMS, manual claims Task delivery, and inbound email with a return reply passed owner-reported tests. The Day 9 live claim lookup is verified. Closed-hours testing and voice callbacks are excluded from current scope; workload-type concurrency is deferred. Automatic after-hours Task creation is published but not delivery-verified. See [current journal](PROGRESS.md).
+**Current milestone:** Day 10 complete (10/14), confirmed by the owner November 24, 2026. Next: Day 11 — security, resilience and observability. Claims and Billing chat delivery, the website chat entry, two-way SMS, manual claims Task delivery, and inbound email with a return reply passed owner-reported tests. The Day 9 live claim lookup is verified. Closed-hours testing and voice callbacks are excluded from current scope; workload-type concurrency is deferred. Automatic after-hours Task creation is published but not delivery-verified. Cross-contact continuity is not claimed live-verified. See [current journal](PROGRESS.md).
 
 ## What's actually built
 
