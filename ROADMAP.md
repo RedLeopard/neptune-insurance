@@ -23,7 +23,8 @@ Status: `DONE` means verified, not simply designed. Design target: 500-agent ref
 | Optional scope | Voice callback build and live test | EXCLUDED | Removed from current scope by owner |
 | Optional scope | Workload-type concurrency | DEFERRED | Retain working channel-level Task/Email capacity |
 | Scale | 500-agent target capacity and routing model | DESIGN ONLY | Load assumptions, quotas and design doc, not a performance claim |
-| Operations | Observability, security, cost review | TODO | Metrics, alarms and budget alerts |
+| Operations / Day 11 | Security, resilience and observability review | DONE — REVIEW / REPORTED DRILL | Flow logs, storage/access review, scoped lookup permission, fault/recovery, error metrics and documented plans; alarm/retention deployment and audit visibility remain separate |
+| Operations / Day 12 | Metrics, supervisor views and outcomes | NEXT | Build the agreed channel scorecard and inspect operational outcomes |
 
 ## Definition of done for each lab task
 
@@ -33,10 +34,10 @@ Status: `DONE` means verified, not simply designed. Design target: 500-agent ref
 4. Smoke test passed; no real personal information used.
 
 
-## Current resume point — Day 11
+## Current resume point — Day 12
 
-Day 10 is complete (10/14), explicitly confirmed by the owner. Day 10's web chat, website entry, two-way SMS, manual Task delivery and inbound email/reply tests passed as owner-reported observations. Day 9's carried-over CLM-1001 lookup testing remains complete. See [the latest build journal](PROGRESS.md).
+Day 11 is complete (11/14), confirmed by the owner November 25, 2026. See [the latest build journal](PROGRESS.md) and [Day 11 evidence](docs/DAY11.md). Logging, storage/access boundaries and Lambda least privilege were reviewed. Fresh Billing web-chat handoff and two-way messaging passed with Jordin. The fault/recovery drill passed as reported; baseline timeout 3/delay 0 was verified and six Lambda errors were observed across two periods. Monitoring, retention, threat-model and response plans are documented; no alarm or retention policy was deployed.
 
-Next: Day 11 — security, resilience and observability. Cross-contact continuity has not been live-verified; it is not represented as a passed test. Customer Profiles and automatic cross-contact context retrieval are not claimed configured. The published after-hours task branch remains configuration evidence only; its isolated test and voice callbacks are excluded from current scope, not open completion requirements. Workload-type concurrency is deferred.
+Next: Day 12 — metrics, supervisor views and outcomes. There are three syllabus days remaining: 12, 13 and 14.
 
-Earlier voice-specific agent-context and full voice quick-connect transfer evidence remain separate from the new chat/SMS/Task/email observations. Capture final current flow/application exports before replacing archived snapshots. Terraform adoption stays separate.
+Evidence gaps remain explicit: final fallback wording, exact failure-to-contact correlation, stored-object encryption and CloudTrail audit visibility. Day 10 remains complete with its accepted channel results; earlier evidence is not erased by a narrower Day 11 recheck. Cross-contact continuity and Customer Profiles integration are not claimed verified. Closed-hours testing and voice callbacks remain excluded; workload-type concurrency and Terraform adoption remain deferred. Earlier voice-specific transfer/context evidence and final current exports remain separate follow-ups.
