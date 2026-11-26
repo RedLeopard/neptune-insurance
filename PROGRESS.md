@@ -1,5 +1,19 @@
 # Neptune Insurance | Build journal
 
+## 2026-11-26 (America/Chicago) — Day 12 complete (12/14); Day 13 next
+
+**Checkpoint: Day 12 complete (12/14), closed at the owner's request after reported practical work. Next: Day 13 — reliability drills and runbooks.**
+
+- Saved and reopened Neptune-Day12-Supervisor-Voice with Neptune-Billing and Auto Claims Voice rows (Available, In queue, Oldest), plus filtered Jordin/Elena agent rows (Agent Name, Activity, Duration), per learner confirmation.
+- Reported answered Billing contact with Jordin, Neptune-To-AutoClaims queue transfer to Elena, two-way audio, contact completion and ACW. This supplies owner-reported Day 12 voice-transfer evidence; it does not verify the separate AI handoff context or every earlier acceptance case.
+- Reported a short Claims queue wait with Elena Offline, customer abandonment, contact clearance and Elena restored Available.
+- Saved three historical reports: Neptune-Day12-Historical-Voice, Neptune-Day12-Channel-Outcomes and Neptune-Day12-Agent-Performance. Historical scope: Total / Last 24 hours / America/New_York.
+- Reported the earlier-window diagnostic and original scope restoration; inspected abandoned and linked transfer records and reviewed the queue counts. Actual IDs, times and before/after values were not supplied in chat.
+- The owner accidentally deleted downloaded CSVs and progress. Reconstructed docs/day12/ with report inventory, test ledger, mission progress, contact capture table, qualitative scorecard, metric dictionary and export capture tables. Numeric totals, durations and percentages remain unavailable rather than inferred from test instructions.
+- Distinguish completed training from quantitative evidence: original export bytes and browser-local notes/quiz state were not restored. No numerical service level, containment or production capacity claim is made. Optional later re-export uses saved reports without repeating calls.
+
+Details: [Day 12](docs/DAY12.md) and [closeout package](docs/day12/README.md). Prior days and their evidence limits remain intact.
+
 ## 2026-11-25 (America/Chicago) — Day 11 complete (11/14); Day 12 next
 
 **Checkpoint: Day 11 complete (11/14), confirmed by the owner. Next: Day 12 — metrics, supervisor views and outcomes.** This closes the agreed training work while retaining explicit evidence gaps; it is not a production-security certification.
