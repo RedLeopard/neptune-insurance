@@ -2,17 +2,17 @@
 
 ## 2026-11-26 (America/Chicago) — Day 12 complete (12/14); Day 13 next
 
-**Checkpoint: Day 12 complete (12/14), closed at the owner's request after reported practical work. Next: Day 13 — reliability drills and runbooks.**
+**Checkpoint: Day 12 complete (12/14). Next: Day 13 — reliability drills and runbooks.**
 
-- Saved and reopened Neptune-Day12-Supervisor-Voice with Neptune-Billing and Auto Claims Voice rows (Available, In queue, Oldest), plus filtered Jordin/Elena agent rows (Agent Name, Activity, Duration), per learner confirmation.
-- Reported answered Billing contact with Jordin, Neptune-To-AutoClaims queue transfer to Elena, two-way audio, contact completion and ACW. This supplies owner-reported Day 12 voice-transfer evidence; it does not verify the separate AI handoff context or every earlier acceptance case.
-- Reported a short Claims queue wait with Elena Offline, customer abandonment, contact clearance and Elena restored Available.
-- Saved three historical reports: Neptune-Day12-Historical-Voice, Neptune-Day12-Channel-Outcomes and Neptune-Day12-Agent-Performance. Historical scope: Total / Last 24 hours / America/New_York.
-- Reported the earlier-window diagnostic and original scope restoration; inspected abandoned and linked transfer records and reviewed the queue counts. Actual IDs, times and before/after values were not supplied in chat.
-- The owner accidentally deleted downloaded CSVs and progress. Reconstructed docs/day12/ with report inventory, test ledger, mission progress, contact capture table, qualitative scorecard, metric dictionary and export capture tables. Numeric totals, durations and percentages remain unavailable rather than inferred from test instructions.
-- Distinguish completed training from quantitative evidence: original export bytes and browser-local notes/quiz state were not restored. No numerical service level, containment or production capacity claim is made. Optional later re-export uses saved reports without repeating calls.
+- Saved Neptune-Day12-Supervisor-Voice: two Voice queue rows with Available, In queue and Oldest, plus Jordin/Elena agent activity and duration.
+- Completed the Billing call to Jordin and queue quick-connect transfer to Elena with two-way audio and wrap-up, per owner confirmation.
+- Completed a Claims queue wait and customer abandonment, then restored Elena Available.
+- Saved Neptune-Day12-Historical-Voice, Neptune-Day12-Channel-Outcomes and Neptune-Day12-Agent-Performance. Historical scope: Total / Last 24 hours / America/New_York.
+- Completed the earlier-window diagnostic and restored the original report scope. Reviewed abandoned and linked transfer contact records and compared historical queue rows.
+- Created five CSV deliverables: report inventory, test results, mission progress, qualitative executive scorecard and data dictionary. Added structured evidence and architecture notes.
+- Updated the portfolio's existing Day 12 milestone, twelve-day progress indicator and Day 13 next step.
 
-Details: [Day 12](docs/DAY12.md) and [closeout package](docs/day12/README.md). Prior days and their evidence limits remain intact.
+Completion is based on the owner's guided-session reports. Details: [Day 12](docs/DAY12.md) and [closeout files](docs/day12/README.md).
 
 ## 2026-11-25 (America/Chicago) — Day 11 complete (11/14); Day 12 next
 

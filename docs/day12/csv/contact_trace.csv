@@ -1,4 +1,0 @@
-"journey","segment","expected_queue","expected_agent","actual_contact_id","actual_initial_id","actual_previous_id","actual_next_id","actual_queue_wait_seconds","status","evidence_source"
-"D12-ANSWERED","Billing","Neptune-Billing","Jordin Training","","","","","","Inspection completed per learner; identifiers and durations unavailable","Day 12 conversation; learner-reported completion"
-"D12-ANSWERED","Claims transfer","Auto Claims","Elena Claims","","","","","","Inspection and linkage completed per learner; identifiers and durations unavailable","Day 12 conversation; learner-reported completion"
-"D12-ABANDONED","Claims queue","Auto Claims","No connected agent expected","","","","","","Inspection completed per learner; identifiers and durations unavailable","Day 12 conversation; learner-reported completion"

@@ -1,3 +1,0 @@
-"report_name","queue","channel","contacts_queued","contacts_handled","contacts_abandoned","avg_queue_answer_seconds","avg_handle_seconds","avg_acw_seconds","interval","time_range","timezone","value_status","provenance"
-"Neptune-Day12-Historical-Voice","Neptune-Billing","VOICE","","","","","","","Total","Last 24 hours","America/New_York","Unavailable: original CSV deleted; values not supplied in conversation","Reconstructed capture table; not an AWS export"
-"Neptune-Day12-Historical-Voice","Auto Claims","VOICE","","","","","","","Total","Last 24 hours","America/New_York","Unavailable: original CSV deleted; values not supplied in conversation","Reconstructed capture table; not an AWS export"

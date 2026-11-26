@@ -24,7 +24,7 @@ Status: `DONE` means verified, not simply designed. Design target: 500-agent ref
 | Optional scope | Workload-type concurrency | DEFERRED | Retain working channel-level Task/Email capacity |
 | Scale | 500-agent target capacity and routing model | DESIGN ONLY | Load assumptions, quotas and design doc, not a performance claim |
 | Operations / Day 11 | Security, resilience and observability review | DONE — REVIEW / REPORTED DRILL | Flow logs, storage/access review, scoped lookup permission, fault/recovery, error metrics and documented plans; alarm/retention deployment and audit visibility remain separate |
-| Operations / Day 12 | Metrics, supervisor views and outcomes | COMPLETE — OWNER-REPORTED LAB | Reports saved, controlled transfer/abandonment and record review reported; closeout reconstructed, deleted numeric exports unavailable |
+| Operations / Day 12 | Metrics, supervisor views and outcomes | COMPLETE — OWNER-REPORTED LAB | Reports saved, controlled transfer/abandonment and contact review completed; scorecard, dictionary and progress files created |
 
 ## Definition of done for each lab task
 
@@ -38,6 +38,6 @@ Status: `DONE` means verified, not simply designed. Design target: 500-agent ref
 
 Day 11 is complete (11/14), confirmed by the owner November 25, 2026. See [the latest build journal](PROGRESS.md) and [Day 11 evidence](docs/DAY11.md). Logging, storage/access boundaries and Lambda least privilege were reviewed. Fresh Billing web-chat handoff and two-way messaging passed with Jordin. The fault/recovery drill passed as reported; baseline timeout 3/delay 0 was verified and six Lambda errors were observed across two periods. Monitoring, retention, threat-model and response plans are documented; no alarm or retention policy was deployed.
 
-Day 12 is complete (12/14), November 26, 2026, based on reported practical work and requested closeout. See [Day 12](docs/DAY12.md). Reconstructed CSV tables preserve unavailable values explicitly. Next: Day 13 — reliability drills and runbooks. Two syllabus days remain: 13 and 14.
+Day 12 is complete (12/14), November 26, 2026, based on reported practical work and requested closeout. See [Day 12](docs/DAY12.md). Created a qualitative scorecard, metric dictionary, report inventory and test/progress CSVs. Next: Day 13 — reliability drills and runbooks. Two syllabus days remain: 13 and 14.
 
 Evidence gaps remain explicit: final fallback wording, exact failure-to-contact correlation, stored-object encryption and CloudTrail audit visibility. Day 10 remains complete with its accepted channel results; earlier evidence is not erased by a narrower Day 11 recheck. Cross-contact continuity and Customer Profiles integration are not claimed verified. Closed-hours testing and voice callbacks remain excluded; workload-type concurrency and Terraform adoption remain deferred. The Day 12 voice-transfer result is owner-reported complete; AI handoff context evidence and final current flow exports remain separate follow-ups.

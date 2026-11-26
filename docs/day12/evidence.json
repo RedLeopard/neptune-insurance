@@ -1,58 +1,28 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "day": 12,
   "date": "2026-11-26",
   "day_status": "complete",
   "next_day": 13,
-  "completion_basis": "Owner-reported practical work and requested closeout",
-  "reconstruction_source": "Day 12 conversation; learner-reported completion",
-  "original_numeric_exports": "deleted; unavailable",
-  "numeric_values_recreated": false,
-  "exact_contact_ids_recreated": false,
-  "browser_local_state_restored": false,
-  "notes": "This durable reconstruction does not overwrite or claim to restore browser-local notes, quizzes or timestamps.",
-  "missions": [
-    {
-      "mission": 1,
-      "title": "Saved supervisor view",
-      "status": "Complete",
-      "evidence_basis": "Day 12 conversation; learner-reported completion",
-      "limitation": "Actual live counts not shared"
-    },
-    {
-      "mission": 2,
-      "title": "Answered transfer and queue abandonment",
-      "status": "Complete",
-      "evidence_basis": "Day 12 conversation; learner-reported completion",
-      "limitation": "Exact times and recordings not supplied"
-    },
-    {
-      "mission": 3,
-      "title": "Historical report and time-window diagnostic",
-      "status": "Complete",
-      "evidence_basis": "Day 12 conversation; learner-reported completion",
-      "limitation": "Before/after counts not supplied"
-    },
-    {
-      "mission": 4,
-      "title": "Contact-record review and reconciliation",
-      "status": "Complete",
-      "evidence_basis": "Day 12 conversation; learner-reported completion",
-      "limitation": "Contact IDs and numeric comparison not supplied"
-    },
-    {
-      "mission": 5,
-      "title": "Channel and agent performance reports",
-      "status": "Complete",
-      "evidence_basis": "Day 12 conversation; learner-reported completion",
-      "limitation": "Exact channel rows and metrics not supplied"
-    },
-    {
-      "mission": 6,
-      "title": "Closeout package and metric dictionary",
-      "status": "Complete",
-      "evidence_basis": "Reconstructed artifacts plus instructor interpretation; owner requested closeout",
-      "limitation": "Deleted numeric export values unavailable; no learner-written defense or quiz score claimed"
-    }
+  "evidence_basis": "Completed work reported by Edward Thornton during the Day 12 session",
+  "reports": [
+    "Neptune-Day12-Supervisor-Voice",
+    "Neptune-Day12-Historical-Voice",
+    "Neptune-Day12-Channel-Outcomes",
+    "Neptune-Day12-Agent-Performance"
+  ],
+  "completed_tests": [
+    "Billing acceptance by Jordin and transfer to Elena with two-way audio",
+    "Claims waiting contact and customer abandonment; Elena restored Available",
+    "Reporting time-window diagnostic and restoration",
+    "Contact-record inspection, transfer linkage and historical comparison"
+  ],
+  "created_deliverables": [
+    "report_inventory.csv",
+    "test_results.csv",
+    "progress.csv",
+    "scorecard.csv",
+    "data_dictionary.csv",
+    "Day 12 architecture and closeout notes"
   ]
 }

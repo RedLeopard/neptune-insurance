@@ -1,3 +1,0 @@
-"report_name","queue","channel","subtype","contacts_queued","contacts_handled","contacts_abandoned","interval","time_range","timezone","value_status","provenance"
-"Neptune-Day12-Channel-Outcomes","Neptune-Billing","","","","","","Total","Last 24 hours","America/New_York","Unavailable: original CSV deleted; values not supplied in conversation; exact channel rows were not shared","Reconstructed capture table; not an AWS export"
-"Neptune-Day12-Channel-Outcomes","Auto Claims","","","","","","Total","Last 24 hours","America/New_York","Unavailable: original CSV deleted; values not supplied in conversation; exact channel rows were not shared","Reconstructed capture table; not an AWS export"

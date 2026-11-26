@@ -1,3 +1,0 @@
-"report_name","agent_name","username","occupancy_percent","avg_handle_seconds","avg_acw_seconds","interval","time_range","timezone","value_status","provenance"
-"Neptune-Day12-Agent-Performance","Jordin Training","neptune-jordain","","","","Total","Last 24 hours","America/New_York","Unavailable: original CSV deleted; values not supplied in conversation","Reconstructed capture table; not an AWS export"
-"Neptune-Day12-Agent-Performance","Elena Claims","neptune-elena","","","","Total","Last 24 hours","America/New_York","Unavailable: original CSV deleted; values not supplied in conversation","Reconstructed capture table; not an AWS export"
