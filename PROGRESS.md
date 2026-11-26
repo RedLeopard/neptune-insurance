@@ -59,6 +59,7 @@
 
 - Created the on-demand `NeptuneInsuranceLab` DynamoDB table with a String partition key and three synthetic policy/claim records.
 - Created `NeptuneInsuranceLookupRole`: Lambda service trust, GetItem on the lab table, and basic execution logging. Deployed `NeptuneInsuranceLookup` with Python 3.13, a 3-second timeout and read-only behavior.
+- AWS SDK for Python (Boto3): the Day 9 Lambda uses `boto3.resource("dynamodb")` and `Table.get_item()` for read-only synthetic policy/claim lookups, with Botocore timeout/retry configuration. Its execution role limits DynamoDB access to the lab table. This is direct SDK usage inside Lambda, not the separate Python subprocess/AWS CLI testing approach. See [implementation](terraform/lambda/neptune_insurance_lookup.py).
 - Verified canonical claim and policy success, not-found, unauthorized, malformed-reference and unexpected-identity responses through supplied terminal output. The five-field response excludes owner IDs and internal notes, including the synthetic injection-test note.
 - Verified a controlled direct Lambda timeout, restoration of the original timeout/environment and a successful recovery lookup.
 - Added the scoped Connect invocation permission, resolved the operator's Lambda-association permission, and confirmed the function association in the instance.
