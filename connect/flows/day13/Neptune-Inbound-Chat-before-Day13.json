@@ -1,0 +1,702 @@
+{
+  "Version": "2019-10-30",
+  "StartAction": "Check Messaging Subtype.",
+  "Metadata": {
+    "entryPointPosition": {
+      "x": -96,
+      "y": 331.2
+    },
+    "ActionMetadata": {
+      "Check Messaging Subtype.": {
+        "position": {
+          "x": 34.4,
+          "y": 331.2
+        },
+        "isFriendlyName": true,
+        "conditions": [],
+        "conditionMetadata": [
+          {
+            "id": "ead132c4-cc45-4ab0-ad4e-c968762bd029",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "connect:SMS"
+          }
+        ]
+      },
+      "Set SMS Entry Context": {
+        "position": {
+          "x": 295.2,
+          "y": 547.2
+        },
+        "isFriendlyName": true,
+        "dynamicParams": []
+      },
+      "Set Chat Entry Context": {
+        "position": {
+          "x": 237.6,
+          "y": 287.2
+        },
+        "isFriendlyName": true,
+        "dynamicParams": []
+      },
+      "Save Chat AI Handoff": {
+        "position": {
+          "x": 590.4,
+          "y": 542.4
+        },
+        "isFriendlyName": true,
+        "parameters": {
+          "Attributes": {
+            "handoffReason": {
+              "useDynamic": true
+            },
+            "handoffSummary": {
+              "useDynamic": true
+            },
+            "handoffClaimReference": {
+              "useDynamic": true
+            },
+            "supervisorRequested": {
+              "useDynamic": true
+            },
+            "customerIntent": {
+              "useDynamic": true
+            }
+          }
+        },
+        "dynamicParams": [
+          "handoffReason",
+          "handoffSummary",
+          "handoffClaimReference",
+          "supervisorRequested",
+          "customerIntent"
+        ]
+      },
+      "Set Chat Billing Queue": {
+        "position": {
+          "x": 1252.8,
+          "y": 632
+        },
+        "isFriendlyName": true,
+        "parameters": {
+          "QueueId": {
+            "displayName": "Neptune-Billing"
+          }
+        },
+        "queue": {
+          "text": "Neptune-Billing"
+        }
+      },
+      "Transfer Chat to Billing": {
+        "position": {
+          "x": 1496,
+          "y": 629.6
+        },
+        "isFriendlyName": true
+      },
+      "Check Chat Department": {
+        "position": {
+          "x": 1029.6,
+          "y": 638.4
+        },
+        "isFriendlyName": true,
+        "conditions": [],
+        "conditionMetadata": [
+          {
+            "id": "0bc84303-cfd1-40bc-87f3-9f9f7771c983",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "Billing"
+          },
+          {
+            "id": "9c687c5e-ef83-43d1-936a-dec685287633",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "AutoClaims"
+          }
+        ]
+      },
+      "Set Chat Claims Queue": {
+        "position": {
+          "x": 1257.6,
+          "y": 424.8
+        },
+        "isFriendlyName": true,
+        "parameters": {
+          "QueueId": {
+            "displayName": "Auto Claims"
+          }
+        },
+        "queue": {
+          "text": "Auto Claims"
+        }
+      },
+      "Transfer Chat to Claims": {
+        "position": {
+          "x": 1746.4,
+          "y": 548.8
+        },
+        "isFriendlyName": true
+      },
+      "Chat Thank You": {
+        "position": {
+          "x": 763.2,
+          "y": 234.4
+        },
+        "isFriendlyName": true
+      },
+      "Chat Idle Timeout": {
+        "position": {
+          "x": 804,
+          "y": 479.2
+        },
+        "isFriendlyName": true
+      },
+      "Chat Technical Fallback": {
+        "position": {
+          "x": 2001.6,
+          "y": 820.8
+        },
+        "isFriendlyName": true
+      },
+      "84d3acd8-c5d8-4fcf-90f7-96cdbe480a6f": {
+        "position": {
+          "x": 2074.4,
+          "y": 596
+        }
+      },
+      "Check Billing Hours": {
+        "position": {
+          "x": 2100,
+          "y": 1549.6
+        },
+        "isFriendlyName": true
+      },
+      "Billing Closed": {
+        "position": {
+          "x": 2400,
+          "y": 1549.6
+        },
+        "isFriendlyName": true
+      },
+      "Check Claims Hours": {
+        "position": {
+          "x": 1800,
+          "y": 1200
+        },
+        "isFriendlyName": true
+      },
+      "Followup Created": {
+        "position": {
+          "x": 2400,
+          "y": 1200
+        },
+        "isFriendlyName": true
+      },
+      "Followup Creation Failed": {
+        "position": {
+          "x": 1800,
+          "y": 1549.6
+        },
+        "isFriendlyName": true
+      },
+      "Create Claims Followup": {
+        "position": {
+          "x": 2100,
+          "y": 1200
+        },
+        "isFriendlyName": true,
+        "parameters": {
+          "Attributes": {
+            "handoffClaimReference": {
+              "useDynamic": true
+            },
+            "handoffSummary": {
+              "useDynamic": true
+            }
+          }
+        }
+      },
+      "Neptune Chat Agentic CX": {
+        "position": {
+          "x": 475.2,
+          "y": 157.6
+        },
+        "isFriendlyName": true,
+        "parameters": {
+          "AgentConfiguration": {
+            "WorkspaceId": {
+              "displayName": "Neptune Insurance Lab",
+              "useDropdown": "true"
+            },
+            "ApplicationId": {
+              "displayName": "NeptuneInsurance"
+            },
+            "Alias": {
+              "displayName": "Production"
+            }
+          },
+          "SpeechRecognitionConfiguration": {
+            "SpeechRecognitionEngine": {
+              "displayName": "Amazon Connect agentic voice (recommended)"
+            }
+          }
+        }
+      }
+    },
+    "Annotations": [],
+    "name": "Neptune-Inbound-Chat",
+    "description": "Neptune Insurance web chat and SMS routing for Billing and Auto Claims, with after-hours claims follow-up tasks.",
+    "type": "contactFlow",
+    "status": "PUBLISHED",
+    "hash": {}
+  },
+  "Actions": [
+    {
+      "Parameters": {
+        "ComparisonValue": "$.SegmentAttributes['connect:Subtype']"
+      },
+      "Identifier": "Check Messaging Subtype.",
+      "Type": "Compare",
+      "Transitions": {
+        "NextAction": "Set Chat Entry Context",
+        "Conditions": [
+          {
+            "NextAction": "Set SMS Entry Context",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "connect:SMS"
+              ]
+            }
+          }
+        ],
+        "Errors": [
+          {
+            "NextAction": "Set Chat Entry Context",
+            "ErrorType": "NoMatchingCondition"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Attributes": {
+          "entryChannel": "SMS"
+        },
+        "TargetContact": "Current"
+      },
+      "Identifier": "Set SMS Entry Context",
+      "Type": "UpdateContactAttributes",
+      "Transitions": {
+        "NextAction": "Neptune Chat Agentic CX",
+        "Errors": [
+          {
+            "NextAction": "Chat Technical Fallback",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Attributes": {
+          "entryChannel": "WebChat"
+        },
+        "TargetContact": "Current"
+      },
+      "Identifier": "Set Chat Entry Context",
+      "Type": "UpdateContactAttributes",
+      "Transitions": {
+        "NextAction": "Neptune Chat Agentic CX",
+        "Errors": [
+          {
+            "NextAction": "Chat Technical Fallback",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Attributes": {
+          "handoffReason": "$.AgenticCX.ContextVariables.handoffReason",
+          "handoffSummary": "$.AgenticCX.ContextVariables.handoffSummary",
+          "handoffClaimReference": "$.AgenticCX.ContextVariables.handoffClaimReference",
+          "supervisorRequested": "$.AgenticCX.ContextVariables.supervisorRequested",
+          "customerIntent": "$.AgenticCX.ContextVariables.customerIntent"
+        },
+        "TargetContact": "Current"
+      },
+      "Identifier": "Save Chat AI Handoff",
+      "Type": "UpdateContactAttributes",
+      "Transitions": {
+        "NextAction": "Check Chat Department",
+        "Errors": [
+          {
+            "NextAction": "Chat Technical Fallback",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "QueueId": "arn:aws:connect:us-west-2:000000000000:instance/00000000-0000-0000-0000-000000000000/queue/33333333-3333-3333-3333-333333333333"
+      },
+      "Identifier": "Set Chat Billing Queue",
+      "Type": "UpdateContactTargetQueue",
+      "Transitions": {
+        "NextAction": "Check Billing Hours",
+        "Errors": [
+          {
+            "NextAction": "Chat Technical Fallback",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {},
+      "Identifier": "Transfer Chat to Billing",
+      "Type": "TransferContactToQueue",
+      "Transitions": {
+        "NextAction": "Chat Technical Fallback",
+        "Errors": [
+          {
+            "NextAction": "Chat Technical Fallback",
+            "ErrorType": "QueueAtCapacity"
+          },
+          {
+            "NextAction": "Chat Technical Fallback",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "ComparisonValue": "$.Attributes.customerIntent"
+      },
+      "Identifier": "Check Chat Department",
+      "Type": "Compare",
+      "Transitions": {
+        "NextAction": "Chat Technical Fallback",
+        "Conditions": [
+          {
+            "NextAction": "Set Chat Billing Queue",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "Billing"
+              ]
+            }
+          },
+          {
+            "NextAction": "Set Chat Claims Queue",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "AutoClaims"
+              ]
+            }
+          }
+        ],
+        "Errors": [
+          {
+            "NextAction": "Chat Technical Fallback",
+            "ErrorType": "NoMatchingCondition"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "QueueId": "arn:aws:connect:us-west-2:000000000000:instance/00000000-0000-0000-0000-000000000000/queue/22222222-2222-2222-2222-222222222222"
+      },
+      "Identifier": "Set Chat Claims Queue",
+      "Type": "UpdateContactTargetQueue",
+      "Transitions": {
+        "NextAction": "Check Claims Hours",
+        "Errors": [
+          {
+            "NextAction": "Chat Technical Fallback",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {},
+      "Identifier": "Transfer Chat to Claims",
+      "Type": "TransferContactToQueue",
+      "Transitions": {
+        "NextAction": "Chat Technical Fallback",
+        "Errors": [
+          {
+            "NextAction": "Chat Technical Fallback",
+            "ErrorType": "QueueAtCapacity"
+          },
+          {
+            "NextAction": "Chat Technical Fallback",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "SkipWhenDTMFBufferEnabled": "false",
+        "Text": "Thank you for contacting the Neptune Insurance."
+      },
+      "Identifier": "Chat Thank You",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "84d3acd8-c5d8-4fcf-90f7-96cdbe480a6f",
+        "Errors": [
+          {
+            "NextAction": "84d3acd8-c5d8-4fcf-90f7-96cdbe480a6f",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "SkipWhenDTMFBufferEnabled": "false",
+        "Text": "This chat has ended because no message was received."
+      },
+      "Identifier": "Chat Idle Timeout",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "84d3acd8-c5d8-4fcf-90f7-96cdbe480a6f",
+        "Errors": [
+          {
+            "NextAction": "84d3acd8-c5d8-4fcf-90f7-96cdbe480a6f",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "SkipWhenDTMFBufferEnabled": "false",
+        "Text": "We could not complete your request in this chat. Please use the existing Neptune contact page for another support option."
+      },
+      "Identifier": "Chat Technical Fallback",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "84d3acd8-c5d8-4fcf-90f7-96cdbe480a6f",
+        "Errors": [
+          {
+            "NextAction": "84d3acd8-c5d8-4fcf-90f7-96cdbe480a6f",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {},
+      "Identifier": "84d3acd8-c5d8-4fcf-90f7-96cdbe480a6f",
+      "Type": "DisconnectParticipant",
+      "Transitions": {}
+    },
+    {
+      "Parameters": {
+        "HoursOfOperationId": "arn:aws:connect:us-west-2:000000000000:instance/00000000-0000-0000-0000-000000000000/operating-hours/11111111-1111-1111-1111-111111111111"
+      },
+      "Identifier": "Check Billing Hours",
+      "Type": "CheckHoursOfOperation",
+      "Transitions": {
+        "NextAction": "Chat Technical Fallback",
+        "Conditions": [
+          {
+            "NextAction": "Transfer Chat to Billing",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "True"
+              ]
+            }
+          },
+          {
+            "NextAction": "Billing Closed",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "False"
+              ]
+            }
+          }
+        ],
+        "Errors": [
+          {
+            "NextAction": "Chat Technical Fallback",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Text": "Billing representatives are unavailable outside support hours. Please return during the published support hours."
+      },
+      "Identifier": "Billing Closed",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "84d3acd8-c5d8-4fcf-90f7-96cdbe480a6f",
+        "Errors": [
+          {
+            "NextAction": "84d3acd8-c5d8-4fcf-90f7-96cdbe480a6f",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "HoursOfOperationId": "arn:aws:connect:us-west-2:000000000000:instance/00000000-0000-0000-0000-000000000000/operating-hours/11111111-1111-1111-1111-111111111111"
+      },
+      "Identifier": "Check Claims Hours",
+      "Type": "CheckHoursOfOperation",
+      "Transitions": {
+        "NextAction": "Followup Creation Failed",
+        "Conditions": [
+          {
+            "NextAction": "Transfer Chat to Claims",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "True"
+              ]
+            }
+          },
+          {
+            "NextAction": "Create Claims Followup",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "False"
+              ]
+            }
+          }
+        ],
+        "Errors": [
+          {
+            "NextAction": "Followup Creation Failed",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Text": "Your follow-up request was created for the Neptune Insurance claims team."
+      },
+      "Identifier": "Followup Created",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "84d3acd8-c5d8-4fcf-90f7-96cdbe480a6f",
+        "Errors": [
+          {
+            "NextAction": "84d3acd8-c5d8-4fcf-90f7-96cdbe480a6f",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Text": "We could not create a follow-up request. Please use the Neptune contact page for another option."
+      },
+      "Identifier": "Followup Creation Failed",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "84d3acd8-c5d8-4fcf-90f7-96cdbe480a6f",
+        "Errors": [
+          {
+            "NextAction": "84d3acd8-c5d8-4fcf-90f7-96cdbe480a6f",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Name": "Neptune Insurance claims follow-up",
+        "ContactFlowId": "arn:aws:connect:us-west-2:000000000000:instance/00000000-0000-0000-0000-000000000000/contact-flow/66666666-6666-6666-6666-666666666666",
+        "Description": "Synthetic after-hours claims request. Review contact context before action.",
+        "Attributes": {
+          "handoffClaimReference": "$.Attributes.handoffClaimReference",
+          "handoffSummary": "$.Attributes.handoffSummary"
+        },
+        "RelatedContact": "CURRENT"
+      },
+      "Identifier": "Create Claims Followup",
+      "Type": "CreateTask",
+      "Transitions": {
+        "NextAction": "Followup Created",
+        "Errors": [
+          {
+            "NextAction": "Followup Creation Failed",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Identifier": "Neptune Chat Agentic CX",
+      "Type": "ConnectParticipantWithAgenticCX",
+      "Parameters": {
+        "AgentConfiguration": {
+          "WorkspaceId": "44444444-4444-4444-4444-444444444444",
+          "ApplicationId": "55555555-5555-5555-5555-555555555555",
+          "Alias": "RESELECT_DEPLOYED_ALIAS"
+        },
+        "SpeechRecognitionConfiguration": {
+          "SpeechRecognitionEngine": "AMAZON_AGENTIC_VOICE"
+        },
+        "AudioFillerConfiguration": {
+          "Enabled": false
+        }
+      },
+      "Transitions": {
+        "NextAction": "Chat Technical Fallback",
+        "Errors": [
+          {
+            "NextAction": "Chat Technical Fallback",
+            "ErrorType": "NoMatchingError"
+          },
+          {
+            "NextAction": "Chat Thank You",
+            "ErrorType": "NoMatchingCondition"
+          },
+          {
+            "NextAction": "Chat Idle Timeout",
+            "ErrorType": "InputTimeLimitExceeded"
+          }
+        ],
+        "Conditions": [
+          {
+            "NextAction": "Save Chat AI Handoff",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "Escalation"
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
