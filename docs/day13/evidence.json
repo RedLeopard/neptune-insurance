@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "day": 13,
+  "status": "COMPLETE",
+  "course_progress": "13/14",
+  "completion_date": "2026-11-27",
+  "timezone": "America/Chicago",
+  "accepted_by": "Edward Thornton",
+  "next_session": "Day 14 — capstone and architecture defense",
+  "configuration": {
+    "target_flow": "Neptune-Day13-Recovery-Chat",
+    "original_flow": "Neptune-Inbound-Chat",
+    "published_marker": "A",
+    "context_key": "day13ClaimReference",
+    "comparison_value": "CLM-1001",
+    "blocks": [
+      "Day13 Version Marker",
+      "Day13 Context Check",
+      "Day13 Missing Context"
+    ],
+    "publication_evidence": "Owner-supplied CLI PASS output after published-content read-back and original-flow comparison"
+  },
+  "tests": [
+    {
+      "case": "T01",
+      "scenario": "Chat entry",
+      "status": "COMPLETE",
+      "observed_result": "Version A marker, normal welcome and Billing response observed.",
+      "evidence_source": "Supplied customer transcript, 2:06–2:08 PM"
+    },
+    {
+      "case": "T02",
+      "scenario": "Off-topic request",
+      "status": "COMPLETE",
+      "observed_result": "Pizza request received insurance-focused recovery.",
+      "evidence_source": "Supplied customer transcript, 2:09 PM"
+    },
+    {
+      "case": "T03",
+      "scenario": "Coverage/payment request",
+      "status": "COMPLETE",
+      "observed_result": "No coverage guarantee or payment approval; Billing response and selected flow recorded as a routing observation.",
+      "evidence_source": "Customer transcript and application History, 2:11 PM"
+    },
+    {
+      "case": "T04",
+      "scenario": "Owned claim status",
+      "status": "COMPLETE",
+      "observed_result": "1001 returned IN_REVIEW to the customer.",
+      "evidence_source": "Supplied customer transcript, 2:41 PM"
+    },
+    {
+      "case": "T05",
+      "scenario": "Malformed reference",
+      "status": "COMPLETE",
+      "observed_result": "ABC produced recovery, a closing message and clear chat end without claim data.",
+      "evidence_source": "Supplied customer transcript, 2:51–2:52 PM"
+    },
+    {
+      "case": "T06",
+      "scenario": "Ownership boundary",
+      "status": "COMPLETE",
+      "observed_result": "CLM-2002 returned UNAUTHORIZED with blank reference/status/product and only the five allowed fields.",
+      "evidence_source": "Supplied AWS CLI response; private test evidence saved at 20:53:53 UTC"
+    },
+    {
+      "case": "T07",
+      "scenario": "Claims eligibility / no available agent",
+      "status": "COMPLETE",
+      "observed_result": "Owner confirmed the restricted-agent waiting test worked after restarting the customer chat.",
+      "evidence_source": "Owner confirmation after the guided agent-state drill"
+    },
+    {
+      "case": "T08",
+      "scenario": "Claims agent recovery",
+      "status": "COMPLETE",
+      "observed_result": "Owner confirmed the same waiting chat reached restored Elena and messages worked both ways.",
+      "evidence_source": "Owner confirmation after the two-way recovery instructions"
+    },
+    {
+      "case": "T09",
+      "scenario": "Missing context and continuation",
+      "status": "COMPLETE",
+      "observed_result": "A marker, missing-context notice and normal welcome appeared; re-entered 1001 returned IN_REVIEW.",
+      "evidence_source": "Supplied customer transcript, 3:15–3:17 PM"
+    },
+    {
+      "case": "T10",
+      "scenario": "Supplied synthetic context",
+      "status": "COMPLETE",
+      "observed_result": "Owner reported completion after applying day13ClaimReference=CLM-1001 and starting the prescribed fresh chat.",
+      "evidence_source": "Owner confirmation"
+    }
+  ],
+  "operational_deliverables": [
+    "Incident isolation and routing observation",
+    "Agent eligibility and availability recovery",
+    "Malformed input and ownership rejection",
+    "Missing-context recovery and safe continuation",
+    "Saved-baseline restoration procedure",
+    "Voice/SMS/email/task incident branches"
+  ],
+  "evidence_policy": "Transcripts, terminal output and owner confirmations are attributed in each row. Raw local exports and bindings stay private."
+}

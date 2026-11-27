@@ -26,6 +26,8 @@ Status: `DONE` means verified, not simply designed. Design target: 500-agent ref
 | Operations / Day 11 | Security, resilience and observability review | DONE — REVIEW / REPORTED DRILL | Flow logs, storage/access review, scoped lookup permission, fault/recovery, error metrics and documented plans; alarm/retention deployment and audit visibility remain separate |
 | Operations / Day 12 | Metrics, supervisor views and outcomes | COMPLETE — OWNER-REPORTED LAB | Reports saved, controlled transfer/abandonment and contact review completed; scorecard, dictionary and progress files created |
 
+| Operations / Day 13 | Reliability, recovery and operational runbook | COMPLETE — OWNER-ACCEPTED SESSION | Published isolated marker/context guard; rejection and recovery observations; agent recovery confirmation; incident/rollback procedures and evidence index |
+
 ## Definition of done for each lab task
 
 1. Screenshot or command evidence recorded in `PROGRESS.md`.
@@ -34,10 +36,10 @@ Status: `DONE` means verified, not simply designed. Design target: 500-agent ref
 4. Smoke test passed; no real personal information used.
 
 
-## Current resume point — Day 13
+## Current resume point — Day 14
 
-Day 11 is complete (11/14), confirmed by the owner November 25, 2026. See [the latest build journal](PROGRESS.md) and [Day 11 evidence](docs/DAY11.md). Logging, storage/access boundaries and Lambda least privilege were reviewed. Fresh Billing web-chat handoff and two-way messaging passed with Jordin. The fault/recovery drill passed as reported; baseline timeout 3/delay 0 was verified and six Lambda errors were observed across two periods. Monitoring, retention, threat-model and response plans are documented; no alarm or retention policy was deployed.
+**Day 13 complete (13/14), November 27, 2026. Next: Day 14 — capstone and principal architect defense.**
 
-Day 12 is complete (12/14), November 26, 2026, based on reported practical work and requested closeout. See [Day 12](docs/DAY12.md). Created a qualitative scorecard, metric dictionary, report inventory and test/progress CSVs. Next: Day 13 — reliability drills and runbooks. Two syllabus days remain: 13 and 14.
+The completed session includes the isolated recovery chat flow, visible A marker, safe input and ownership rejection, claim-status lookup, owner-reported agent recovery, and missing-context recovery with successful continuation. The operational runbook covers diagnosis, mitigation, rollback and channel-specific incident response. See [Day 13](docs/DAY13.md), [runbook](docs/day13/RUNBOOK.md) and [session evidence](docs/day13/evidence.json).
 
-Evidence gaps remain explicit: final fallback wording, exact failure-to-contact correlation, stored-object encryption and CloudTrail audit visibility. Day 10 remains complete with its accepted channel results; earlier evidence is not erased by a narrower Day 11 recheck. Cross-contact continuity and Customer Profiles integration are not claimed verified. Closed-hours testing and voice callbacks remain excluded; workload-type concurrency and Terraform adoption remain deferred. The Day 12 voice-transfer result is owner-reported complete; AI handoff context evidence and final current flow exports remain separate follow-ups.
+Day 14 presents the existing Neptune solution and its design decisions. The 500-agent scale remains a reference design. The separate bonus sequence remains recording/storage, Nova 2 Sonic and final project cleanup.

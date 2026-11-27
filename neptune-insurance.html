@@ -12,7 +12,7 @@
     <meta property="og:site_name" content="Edward E.T. Thornton · Architecture Portfolio">
     <meta property="og:title" content="Neptune Insurance | Live AWS CX Experience">
     <meta property="og:description"
-        content="Explore Neptune Insurance progress: Day 12 complete with supervisor reports, historical channel and agent views, controlled transfer and abandonment tests, and a metrics scorecard. Next: Day 13 reliability drills and runbooks.">
+        content="Explore Neptune Insurance progress: Day 13 complete with an isolated recovery chat flow, safe lookup rejection, agent recovery, a context guard and an operational runbook. Next: Day 14 capstone and architecture defense.">
     <meta property="og:url" content="https://hireedwardthornton.click/neptune-insurance.html">
     <meta property="og:image" content="https://hireedwardthornton.click/assets/neptune-share.png">
     <meta property="og:image:secure_url" content="https://hireedwardthornton.click/assets/neptune-share.png">
@@ -973,7 +973,7 @@
         .progress-track>span {
             height: 3px;
             display: block;
-            width: calc(100% / 14 * 12 - 5px);
+            width: calc(100% / 14 * 13 - 5px);
             background: repeating-linear-gradient(90deg, var(--lime) 0 calc(100% / 9 - 5px), transparent calc(100% / 9 - 5px) calc(100% / 9))
         }
 
@@ -2261,8 +2261,8 @@
                     <p class="hero-summary">From the first click to the first conversation. An insurance demo that
                         brings a live customer website and a published voice journey into one evolving AWS project.</p>
                     <a class="quiet-link" href="#experience">Explore the experience</a>
-                    <div class="hero-progress"><span class="status-label"><i aria-hidden="true"></i>DAY 12
-                            COMPLETE</span><span>Supervisor reports, controlled contact tests and metrics scorecard complete. Next: Day 13 reliability drills.</span></div>
+                    <div class="hero-progress"><span class="status-label"><i aria-hidden="true"></i>DAY 13
+                            COMPLETE</span><span>Recovery chat, safe lookup rejection, context handling and operational runbook complete. Next: Day 14 capstone.</span></div>
                 </div>
                 <figure class="hero-art">
                     <div class="orbit orbit-one" aria-hidden="true"></div>
@@ -2596,16 +2596,16 @@
                 <div class="section-heading heading-with-aside">
                     <div>
                         <p class="eyebrow">A BUILD WITH DIRECTION</p>
-                        <h2 id="roadmap-title">Twelve days complete.<br><span>A foundation you can follow.</span></h2>
+                        <h2 id="roadmap-title">Thirteen days complete.<br><span>A foundation you can follow.</span></h2>
                     </div>
                     <p>A self-directed 14-day architecture project I designed and am building myself. Each stage adds a working capability to the
                         Neptune Insurance customer journey.</p>
                 </div>
                 <div class="course-progress">
-                    <div><strong>12 of 14 days complete</strong><span>Next: Day 13 · Reliability drills and omnichannel runbooks</span>
+                    <div><strong>13 of 14 days complete</strong><span>Next: Day 14 · Capstone and architecture defense</span>
                     </div>
                     <div class="progress-track" role="progressbar" aria-label="Reported course progress"
-                        aria-valuemin="0" aria-valuemax="14" aria-valuenow="12"><span></span></div>
+                        aria-valuemin="0" aria-valuemax="14" aria-valuenow="13"><span></span></div>
                 </div>
                 <div class="milestone-list">
                     <article>
@@ -2681,9 +2681,17 @@
                             <p>Saved real-time supervisor and historical voice, channel and agent reports. Completed a Billing-to-Claims transfer with two-way audio, observed queue abandonment and restored agent availability. Reviewed reporting windows and linked contact records. Created a qualitative executive scorecard, metric dictionary, report inventory and test/progress CSVs.</p>
                         </div><span class="milestone-state">Complete · reports and tests</span>
                     </article>
+                    <article>
+                        <div class="milestone-day">DAY 13</div>
+                        <div>
+                            <h3>Recover the journey. Run the operation.</h3>
+                            <p>Published an isolated recovery chat flow with a visible A marker and synthetic context guard. Exercised safe input and ownership rejection, claim-status lookup and agent recovery. Demonstrated missing-context recovery to IN_REVIEW and documented incident isolation, rollback and channel-specific operating procedures.</p>
+                            <a class="quiet-link" href="https://github.com/RedLeopard/neptune-insurance/blob/main/docs/day13/RUNBOOK.md" target="_blank" rel="noopener noreferrer">Read the operational runbook</a>
+                        </div><span class="milestone-state">Complete · recovery and runbook</span>
+                    </article>
                 </div>
-                <div class="future-scope"><span class="eyebrow">NEXT: RELIABILITY DRILLS AND RUNBOOKS</span>
-                    <p>Next: Day 13 reliability drills and omnichannel runbooks, followed by the Day 14 capstone and architecture defense.</p>
+                <div class="future-scope"><span class="eyebrow">NEXT: CAPSTONE AND ARCHITECTURE DEFENSE</span>
+                    <p>Next: Day 14 capstone and architecture defense. Present the customer journey, operating decisions, recovery procedures and 500-agent reference design.</p>
                 </div>
             </div>
         </section>

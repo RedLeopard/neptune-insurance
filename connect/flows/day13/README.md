@@ -26,3 +26,9 @@ The public JSON follows the existing Connect template convention. AWS account, i
 | `RESELECT_DEPLOYED_ALIAS` | Existing deployed application alias, shown as Production in the supplied export |
 
 These public templates require rebinding before import/use. They do not include the application, queues, users, hours or task resources. Import only into the intended isolated lab flow, confirm its name and resource selections, then save/publish as appropriate. Importing an export is not proof of a successful customer interaction.
+
+## Day 13 published configuration reference
+
+[Neptune-Day13-Recovery-Chat-A-context-template.json](Neptune-Day13-Recovery-Chat-A-context-template.json) reconstructs the A marker and context guard from the supplied baseline plus the session scripts. It contains 23 executable actions. This is a public reference template, with resource bindings retained as placeholders; its generated editor condition ID is local template metadata. It is not presented as an additional AWS-exported file. The owner supplied successful published-content read-back checks for the applied changes.
+
+See the [completed Day 13 journal](../../../docs/DAY13.md) and [operational runbook](../../../docs/day13/RUNBOOK.md).

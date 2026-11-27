@@ -1,0 +1,11 @@
+case,scenario,status,observed_result,evidence_source
+T01,Chat entry,COMPLETE,"Version A marker, normal welcome and Billing response observed.","Supplied customer transcript, 2:06–2:08 PM"
+T02,Off-topic request,COMPLETE,Pizza request received insurance-focused recovery.,"Supplied customer transcript, 2:09 PM"
+T03,Coverage/payment request,COMPLETE,No coverage guarantee or payment approval; Billing response and selected flow recorded as a routing observation.,"Customer transcript and application History, 2:11 PM"
+T04,Owned claim status,COMPLETE,1001 returned IN_REVIEW to the customer.,"Supplied customer transcript, 2:41 PM"
+T05,Malformed reference,COMPLETE,"ABC produced recovery, a closing message and clear chat end without claim data.","Supplied customer transcript, 2:51–2:52 PM"
+T06,Ownership boundary,COMPLETE,CLM-2002 returned UNAUTHORIZED with blank reference/status/product and only the five allowed fields.,Supplied AWS CLI response; private test evidence saved at 20:53:53 UTC
+T07,Claims eligibility / no available agent,COMPLETE,Owner confirmed the restricted-agent waiting test worked after restarting the customer chat.,Owner confirmation after the guided agent-state drill
+T08,Claims agent recovery,COMPLETE,Owner confirmed the same waiting chat reached restored Elena and messages worked both ways.,Owner confirmation after the two-way recovery instructions
+T09,Missing context and continuation,COMPLETE,"A marker, missing-context notice and normal welcome appeared; re-entered 1001 returned IN_REVIEW.","Supplied customer transcript, 3:15–3:17 PM"
+T10,Supplied synthetic context,COMPLETE,Owner reported completion after applying day13ClaimReference=CLM-1001 and starting the prescribed fresh chat.,Owner confirmation

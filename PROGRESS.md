@@ -1,5 +1,19 @@
 # Neptune Insurance | Build journal
 
+## 2026-11-27 (America/Chicago) — Day 13 complete (13/14); Day 14 next
+
+**Checkpoint: Day 13 complete (13/14), accepted by the owner. Next: Day 14 — capstone and architecture defense.**
+
+- Created the isolated Neptune-Day13-Recovery-Chat copy. Published the A marker with Python/AWS CLI, preserved the original entry, and verified customer-facing A, welcome and Billing messages.
+- Exercised off-topic recovery, claim status (1001 → IN_REVIEW), malformed input (ABC → recovery and clear end), and the direct different-owner fixture (CLM-2002 → UNAUTHORIZED with empty claim fields).
+- Inspected the coverage/payment request in application History. It selected NeptuneBilling, offered no coverage/payment promise and exited; captured this as a routing observation rather than assuming a guardrail activation.
+- Owner confirmed the restricted-agent waiting drill and recovery of the same chat with Elena, including two-way messages.
+- Added and published Day13 Context Check / Compare on $.Attributes.day13ClaimReference = CLM-1001 and Day13 Missing Context / MessageParticipant. With {}, the notice and normal welcome appeared and re-entered 1001 returned IN_REVIEW. The supplied-context check was owner-reported complete.
+- Supplied CLI output confirmed published graphs and unchanged original chat content. Private backups were saved before both configuration changes.
+- Completed the operational runbook, evidence ledger, architect notes, sanitized reference template and operator helpers for backup, marker change, context guard and baseline restoration. Updated the existing portfolio progress to 13/14 with Day 14 next.
+
+Evidence sources: supplied chat transcripts, terminal PASS output and owner confirmations. [Day 13 closeout](docs/day13/README.md) · [Operational runbook](docs/day13/RUNBOOK.md).
+
 ## 2026-11-26 (America/Chicago) — Day 12 complete (12/14); Day 13 next
 
 **Checkpoint: Day 12 complete (12/14). Next: Day 13 — reliability drills and runbooks.**
