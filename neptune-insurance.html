@@ -12,7 +12,7 @@
     <meta property="og:site_name" content="Edward E.T. Thornton · Architecture Portfolio">
     <meta property="og:title" content="Neptune Insurance | Live AWS CX Experience">
     <meta property="og:description"
-        content="Explore Neptune Insurance progress: Day 13 complete with an isolated recovery chat flow, safe lookup rejection, agent recovery, a context guard and an operational runbook. Next: Day 14 capstone and architecture defense.">
+        content="Neptune Insurance: all 14 core bootcamp days complete, including the live customer-journey capstone, operational handoff and principal architect defense. Next: S3 recording proof, Nova 2 Sonic and self-paced cleanup.">
     <meta property="og:url" content="https://hireedwardthornton.click/neptune-insurance.html">
     <meta property="og:image" content="https://hireedwardthornton.click/assets/neptune-share.png">
     <meta property="og:image:secure_url" content="https://hireedwardthornton.click/assets/neptune-share.png">
@@ -973,7 +973,7 @@
         .progress-track>span {
             height: 3px;
             display: block;
-            width: calc(100% / 14 * 13 - 5px);
+            width: calc(100% / 14 * 14 - 5px);
             background: repeating-linear-gradient(90deg, var(--lime) 0 calc(100% / 9 - 5px), transparent calc(100% / 9 - 5px) calc(100% / 9))
         }
 
@@ -2261,8 +2261,8 @@
                     <p class="hero-summary">From the first click to the first conversation. An insurance demo that
                         brings a live customer website and a published voice journey into one evolving AWS project.</p>
                     <a class="quiet-link" href="#experience">Explore the experience</a>
-                    <div class="hero-progress"><span class="status-label"><i aria-hidden="true"></i>DAY 13
-                            COMPLETE</span><span>Recovery chat, safe lookup rejection, context handling and operational runbook complete. Next: Day 14 capstone.</span></div>
+                    <div class="hero-progress"><span class="status-label"><i aria-hidden="true"></i>14-DAY CORE
+                            COMPLETE</span><span>All 14 core days complete. Capstone, architecture defense and operational handoff complete. Next: recording proof and Nova 2 Sonic bonus missions.</span></div>
                 </div>
                 <figure class="hero-art">
                     <div class="orbit orbit-one" aria-hidden="true"></div>
@@ -2422,8 +2422,8 @@
                             <desc id="ndi-desc">Target design: Voice, web chat from Neptune's live website, SMS, and
                                 email feed Amazon Connect flows, queues and routing profiles. Agentic CX and human
                                 agents connect to Lambda and proposed insurance services. The existing Neptune customer
-                                website is hosted separately on Route 53, CloudFront, and a private S3 origin. Website
-                                integration with Connect is planned, not yet live.</desc>
+                                website is hosted separately on Route 53, CloudFront, and a private S3 origin. The embedded
+                                Connect chat widget is live; enterprise scale and automatic cross-contact continuity remain design work.</desc>
                             <defs>
                                 <pattern id="ndi-grid" width="20" height="20" patternUnits="userSpaceOnUse">
                                     <path d="M20 0 H0 V20" fill="none" stroke="#6a9163" stroke-opacity=".07"
@@ -2568,7 +2568,9 @@
                         operation, while the lab uses a small group of training agents.</p>
                     <div class="technology-list" aria-label="Technologies used"><span>Amazon
                             Connect</span><span>CloudFront</span><span>Private S3</span><span>Route
-                            53</span><span>ACM</span><span>CloudWatch</span></div>
+                            53</span><span>ACM</span><span>CloudWatch</span><span>Agentic CX</span><span>AWS Lambda</span><span>DynamoDB</span><span>AWS SDK · Boto3</span></div>
+                    <p>The read-only lookup uses AWS SDK for Python (Boto3) inside Lambda: DynamoDB GetItem, table-scoped IAM and bounded timeout/retry settings. Python/AWS CLI operator automation is documented separately.</p>
+                    <a class="quiet-link" href="https://github.com/RedLeopard/neptune-insurance/blob/main/terraform/lambda/neptune_insurance_lookup.py" target="_blank" rel="noopener noreferrer">Inspect the Boto3 lookup source</a>
                 </div>
                 <div class="principles">
                     <article><span class="principle-label">CLEAR ROUTING</span>
@@ -2583,7 +2585,7 @@
                     </article>
                     <article><span class="principle-label">HONEST BOUNDARIES</span>
                         <h3>Build the foundation. Prove each layer.</h3>
-                        <p>The website, voice entry, routing configuration, and conversational app exist today. AI-to-human handoff, cross-channel context, hosted chat, messaging, and business APIs remain later work.</p>
+                        <p>Voice, hosted web chat, two-way SMS, email replies and manual task delivery have working lab evidence. The synthetic lookup uses scoped AWS SDK access. Automatic cross-contact context and 500-agent capacity remain separate design and validation work.</p>
                     </article>
                 </div>
             </div>
@@ -2596,16 +2598,16 @@
                 <div class="section-heading heading-with-aside">
                     <div>
                         <p class="eyebrow">A BUILD WITH DIRECTION</p>
-                        <h2 id="roadmap-title">Thirteen days complete.<br><span>A foundation you can follow.</span></h2>
+                        <h2 id="roadmap-title">Fourteen days complete.<br><span>A foundation you can follow.</span></h2>
                     </div>
-                    <p>A self-directed 14-day architecture project I designed and am building myself. Each stage adds a working capability to the
+                    <p>A self-directed 14-day architecture project I designed and built myself. The completed core brings customer channels, controlled AI, routing and operations together in the
                         Neptune Insurance customer journey.</p>
                 </div>
                 <div class="course-progress">
-                    <div><strong>13 of 14 days complete</strong><span>Next: Day 14 · Capstone and architecture defense</span>
+                    <div><strong>14 of 14 days complete</strong><span>Core bootcamp complete · Bonus missions follow</span>
                     </div>
                     <div class="progress-track" role="progressbar" aria-label="Reported course progress"
-                        aria-valuemin="0" aria-valuemax="14" aria-valuenow="13"><span></span></div>
+                        aria-valuemin="0" aria-valuemax="14" aria-valuenow="14"><span></span></div>
                 </div>
                 <div class="milestone-list">
                     <article>
@@ -2650,8 +2652,8 @@
                         <div class="milestone-day">DAY 8</div>
                         <div>
                             <h3>Connect AI to controlled actions.</h3>
-                            <p>Saved input/output guardrails, human and supervisor handoff flows, and five context mappings. Connected and published the AI phone path; live phone-to-agent verification remains pending.</p>
-                        </div><span class="milestone-state">Configured</span>
+                            <p>Saved input/output guardrails, human and supervisor handoff flows, and five context mappings. Connected and published the AI phone path; the guided Day 14 capstone included owner-reported live voice and chat handoff exercises.</p>
+                        </div><span class="milestone-state">Complete · controls and handoff</span>
                     </article>
                     <article>
                         <div class="milestone-day">DAY 9</div>
@@ -2689,9 +2691,17 @@
                             <a class="quiet-link" href="https://github.com/RedLeopard/neptune-insurance/blob/main/docs/day13/RUNBOOK.md" target="_blank" rel="noopener noreferrer">Read the operational runbook</a>
                         </div><span class="milestone-state">Complete · recovery and runbook</span>
                     </article>
+                    <article>
+                        <div class="milestone-day">DAY 14</div>
+                        <div>
+                            <h3>Demonstrate the journey. Defend the architecture.</h3>
+                            <p>Completed the guided capstone: live Claims voice and chat exercises, bounded AI lookup and guardrail checks, new-conversation context handling and an operational evidence trace. Authored five architecture decisions, five risks, a staged expansion and rollback plan, a failure tabletop, a case summary and a CIO briefing. Core completion accepted November 28, 2026; the 500-agent target remains a reference design.</p>
+                            <a class="quiet-link" href="https://github.com/RedLeopard/neptune-insurance/blob/main/docs/DAY14.md" target="_blank" rel="noopener noreferrer">Read the capstone closeout</a>
+                        </div><span class="milestone-state">Complete · core 14/14</span>
+                    </article>
                 </div>
-                <div class="future-scope"><span class="eyebrow">NEXT: CAPSTONE AND ARCHITECTURE DEFENSE</span>
-                    <p>Next: Day 14 capstone and architecture defense. Present the customer journey, operating decisions, recovery procedures and 500-agent reference design.</p>
+                <div class="future-scope"><span class="eyebrow">NEXT: SELF-PACED BONUS MISSIONS</span>
+                    <p>The 14-day core bootcamp is complete. Next: prove stored S3 call recordings, evaluate and integrate Nova 2 Sonic where supported, then complete project cleanup and regression. Bonus progress is tracked separately from the completed core.</p>
                 </div>
             </div>
         </section>

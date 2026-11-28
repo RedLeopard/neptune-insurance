@@ -1,5 +1,19 @@
 # Neptune Insurance | Build journal
 
+## 2026-11-28 (America/Chicago) — Day 14 complete; core bootcamp COMPLETE (14/14)
+
+**Checkpoint: all 14 core days complete, explicitly accepted by Edward Thornton.** The final session combined the customer journey, operations handoff and principal architect defense. Bonus work is a separate extension.
+
+- Completed the final Auto Claims live voice exercise and the deployed-chat lookup/handoff exercise as reported by the owner; the exercise preserves Jordin's training exclusion and Elena's Claims eligibility.
+- Reported completion of the coverage/payment guardrail exercise, new-conversation context exercise and contact/flow-log evidence trace. These are guided-session reports; no new ContactIds, timestamps or verbatim test responses are reconstructed here.
+- Authored the follow-up work-item contract and operational handoff, referencing the existing Day 13 recovery procedures. The Day 14 contract is a simulation; the already tested Day 10 manual Task path remains part of the working baseline.
+- Reconfirmed that SMS and email work. Existing Day 10 evidence covers two-way SMS, email acceptance/reply and manual Task delivery; these are not merely service approvals.
+- Completed five architecture decisions, five risks, staged expansion/rollback planning, the 10x-traffic-plus-lookup-timeout tabletop, a 10-minute briefing outline, a case summary and the 90-second CIO explanation.
+- Explicitly included AWS SDK for Python (Boto3): Lambda uses DynamoDB GetItem with scoped IAM and Botocore timeouts/retry controls. Source was rechecked at closeout; Python subprocess/AWS CLI automation remains a separate technique.
+- Updated the existing portfolio case-study source to 14/14, preserving branding, hero assets, layout and project order. Publication uses the owner's existing Hire Edward bash; this repository update does not itself upload the portfolio.
+
+**Next:** B01 S3 recording proof → B02 Nova 2 Sonic → B03 cleanup/regression and portfolio refinement. The 500-agent model remains a reference design rather than a load-tested deployment. See [Day 14 closeout](docs/DAY14.md).
+
 ## 2026-11-27 (America/Chicago) — Day 13 complete (13/14); Day 14 next
 
 **Checkpoint: Day 13 complete (13/14), accepted by the owner. Next: Day 14 — capstone and architecture defense.**

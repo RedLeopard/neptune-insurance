@@ -1,6 +1,6 @@
 # Neptune Insurance operational runbook
 
-**Day 13 complete — November 27, 2026. Course progress: 13/14. Next session: Day 14 capstone and architecture defense.**
+**Core bootcamp complete — 14/14, November 28, 2026.** This runbook originated in Day 13 and was reviewed in the Day 14 operational handoff. Next: separate recording/storage, Nova 2 Sonic and cleanup bonus missions. See [Day 14 closeout](../DAY14.md).
 
 Owner: Edward Thornton. Environment: synthetic Neptune Insurance lab, Oregon (`us-west-2`).
 
@@ -151,3 +151,13 @@ Use these procedures during an authorized recovery change and retain the actual 
 - Review the reference design's staffing, capacity, quotas, channel continuity and operating ownership separately from the small synthetic lab.
 
 Official references: [Flow troubleshooting](https://docs.aws.amazon.com/connect/latest/adminguide/troubleshoot-contact-flow-behavior.html), [conversation history](https://docs.aws.amazon.com/connect/latest/adminguide/acxd-conversation-history.html), [routing profiles](https://docs.aws.amazon.com/connect/latest/adminguide/routing-profiles.html), [Check contact attributes](https://docs.aws.amazon.com/connect/latest/adminguide/check-contact-attributes.html), [flow rollback](https://docs.aws.amazon.com/connect/latest/adminguide/flow-version-control.html).
+
+## Day 14 operating handoff — core complete
+
+- Owner: Edward Thornton. Preserve the working voice, web chat, two-way SMS, email replies and manual Task delivery baseline. Source evidence for those channels is recorded in Day 10; the owner reconfirmed SMS/email during Day 14.
+- The owner reported completing the final voice, chat/lookup/handoff, guardrail, new-conversation and operational evidence exercises. The follow-up contract and combined 10x-load/lookup-timeout response are authored simulations, not new deployed automation.
+- Separate capacity overload from integration failure. Watch queue size/oldest wait and eligible-agent capacity alongside lookup failures. Isolate the failed dependency, avoid immediate retry storms, preserve Claims eligibility and use an actually available channel/staffed route.
+- Proposed operational ownership: operations lead for queues/staffing, integration owner for AI/lookup failures, messaging/email owner for delivery, and security owner for unauthorized context. Monitoring thresholds and notifications described in the tabletop are proposals unless separately deployed.
+- Retain only context supported by the contact or authorized store. A new channel does not automatically inherit authenticated voice context. The fixed synthetic demo principal in Lambda is not production authentication.
+- Recovery uses the affected resource's known-good artifact and a controlled verification contact. The isolated Day 13 clone's restore procedure applies to that clone; do not silently substitute it for an unrelated production flow.
+- B01 must establish actual stored audio/playback evidence. B02 adds the verified Sonic integration where supported. Neither bonus is a prerequisite for the completed 14-day core.
